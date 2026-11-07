@@ -16,7 +16,15 @@
           },
           {
             "/": "/join/*",
-            "comment": "Same landing with a trailing slash or a language"
+            "comment": "Same landing with a trailing slash"
+          },
+          {
+            "/": "/*/join",
+            "comment": "Language versions of the landing (/ru/join, /zh-hans/join) open the Family tab too"
+          },
+          {
+            "/": "/*/join/*",
+            "comment": "Same, with a trailing slash"
           }
         ]
       }
