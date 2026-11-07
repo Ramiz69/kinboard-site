@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kinboard — the family screen you already own</title>
+<meta name="description" content="Turn your Apple TV or an old iPad into a family calendar and command center. One purchase. No account. No subscription.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f6f1e7;
+    --paper-2: #efe7d8;
+    --ink: #1d1b26;
+    --ink-soft: #5b5766;
+    --accent: #d2603a;
+    --accent-ink: #fff;
+    --tv: #14131c;
+    --line: #ddd3c1;
+    --c1: #e07a5f; /* mom */
+    --c2: #3d8bbf; /* dad */
+    --c3: #81b29a; /* kid 1 */
+    --c4: #e9b949; /* kid 2 */
+    --radius: 18px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font: 17px/1.55 Inter, -apple-system, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: Fraunces, Georgia, serif; font-weight: 600; letter-spacing: -0.01em; margin: 0; }
+  a { color: inherit; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+  /* nav */
+  nav { display: flex; align-items: center; justify-content: space-between; padding: 22px 0; }
+  .logo { font-family: Fraunces, serif; font-weight: 700; font-size: 22px; display: flex; gap: 10px; align-items: center; text-decoration: none; }
+  .logo-mark { width: 26px; height: 26px; border-radius: 7px; background: var(--ink); display: grid; grid-template-columns: 1fr 1fr; gap: 3px; padding: 5px; }
+  .logo-mark i { border-radius: 2px; }
+  .logo-mark i:nth-child(1){background:var(--c1)} .logo-mark i:nth-child(2){background:var(--c2)}
+  .logo-mark i:nth-child(3){background:var(--c3)} .logo-mark i:nth-child(4){background:var(--c4)}
+  .btn { display: inline-block; background: var(--accent); color: var(--accent-ink); text-decoration: none; font-weight: 600;
+         padding: 12px 22px; border-radius: 999px; border: 0; cursor: pointer; font: inherit; font-weight: 600;
+         transition: transform .15s ease, box-shadow .15s ease; box-shadow: 0 6px 18px -8px rgba(210,96,58,.7); }
+  .btn:hover { transform: translateY(-1px); box-shadow: 0 10px 24px -10px rgba(210,96,58,.8); }
+  .btn.ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--ink); }
+
+  /* hero */
+  .hero { padding: 40px 0 30px; text-align: center; }
+  .eyebrow { display: inline-block; font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+             color: var(--accent); background: #f3dccf; padding: 6px 12px; border-radius: 999px; }
+  .hero h1 { font-size: clamp(40px, 6vw, 68px); line-height: 1.04; margin: 20px auto 18px; max-width: 14ch; }
+  .hero h1 em { font-style: italic; color: var(--accent); }
+  .hero p.lead { font-size: 20px; color: var(--ink-soft); max-width: 40ch; margin: 0 auto 28px; }
+  .hero .ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .fine { font-size: 14px; color: var(--ink-soft); margin-top: 14px; }
+
+  /* TV mockup */
+  .stage { position: relative; margin: 56px auto 0; max-width: 980px; }
+  .tv { background: #0b0a10; border-radius: 22px; padding: 14px; box-shadow: 0 40px 80px -40px rgba(29,27,38,.55), 0 0 0 1px #2a2834; }
+  .screen { aspect-ratio: 16/9; border-radius: 10px; overflow: hidden; position: relative; color: #fff;
+            background:
+              radial-gradient(120% 90% at 85% 10%, rgba(233,185,73,.35), transparent 55%),
+              radial-gradient(100% 80% at 10% 100%, rgba(61,139,191,.45), transparent 60%),
+              linear-gradient(160deg, #2b3a4a, #1a1f2b 60%, #241c22);
+            display: grid; grid-template-columns: 1.05fr 1.6fr 1fr; gap: 1.6%; padding: 3%; text-align: left;
+            font-size: clamp(7px, 1.25vw, 13px); }
+  .screen::after { /* faux photo vignette */ content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.35)); pointer-events: none; }
+  .panel { position: relative; z-index: 1; background: rgba(15,14,22,.42); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+           border: 1px solid rgba(255,255,255,.08); border-radius: 1.2em; padding: 1.2em 1.3em; }
+  .clock { font-family: Fraunces, serif; font-size: 4.6em; line-height: 1; font-weight: 600; }
+  .date { opacity: .8; margin-top: .3em; font-size: 1.15em; }
+  .wx { display: flex; align-items: center; gap: .6em; margin-top: 1.3em; font-size: 1.1em; }
+  .wx b { font-size: 2.1em; font-family: Fraunces, serif; font-weight: 600; }
+  .wx-row { display: flex; justify-content: space-between; margin-top: .9em; opacity: .85; font-size: .95em; }
+  .wx-row span { display: grid; text-align: center; gap: .2em; }
+  .count { margin-top: 1.3em; padding-top: 1em; border-top: 1px solid rgba(255,255,255,.12); }
+  .count b { font-family: Fraunces, serif; font-size: 1.9em; color: var(--c4); }
+  .ptitle { font-size: .82em; letter-spacing: .1em; text-transform: uppercase; opacity: .65; margin-bottom: .8em; font-weight: 600; }
+  .ev { display: grid; grid-template-columns: 4.2em .35em 1fr; gap: .7em; align-items: center; padding: .55em 0; border-bottom: 1px solid rgba(255,255,255,.07); }
+  .ev:last-child { border-bottom: 0; }
+  .ev time { opacity: .7; font-variant-numeric: tabular-nums; }
+  .ev i { height: 1.9em; border-radius: 3px; }
+  .ev small { display: block; opacity: .6; font-size: .85em; }
+  .who { display: flex; gap: .5em; margin-top: .9em; flex-wrap: wrap; }
+  .who span { display: inline-flex; align-items: center; gap: .35em; font-size: .85em; opacity: .85; }
+  .who span::before { content: ""; width: .7em; height: .7em; border-radius: 50%; background: var(--c); }
+  .li { display: flex; gap: .6em; align-items: center; padding: .4em 0; }
+  .li .box { width: 1.05em; height: 1.05em; border-radius: .3em; border: 1.5px solid rgba(255,255,255,.55); flex: none; }
+  .li.done { opacity: .45; text-decoration: line-through; }
+  .li.done .box { background: var(--c3); border-color: var(--c3); }
+  .chore { display: flex; justify-content: space-between; padding: .35em 0; }
+  .chore em { font-style: normal; color: var(--c4); }
+  .stand { width: 22%; height: 18px; margin: 0 auto; background: linear-gradient(#22202b, #0f0e14); border-radius: 0 0 8px 8px; }
+
+  .ipad, .tag { z-index: 5; }
+  @media (max-width: 1040px) { .ipad { right: 1%; } .tag { left: 2%; } }
+  .ipad { position: absolute; right: -2%; bottom: -8%; width: 27%; background: #111; border-radius: 16px; padding: 7px;
+          box-shadow: 0 30px 50px -25px rgba(0,0,0,.6); transform: rotate(3deg); }
+  .ipad .screen { aspect-ratio: 4/3; grid-template-columns: 1fr; padding: 7%; gap: 5%; font-size: clamp(5px, .75vw, 8.5px); }
+  .tag { position: absolute; left: -1%; bottom: 6%; background: #fff; color: var(--ink); border-radius: 12px; padding: 10px 14px;
+         font-size: 14px; box-shadow: 0 16px 30px -18px rgba(0,0,0,.45); display: flex; gap: 10px; align-items: center; transform: rotate(-2deg); }
+  .tag b { font-family: Fraunces, serif; }
+
+  /* sections */
+  section { padding: 90px 0; }
+  .sec-head { max-width: 640px; margin-bottom: 44px; }
+  .sec-head h2 { font-size: clamp(30px, 4vw, 44px); line-height: 1.1; }
+  .sec-head p { color: var(--ink-soft); font-size: 19px; margin-top: 14px; }
+
+  .problem { background: var(--ink); color: var(--paper); }
+  .problem .sec-head p { color: #b9b3c4; }
+  .price-cmp { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .pc { border-radius: var(--radius); padding: 26px; background: #262433; }
+  .pc h3 { font-size: 20px; }
+  .pc .big { font-family: Fraunces, serif; font-size: 44px; margin: 14px 0 4px; }
+  .pc p { margin: 0; color: #b9b3c4; font-size: 15px; }
+  .pc.us { background: var(--accent); }
+  .pc.us p { color: #fde6dc; }
+  .note { font-size: 13px; color: #8e889b; margin-top: 18px; }
+
+  .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .f { background: #fffaf1; border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; }
+  .f .ic { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; font-size: 22px; margin-bottom: 16px; background: var(--paper-2); }
+  .f h3 { font-size: 21px; margin-bottom: 8px; }
+  .f p { margin: 0; color: var(--ink-soft); font-size: 16px; }
+
+  .how { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; counter-reset: s; }
+  .how div { counter-increment: s; }
+  .how div::before { content: counter(s); font-family: Fraunces, serif; font-size: 54px; color: var(--accent); line-height: 1; display: block; margin-bottom: 8px; }
+  .how h3 { font-size: 22px; margin-bottom: 6px; }
+  .how p { margin: 0; color: var(--ink-soft); }
+
+  /* launch */
+  .wl { background: var(--paper-2); }
+  .wl-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 50px; align-items: start; }
+  .perk { display: flex; gap: 12px; margin: 16px 0; }
+  .perk span { color: var(--accent); font-weight: 700; }
+  .card { background: #fffaf1; border: 1px solid var(--line); border-radius: 22px; padding: 30px; }
+  .card h3 { font-size: 24px; margin-bottom: 10px; }
+  .card p { color: var(--ink-soft); margin: 0 0 12px; }
+  footer nav { padding: 0; gap: 18px; }
+
+  .faq details { border-bottom: 1px solid var(--line); padding: 18px 0; }
+  .faq summary { cursor: pointer; font-family: Fraunces, serif; font-size: 21px; font-weight: 600; list-style: none; display: flex; justify-content: space-between; }
+  .faq summary::after { content: "+"; color: var(--accent); }
+  .faq details[open] summary::after { content: "–"; }
+  .faq p { color: var(--ink-soft); margin: 10px 0 0; max-width: 70ch; }
+
+  footer { padding: 40px 0 60px; color: var(--ink-soft); font-size: 14px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+
+  @media (max-width: 860px) {
+    .price-cmp, .features, .how, .wl-grid { grid-template-columns: 1fr; }
+    .screen { grid-template-columns: 1fr 1.5fr; }
+    .screen .panel:nth-child(3) { display: none; }
+    .ipad, .tag { display: none; }
+    section { padding: 64px 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <nav>
+    <a class="logo" href="/"><span class="logo-mark"><i></i><i></i><i></i><i></i></span>Kinboard</a>
+    <a class="btn" href="#launch">Coming soon</a>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <span class="eyebrow">For Apple TV &amp; iPad</span>
+    <h1>The family screen <em>you already own.</em></h1>
+    <p class="lead">Everyone's calendar, the grocery list, kids' chores, weather and your photos — on the Apple TV in the living room or the old iPad on the kitchen wall.</p>
+    <div class="ctas">
+      <a class="btn" href="#launch">Coming to the App Store</a>
+      <a class="btn ghost" href="#how">How it works</a>
+    </div>
+    <p class="fine">14 days free, then one purchase. No account. No subscription. Your data stays in your iCloud.</p>
+
+    <div class="stage" aria-label="Preview of Kinboard on an Apple TV and an iPad">
+      <div class="tv">
+        <div class="screen">
+          <div class="panel">
+            <div class="clock" id="clock">7:42</div>
+            <div class="date" id="date">Friday, November 6</div>
+            <div class="wx"><span aria-hidden="true">⛅️</span><b>12°</b><span>Partly cloudy<br><small style="opacity:.7">H 15° · L 6°</small></span></div>
+            <div class="wx-row"><span>9am<b>☀️</b>10°</span><span>12pm<b>⛅️</b>14°</span><span>3pm<b>🌦</b>13°</span><span>6pm<b>🌙</b>9°</span></div>
+            <div class="count">
+              <div class="ptitle" style="margin:0">Countdown</div>
+              <b>12</b> days to Grandma's visit
+            </div>
+          </div>
+          <div class="panel">
+            <div class="ptitle">Today</div>
+            <div class="ev"><time>8:00</time><i style="background:var(--c3)"></i><div>School drop-off<small>Mia · Leo</small></div></div>
+            <div class="ev"><time>10:30</time><i style="background:var(--c2)"></i><div>Dentist<small>Dad</small></div></div>
+            <div class="ev"><time>15:45</time><i style="background:var(--c4)"></i><div>Swimming practice<small>Leo · pick-up: Mom</small></div></div>
+            <div class="ev"><time>17:00</time><i style="background:var(--c1)"></i><div>Yoga<small>Mom</small></div></div>
+            <div class="ev"><time>19:30</time><i style="background:linear-gradient(var(--c1),var(--c2),var(--c3),var(--c4))"></i><div>Pizza &amp; movie night<small>Everyone</small></div></div>
+            <div class="who"><span style="--c:var(--c1)">Mom</span><span style="--c:var(--c2)">Dad</span><span style="--c:var(--c3)">Mia</span><span style="--c:var(--c4)">Leo</span></div>
+          </div>
+          <div class="panel">
+            <div class="ptitle">Groceries</div>
+            <div class="li done"><span class="box"></span>Milk</div>
+            <div class="li"><span class="box"></span>Apples</div>
+            <div class="li"><span class="box"></span>Pizza dough</div>
+            <div class="li done"><span class="box"></span>Coffee</div>
+            <div class="ptitle" style="margin-top:1.2em">Chores</div>
+            <div class="chore">Feed the cat <em>Mia ★</em></div>
+            <div class="chore">Empty dishwasher <em>Leo</em></div>
+          </div>
+        </div>
+      </div>
+      <div class="stand"></div>
+
+      <div class="ipad" aria-hidden="true">
+        <div class="screen">
+          <div class="panel">
+            <div class="clock" id="clock2" style="font-size:3.4em">7:42</div>
+            <div class="date">Fri · 12° ⛅️</div>
+          </div>
+          <div class="panel">
+            <div class="ptitle">Groceries</div>
+            <div class="li"><span class="box"></span>Apples</div>
+            <div class="li"><span class="box"></span>Pizza dough</div>
+            <div class="li done"><span class="box"></span>Milk</div>
+          </div>
+        </div>
+      </div>
+      <div class="tag"><span aria-hidden="true">📱</span><span><b>Edit from any iPhone</b><br>Changes appear on every screen</span></div>
+    </div>
+  </div>
+
+  <section class="problem" style="margin-top:60px">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Family wall calendars are great. Buying one isn't.</h2>
+        <p>Dedicated displays cost hundreds of dollars and still want a monthly fee for the good parts. You probably already have a better screen.</p>
+      </div>
+      <div class="price-cmp">
+        <div class="pc"><h3>Smart wall calendar A</h3><div class="big">~$300</div><p>+ $79/year for photos, meal planning and extras</p></div>
+        <div class="pc"><h3>Smart wall calendar B</h3><div class="big">$699</div><p>+ $9/month membership for the full experience</p></div>
+        <div class="pc us"><h3>Kinboard</h3><div class="big">One price</div><p>Runs on the Apple TV or iPad you already own. No subscription, ever.</p></div>
+      </div>
+      <p class="note">Prices of popular dedicated family displays as listed by their makers and retailers, November 2026.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Everything your family needs at a glance</h2>
+        <p>Designed for the couch and the kitchen — readable from across the room.</p>
+      </div>
+      <div class="features">
+        <div class="f"><div class="ic">🗓</div><h3>Everyone's calendar</h3><p>iCloud, Google and Outlook calendars, one color per person, so you instantly see who's where.</p></div>
+        <div class="f"><div class="ic">🛒</div><h3>Shared lists</h3><p>Groceries and to-dos that anyone can update from their iPhone — or tick off on the iPad.</p></div>
+        <div class="f"><div class="ic">⭐️</div><h3>Kids' chores</h3><p>Simple chore charts with stars kids can actually see, right where the family gathers.</p></div>
+        <div class="f"><div class="ic">⛅️</div><h3>Weather &amp; countdowns</h3><p>Today's forecast, plus countdowns to birthdays, trips and the next visit from Grandma.</p></div>
+        <div class="f"><div class="ic">🖼</div><h3>Your photos</h3><p>A shared album slowly rotating in the background. Night mode dims everything after bedtime.</p></div>
+        <div class="f"><div class="ic">🔒</div><h3>Private by design</h3><p>No sign-up, no servers of ours. Everything syncs through your family's own iCloud.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" style="padding-top:20px">
+    <div class="wrap">
+      <div class="sec-head"><h2>Up and running in two minutes</h2></div>
+      <div class="how">
+        <div><h3>Install on Apple TV or iPad</h3><p>One purchase covers your Apple TV, iPad and iPhone.</p></div>
+        <div><h3>Pick calendars on your iPhone</h3><p>Choose whose calendars to show and invite family members to edit lists.</p></div>
+        <div><h3>Leave it on</h3><p>Kinboard keeps the screen awake, refreshes itself and dims at night.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wl" id="launch">
+    <div class="wrap wl-grid">
+      <div>
+        <div class="sec-head" style="margin-bottom:20px">
+          <h2>Coming soon to the App Store</h2>
+          <p>Kinboard for Apple TV, iPad and iPhone is almost ready. Try everything free for 14 days, then keep it with a single purchase.</p>
+        </div>
+        <div class="perk"><span>✓</span><div><b>One purchase</b> covers Apple TV, iPad and iPhone.</div></div>
+        <div class="perk"><span>✓</span><div><b>Family Sharing</b> - buy once for the whole family.</div></div>
+        <div class="perk"><span>✓</span><div><b>Free forever:</b> the clock, weather, countdowns and one calendar.</div></div>
+      </div>
+      <div class="card">
+        <h3>Questions or ideas?</h3>
+        <p>Kinboard is made by one independent developer. Every message is read and answered.</p>
+        <a class="btn" href="/support/">Contact support</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="wrap">
+      <div class="sec-head"><h2>Questions</h2></div>
+      <details><summary>Which devices will it support?</summary><p>Apple TV (tvOS) and iPad for the display, plus an iPhone companion for setup and editing. One purchase covers all of them.</p></details>
+      <details><summary>Do I need an account?</summary><p>No. Kinboard syncs through iCloud, the same way your Notes and Reminders do. We never see your calendar or photos.</p></details>
+      <details><summary>Will there be a subscription?</summary><p>No. Kinboard is a one-time purchase, with a 14-day free trial so you can see it on your own screen first. The clock, weather, countdowns and one calendar stay free after the trial.</p></details>
+      <details><summary>Does it work with Google Calendar?</summary><p>Yes. Calendars from your iPhone or iPad appear on the screen, including Google and Outlook accounts added there, plus any calendar you can subscribe to by link (including many school calendars).</p></details>
+      <details><summary>When does it launch?</summary><p>Very soon. Kinboard is in final testing and will be on the App Store shortly.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <span>© 2026 Ramiz Kichibekov. Apple TV and iPad are trademarks of Apple Inc.</span>
+  <nav><a href="/privacy/">Privacy</a><a href="/support/">Support</a></nav>
+</footer>
+
+<script>
+  // Live clock in the mockup
+  (function tick() {
+    const now = new Date();
+    const time = now.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", hour12: false });
+    document.getElementById("clock").textContent = time;
+    document.getElementById("clock2").textContent = time;
+    document.getElementById("date").textContent =
+      now.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" });
+    setTimeout(tick, 15000);
+  })();
+
+</script>
+</body>
+</html>

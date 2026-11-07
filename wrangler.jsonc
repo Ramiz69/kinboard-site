@@ -1,0 +1,10 @@
+{
+  // Статический сайт Kinboard: папка public/ как есть, своего кода у воркера нет.
+  // Публикует Cloudflare Workers Builds при пуше в main.
+  "name": "kinboard",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./public",
+    "html_handling": "auto-trailing-slash"
+  }
+}
