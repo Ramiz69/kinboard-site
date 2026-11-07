@@ -1,0 +1,117 @@
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <p class="eyebrow">{{home.hero.eyebrow}}</p>
+      <h1 id="hero-title">{{home.hero.title}}</h1>
+      <p class="sub">{{home.hero.sub}}</p>
+      <div class="cta">{{badge}}</div>
+      <p class="note">{{home.hero.note}}<br><span class="req">{{home.hero.requires}}</span></p>
+    </div>
+    <figure class="frame-tv">
+      <img src="{{shots.tv}}" alt="{{home.hero.shotAlt}}" width="1600" height="900" fetchpriority="high" decoding="async">
+    </figure>
+  </div>
+</section>
+
+<section class="how" id="how" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="how-title">{{home.how.title}}</h2>
+      <p class="lede">{{home.how.lede}}</p>
+    </div>
+    <ol class="steps">
+      {{#steps}}<li class="card"><span class="num" aria-hidden="true">{{.n}}</span><h3>{{.title}}</h3><p>{{.text}}</p></li>{{/steps}}
+    </ol>
+    <figure class="ipad">
+      <img src="{{shots.ipad}}" alt="{{home.how.shotAlt}}" width="1400" height="1050" loading="lazy" decoding="async">
+    </figure>
+  </div>
+</section>
+
+<section class="features" id="features" aria-labelledby="features-title">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="features-title">{{home.features.title}}</h2>
+      <p class="lede">{{home.features.lede}}</p>
+    </div>
+    {{#features}}<article class="feature">
+      <figure class="phone"><img src="{{.shot}}" alt="{{.shotAlt}}" width="600" height="1304" loading="lazy" decoding="async"></figure>
+      <div class="feature-copy">
+        <span class="dot dot-{{.n}}" aria-hidden="true"></span>
+        <h3>{{.title}}</h3>
+        <p>{{.text}}</p>
+        <ul class="ticks">{{.points}}</ul>
+      </div>
+    </article>{{/features}}
+  </div>
+</section>
+
+<section class="always" aria-labelledby="always-title">
+  <div class="wrap always-in">
+    <div>
+      <div class="head">
+        <h2 id="always-title">{{home.alwaysOn.title}}</h2>
+        <p class="lede">{{home.alwaysOn.lede}}</p>
+      </div>
+      <ul class="facts">
+        {{#facts}}<li>{{.icon}}<div><h3>{{.title}}</h3><p>{{.text}}</p></div></li>{{/facts}}
+      </ul>
+    </div>
+    <figure class="ipad tall">
+      <img src="{{shots.ipadTall}}" alt="{{home.alwaysOn.shotAlt}}" width="900" height="1200" loading="lazy" decoding="async">
+    </figure>
+  </div>
+</section>
+
+<section class="privacy" id="privacy" aria-labelledby="privacy-title">
+  <div class="wrap">
+    <div class="card privacy-card">
+      {{lock}}
+      <h2 id="privacy-title">{{home.privacy.title}}</h2>
+      <p class="lede">{{home.privacy.text}}</p>
+      <ul class="ticks">{{privacyPoints}}</ul>
+      <p><a href="{{hrefs.privacy}}">{{home.privacy.link}}</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing" aria-labelledby="pricing-title">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="pricing-title">{{home.pricing.title}}</h2>
+      <p class="lede">{{home.pricing.lede}}</p>
+    </div>
+    <div class="plans">
+      <div class="card plan">
+        <h3>{{home.pricing.trial.title}}</h3>
+        <p>{{home.pricing.trial.text}}</p>
+        <h4>{{home.pricing.free.title}}</h4>
+        <ul class="ticks">{{freeItems}}</ul>
+      </div>
+      <div class="card plan plus">
+        <h3>{{logoSmall}}<bdi>{{home.pricing.plus.title}}</bdi></h3>
+        <p>{{home.pricing.plus.text}}</p>
+        <ul class="ticks">{{plusItems}}</ul>
+        <p class="small">{{home.pricing.plus.family}}</p>
+        <p class="small muted">{{home.pricing.plus.price}}</p>
+      </div>
+    </div>
+    <p class="kept">{{home.pricing.kept}}</p>
+  </div>
+</section>
+
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <div class="wrap narrow">
+    <h2 id="faq-title">{{home.faq.title}}</h2>
+    {{#faq}}<details><summary>{{.q}}</summary><p>{{.a}}</p></details>{{/faq}}
+  </div>
+</section>
+
+<section class="final" aria-labelledby="final-title">
+  <div class="wrap final-in">
+    {{logoBig}}
+    <h2 id="final-title">{{home.cta.title}}</h2>
+    <p class="lede">{{home.cta.text}}</p>
+    <div class="cta">{{badge}}</div>
+  </div>
+</section>

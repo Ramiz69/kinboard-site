@@ -1,0 +1,12 @@
+{
+  "name": "kinboard-site",
+  "private": true,
+  "type": "module",
+  "description": "The Kinboard marketing site and its support and privacy pages.",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "node build.mjs",
+    "check": "node tools/check-i18n.mjs",
+    "serve": "node build.mjs && node tools/serve.mjs 8787"
+  }
+}

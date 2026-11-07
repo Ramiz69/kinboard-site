@@ -1,62 +1,119 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#1a1f2b" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f8f3ea" media="(prefers-color-scheme: light)">
 <title>Kinboard Support</title>
-<meta name="description" content="Help with Kinboard, the family screen for Apple TV, iPad and iPhone.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root { --paper:#f6f1e7; --ink:#1d1b26; --ink-soft:#5b5766; --accent:#d2603a; --line:#ddd3c1;
-          --c1:#e07a5f; --c2:#3d8bbf; --c3:#81b29a; --c4:#e9b949; }
-  * { box-sizing: border-box; }
-  body { margin:0; background:var(--paper); color:var(--ink); font:17px/1.6 Inter,-apple-system,system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
-  h1,h2 { font-family:Fraunces,Georgia,serif; font-weight:600; letter-spacing:-.01em; }
-  h1 { font-size:clamp(34px,5vw,48px); line-height:1.1; margin:24px 0 8px; }
-  h2 { font-size:24px; margin:40px 0 8px; }
-  a { color:var(--accent); }
-  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
-  nav { display:flex; align-items:center; justify-content:space-between; padding:22px 0; }
-  .logo { font-family:Fraunces,serif; font-weight:700; font-size:22px; display:flex; gap:10px; align-items:center; text-decoration:none; color:var(--ink); }
-  .logo-mark { width:26px; height:26px; border-radius:7px; background:var(--ink); display:grid; grid-template-columns:1fr 1fr; gap:3px; padding:5px; }
-  .logo-mark i { border-radius:2px; }
-  .logo-mark i:nth-child(1){background:var(--c1)} .logo-mark i:nth-child(2){background:var(--c2)}
-  .logo-mark i:nth-child(3){background:var(--c3)} .logo-mark i:nth-child(4){background:var(--c4)}
-  .lead { color:var(--ink-soft); font-size:19px; }
-  .meta { color:var(--ink-soft); font-size:14px; }
-  ul { padding-left:1.2em; } li { margin:6px 0; }
-  .box { background:#fffaf1; border:1px solid var(--line); border-radius:18px; padding:22px 24px; margin:24px 0; }
-  footer { margin-top:60px; padding:30px 0 60px; border-top:1px solid var(--line); color:var(--ink-soft); font-size:14px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; }
-  footer a { color:var(--ink-soft); margin-left:16px; }
-</style>
+<meta name="description" content="Help with Kinboard, the family screen for Apple TV, iPad and iPhone: getting started, calendars, weather, Kinboard+ and contact.">
+<link rel="canonical" href="https://kinboard-family.app/support/">
+<link rel="alternate" hreflang="en" href="https://kinboard-family.app/support/">
+<link rel="alternate" hreflang="ru" href="https://kinboard-family.app/ru/support/">
+<link rel="alternate" hreflang="ar" href="https://kinboard-family.app/ar/support/">
+<link rel="alternate" hreflang="de" href="https://kinboard-family.app/de/support/">
+<link rel="alternate" hreflang="es" href="https://kinboard-family.app/es/support/">
+<link rel="alternate" hreflang="fr" href="https://kinboard-family.app/fr/support/">
+<link rel="alternate" hreflang="hi" href="https://kinboard-family.app/hi/support/">
+<link rel="alternate" hreflang="id" href="https://kinboard-family.app/id/support/">
+<link rel="alternate" hreflang="it" href="https://kinboard-family.app/it/support/">
+<link rel="alternate" hreflang="ja" href="https://kinboard-family.app/ja/support/">
+<link rel="alternate" hreflang="ko" href="https://kinboard-family.app/ko/support/">
+<link rel="alternate" hreflang="pt-BR" href="https://kinboard-family.app/pt-br/support/">
+<link rel="alternate" hreflang="tr" href="https://kinboard-family.app/tr/support/">
+<link rel="alternate" hreflang="uk" href="https://kinboard-family.app/uk/support/">
+<link rel="alternate" hreflang="vi" href="https://kinboard-family.app/vi/support/">
+<link rel="alternate" hreflang="zh-Hans" href="https://kinboard-family.app/zh-hans/support/">
+<link rel="alternate" hreflang="zh-Hant" href="https://kinboard-family.app/zh-hant/support/">
+<link rel="alternate" hreflang="x-default" href="https://kinboard-family.app/support/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kinboard">
+<meta property="og:title" content="Kinboard Support">
+<meta property="og:description" content="Help with Kinboard, the family screen for Apple TV, iPad and iPhone: getting started, calendars, weather, Kinboard+ and contact.">
+<meta property="og:url" content="https://kinboard-family.app/support/">
+<meta property="og:image" content="https://kinboard-family.app/og/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Kinboard logo: the family screen for Apple TV and iPad">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="id_ID">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="uk_UA">
+<meta property="og:locale:alternate" content="vi_VN">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kinboard Support">
+<meta name="twitter:description" content="Help with Kinboard, the family screen for Apple TV, iPad and iPhone: getting started, calendars, weather, Kinboard+ and contact.">
+<meta name="twitter:image" content="https://kinboard-family.app/og/og-en.png">
+<meta name="twitter:image:alt" content="The Kinboard logo: the family screen for Apple TV and iPad">
+<meta name="apple-itunes-app" content="app-id=6831690840">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/icon.png">
+<link rel="stylesheet" href="/assets/page.725331d50d.css">
+<script src="/assets/theme-init.1862146f72.js"></script>
+<script type="module" src="/assets/menus.184c7bd90c.js"></script>
+
 </head>
-<body>
-<div class="wrap">
-<nav><a class="logo" href="/"><span class="logo-mark"><i></i><i></i><i></i><i></i></span>Kinboard</a></nav>
-<main>
-<h1>Support</h1>
-<p class="lead">Kinboard is made by one independent developer. Write any time - every message is read and answered, usually within two days.</p>
-<div class="box"><b>Email:</b> <a href="mailto:angelokk161@gmail.com?subject=Kinboard">angelokk161@gmail.com</a><br><span class="meta">Please mention your devices (Apple TV, iPad, iPhone) and what you expected to see.</span></div>
+<body class="p-support">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="bar">
+    <a class="brand" href="/"><svg class="logo" width="30" height="30" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="8" fill="#1a1f2b"/><rect x="2" y="2" width="28" height="28" rx="6.5" fill="#fff" fill-opacity=".1"/><rect x="6.5" y="6.5" width="8.5" height="8.5" rx="2.3" fill="#E07A5F"/><rect x="17" y="6.5" width="8.5" height="8.5" rx="2.3" fill="#3D8BBF"/><rect x="6.5" y="17" width="8.5" height="8.5" rx="2.3" fill="#81B29A"/><rect x="17" y="17" width="8.5" height="8.5" rx="2.3" fill="#E9B949"/></svg><span>Kinboard</span></a>
+    <nav class="topnav" aria-label="Language · Appearance">
+    <div class="menu-wrap lang-menu">
+      <button class="chip menu-btn" type="button" aria-expanded="false" aria-controls="lang-list"><span class="vh">Language: English</span> <svg class="globe" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.25"/><path d="M1.75 8h12.5M8 1.75c1.8 1.7 2.7 3.8 2.7 6.25S9.8 12.55 8 14.25M8 1.75C6.2 3.45 5.3 5.55 5.3 8s.9 4.55 2.7 6.25"/></svg><span aria-hidden="true">EN</span><svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 6.5 3 3 3-3"/></svg></button>
+      <ul class="menu" id="lang-list" aria-label="Language"><li><a class="menu-item" tabindex="-1" href="/support/" hreflang="en" lang="en" aria-current="page"><span class="label">English</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/ru/support/" hreflang="ru" lang="ru"><span class="label">Русский</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/ar/support/" hreflang="ar" lang="ar"><span class="label">العربية</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/de/support/" hreflang="de" lang="de"><span class="label">Deutsch</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/es/support/" hreflang="es" lang="es"><span class="label">Español</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/fr/support/" hreflang="fr" lang="fr"><span class="label">Français</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/hi/support/" hreflang="hi" lang="hi"><span class="label">हिन्दी</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/id/support/" hreflang="id" lang="id"><span class="label">Bahasa Indonesia</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/it/support/" hreflang="it" lang="it"><span class="label">Italiano</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/ja/support/" hreflang="ja" lang="ja"><span class="label">日本語</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/ko/support/" hreflang="ko" lang="ko"><span class="label">한국어</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/pt-br/support/" hreflang="pt-BR" lang="pt-BR"><span class="label">Português (Brasil)</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/tr/support/" hreflang="tr" lang="tr"><span class="label">Türkçe</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/uk/support/" hreflang="uk" lang="uk"><span class="label">Українська</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/vi/support/" hreflang="vi" lang="vi"><span class="label">Tiếng Việt</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/zh-hans/support/" hreflang="zh-Hans" lang="zh-Hans"><span class="label">简体中文</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/zh-hant/support/" hreflang="zh-Hant" lang="zh-Hant"><span class="label">繁體中文</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li></ul>
+    </div>
+    <div class="menu-wrap theme-menu" data-theme-menu>
+      <button class="chip menu-btn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="theme-list"><span class="vh">Appearance:</span> <span class="tv tv-auto"><svg class="ico" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="5.75"/><path d="M8 2.25a5.75 5.75 0 0 0 0 11.5Z" fill="currentColor"/></svg><span class="tvl">Auto</span></span><span class="tv tv-light"><svg class="ico" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="2.75"/><path d="M8 1.5v1.25M8 13.25v1.25M1.5 8h1.25M13.25 8h1.25M3.4 3.4l.9.9M11.7 11.7l.9.9M3.4 12.6l.9-.9M11.7 4.3l.9-.9"/></svg><span class="tvl">Light</span></span><span class="tv tv-dark"><svg class="ico" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13.25 9.6A5.5 5.5 0 0 1 6.4 2.75a5.5 5.5 0 1 0 6.85 6.85Z"/></svg><span class="tvl">Dark</span></span><svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 6.5 3 3 3-3"/></svg></button>
+      <div class="menu" id="theme-list" role="menu" aria-label="Appearance"><button class="menu-item" type="button" role="menuitemradio" aria-checked="true" tabindex="-1" data-value="auto"><svg class="ico" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="5.75"/><path d="M8 2.25a5.75 5.75 0 0 0 0 11.5Z" fill="currentColor"/></svg><span class="label">Auto</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></button><button class="menu-item" type="button" role="menuitemradio" aria-checked="false" tabindex="-1" data-value="light"><svg class="ico" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="2.75"/><path d="M8 1.5v1.25M8 13.25v1.25M1.5 8h1.25M13.25 8h1.25M3.4 3.4l.9.9M11.7 11.7l.9.9M3.4 12.6l.9-.9M11.7 4.3l.9-.9"/></svg><span class="label">Light</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></button><button class="menu-item" type="button" role="menuitemradio" aria-checked="false" tabindex="-1" data-value="dark"><svg class="ico" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13.25 9.6A5.5 5.5 0 0 1 6.4 2.75a5.5 5.5 0 1 0 6.85 6.85Z"/></svg><span class="label">Dark</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></button></div>
+    </div>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="doc">
+  <h1>Support</h1>
+  <p class="lede-doc">Kinboard is made by one independent developer. Write any time - every message is read and answered, usually within two days.</p>
+  <div class="card mail">
+    <p><b>Email:</b> <a href="mailto:support@kinboard-family.app?subject=Kinboard">support@kinboard-family.app</a></p>
+    <p class="muted small">Please mention your devices (Apple TV, iPad, iPhone) and what you expected to see.</p>
+  </div>
 
-<h2>Getting started</h2>
-<ul>
-  <li>Install Kinboard on the Apple TV or iPad that will be the family screen, and on your iPhone.</li>
-  <li>On the iPhone, add family members and pick the calendars to show. Changes appear on every screen through iCloud.</li>
-  <li>To let others edit lists and calendars, open Family → Invite Family Members on your iPhone.</li>
-</ul>
+  <h2>Getting started</h2>
+  <ol>
+    <li>Install Kinboard on the Apple TV or iPad that will be the family screen, and on your iPhone.</li><li>On the iPhone, add family members and pick the calendars to show. Changes appear on every screen through iCloud.</li><li>To let others edit lists and calendars, open Family → Invite Family Members on your iPhone.</li>
+  </ol>
 
-<h2>Common questions</h2>
-<p><b>Events don't appear on the screen.</b> Make sure every device is signed in to the same iCloud account (or has joined your family through an invitation), and that iCloud Drive is turned on. Calendars from an iPhone update when Kinboard is opened there, and in the background from time to time.</p>
-<p><b>How do I add a Google or Outlook calendar?</b> Add the account in the iPhone's Settings → Calendar → Accounts, then pick its calendars in Kinboard. You can also paste a calendar's subscription link (ICS or webcal).</p>
-<p><b>The weather isn't showing.</b> Allow Kinboard to use your location in Settings → Privacy &amp; Security → Location Services.</p>
-<p><b>What's free and what's in Kinboard+?</b> Everything is open for 14 days. After that the clock, weather, countdowns, night mode and one calendar stay free. Kinboard+ is a one-time purchase that unlocks every calendar, shared lists, chores and stars, the photo background, family invitations and the Apple TV Top Shelf. Nothing you added is deleted when the trial ends.</p>
-<p><b>I bought Kinboard+ on another device.</b> Open Kinboard+ at the top of Kinboard’s settings and tap Restore Purchases. With Family Sharing, the purchase appears for everyone in your Apple family group.</p>
-<p><b>How do I get a refund?</b> Refunds are handled by Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+  <h2>Common questions</h2>
+  <h3>Events don't appear on the screen.</h3><p>Make sure every device is signed in to the same iCloud account (or has joined your family through an invitation), and that iCloud Drive is turned on. Calendars from an iPhone update when Kinboard is opened there, and in the background from time to time.</p><h3>How do I add a Google or Outlook calendar?</h3><p>Add the account in the iPhone's Settings → Calendar → Accounts, then pick its calendars in Kinboard. You can also paste a calendar's subscription link (ICS or webcal).</p><h3>The weather isn't showing.</h3><p>Allow Kinboard to use your location: on iPhone and iPad in Settings → Apps → Kinboard → Location (Settings → Privacy &amp; Security → Location Services on some versions). On Apple TV, press Select on the remote, then choose Show Local Weather.</p><h3>What's free and what's in Kinboard+?</h3><p>Everything is open for 14 days. After that the clock, weather, countdowns, night mode and one calendar stay free. Kinboard+ is a one-time purchase that unlocks every calendar, shared lists, chores and stars, the photo background, family invitations and the Apple TV Top Shelf. Nothing you added is deleted when the trial ends.</p><h3>I bought Kinboard+ on another device.</h3><p>Open Kinboard+ at the top of Kinboard's settings and tap Restore Purchases. With Family Sharing, the purchase appears for everyone in your Apple family group.</p><h3>How do I get a refund?</h3><p>Refunds are handled by Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+
+  <div class="cta doc-cta"><a class="badge" href="https://apps.apple.com/app/id6831690840"><img class="b-black" src="/assets/badge-black-en.a26fc5b383.svg" alt="Download on the App Store" width="144" height="48"><img class="b-white" src="/assets/badge-white-en.056de2f81f.svg" alt="Download on the App Store" width="144" height="48"></a></div>
+</div>
 
 </main>
-<footer><span>© 2026 Ramiz Kichibekov</span><span><a href="/">Home</a><a href="/privacy/">Privacy</a><a href="/support/">Support</a></span></footer>
-</div>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <nav class="site" aria-label="Site">
+      <a href="/">Home</a>
+      <a href="/support/" aria-current="page">Support</a>
+      <a href="/privacy/">Privacy Policy</a>
+      <a href="/press/" hreflang="en">Press</a>
+    </nav>
+    <p class="legal">© 2026 Ramiz Kichibekov · Apple, Apple TV, iPad, iPhone and iCloud are trademarks of Apple Inc.</p>
+  </div>
+</footer>
 </body>
 </html>

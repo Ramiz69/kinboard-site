@@ -1,0 +1,33 @@
+/* Support, Privacy, Press and 404: the same tokens as the home page, set for reading. */
+.doc { width: min(38rem, 100% - 32px); margin: 24px auto 0; }
+.doc h1 { font-size: clamp(34px, 7vw, 50px); line-height: 1.06; letter-spacing: -.03em; margin: 0 0 .6rem; }
+.doc h2 { font-size: 1.35rem; margin: 2.5rem 0 .6rem; }
+.doc h3 { font-size: 1.05rem; margin: 1.6rem 0 .35rem; }
+.doc ul, .doc ol { padding-inline-start: 1.3rem; }
+.doc li { margin: .45rem 0; }
+.updated { color: var(--muted); font-size: .95rem; }
+.lede-doc { font-size: 1.15rem; color: var(--muted); margin: 0 0 1.75rem; }
+.mail { padding: 18px 22px 4px; }
+.mail a { word-break: break-all; }
+.doc-cta { margin-top: 2.5rem; }
+.notfound { text-align: center; padding: 40px 0; display: grid; justify-items: center; }
+.logo.big { width: 64px; height: 64px; margin-bottom: 20px; }
+.button {
+  display: inline-block; padding: 12px 22px; border-radius: 999px; text-decoration: none; font-weight: 600;
+  background: var(--accent-fill); color: var(--on-accent);
+}
+/* Press kit */
+.facts { display: grid; grid-template-columns: max-content 1fr; gap: .55rem 1.25rem; margin: 0 0 1rem; }
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; }
+@media (max-width: 520px) { .facts { grid-template-columns: 1fr; gap: .1rem; } .facts dd { margin-bottom: .6rem; } }
+.long { border-inline-start: 3px solid var(--line); padding-inline-start: 18px; }
+.long h3 { margin-top: 1.25rem; }
+.features-list li { margin: .6rem 0; }
+.doc .assets { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); gap: 16px; margin: 1rem 0 1.5rem; }
+.doc .assets.shots { grid-template-columns: repeat(auto-fill, minmax(min(100%, 9rem), 1fr)); }
+.doc .assets li { margin: 0; display: grid; gap: 6px; align-content: start; color: var(--muted); font-size: .88rem; }
+.doc .assets.shots li.wide { grid-column: 1 / -1; }
+.assets a { display: block; line-height: 0; }
+.assets img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); background: var(--surface-2); }
+.assets li.icon img { width: 160px; border: 0; border-radius: 0; background: none; }

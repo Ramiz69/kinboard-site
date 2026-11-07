@@ -1,0 +1,247 @@
+{
+  "_about": "Strings of the press kit at /press/, English only. The build fills {price}, {pressemail}, {appstore} and {site} from the constants in build.mjs. The descriptions are the App Store copy (Kindboard repo, Tools/asc/store-texts.json, en-US); keep them in step with it.",
+  "meta": {
+    "title": "Kinboard Press Kit",
+    "description": "Facts, descriptions, screenshots, the app icon and logo for writing about Kinboard, the family screen for Apple TV and iPad."
+  },
+  "title": "Press kit",
+  "updated": "Kinboard for Apple TV, iPad and iPhone",
+  "lede": "Kinboard turns the Apple TV or iPad a family already owns into the family screen, with the iPhone as the remote. For offer codes, interviews or anything else, write to <a href=\"mailto:{pressemail}?subject=Kinboard%20press\">{pressemail}</a>.",
+  "factsTitle": "Fact sheet",
+  "facts": [
+    {
+      "k": "Name",
+      "v": "Kinboard (in the App Store: “Kinboard: Family Calendar”)"
+    },
+    {
+      "k": "Developer",
+      "v": "Ramiz Kichibekov, independent"
+    },
+    {
+      "k": "Platforms",
+      "v": "Apple TV (tvOS 26) or iPad (iPadOS 26) as the family screen, iPhone (iOS 26) as the remote"
+    },
+    {
+      "k": "Released",
+      "v": "2026"
+    },
+    {
+      "k": "Price",
+      "v": "Free download with a 14-day free trial of everything. Kinboard+ is a one-time purchase of {price} in the US, with Family Sharing. No subscription, no ads."
+    },
+    {
+      "k": "Languages",
+      "v": "17, including right-to-left Arabic"
+    },
+    {
+      "k": "Privacy",
+      "v": "Collects no data. No account, no servers of its own, no analytics; everything syncs through the family's own iCloud."
+    },
+    {
+      "k": "Links",
+      "v": "<a href=\"{appstore}\">App Store</a> · <a href=\"{site}/\">{sitename}</a>"
+    },
+    {
+      "k": "Contact",
+      "v": "<a href=\"mailto:{pressemail}?subject=Kinboard%20press\">{pressemail}</a>"
+    }
+  ],
+  "shortTitle": "Short description",
+  "short": [
+    "Family screen for TV and iPad.",
+    "Turn the Apple TV or iPad you already own into the family screen: everyone's calendars, shared lists, kids' chores and the weather. Try everything free for 14 days."
+  ],
+  "longTitle": "Long description",
+  "long": {
+    "intro": [
+      "Kinboard turns the Apple TV in your living room or the iPad on your kitchen wall into a family screen. Everyone's day, the grocery list, the kids' chores and the weather - readable from across the room, and always on.",
+      "No extra gadget to buy, no account to create, no subscription."
+    ],
+    "sections": [
+      {
+        "title": "Everyone's calendar",
+        "paragraphs": [],
+        "points": [
+          "Each person gets their own color, so you can tell at a glance who is where",
+          "Today and tomorrow side by side, with what's happening right now on top",
+          "Calendars from your iPhone and iPad, including Google and Outlook accounts added there",
+          "Any calendar you can subscribe to by link - school, sports club, holidays"
+        ]
+      },
+      {
+        "title": "Shared lists",
+        "paragraphs": [],
+        "points": [
+          "Groceries, packing and to-dos that anyone can update from their iPhone",
+          "Tick items off right on the iPad",
+          "Open items appear on the screen and on the Apple TV Top Shelf"
+        ]
+      },
+      {
+        "title": "Kids' chores",
+        "paragraphs": [],
+        "points": [
+          "Daily jobs for each child, on the days you choose",
+          "One to three stars per chore, and a weekly star count kids can see",
+          "Kids mark chores done themselves on the iPad"
+        ]
+      },
+      {
+        "title": "More on the screen",
+        "paragraphs": [],
+        "points": [
+          "Weather for where you are",
+          "Countdowns to birthdays, trips and the next visit from Grandma",
+          "Family photos slowly changing behind the schedule",
+          "Night mode dims the screen at bedtime and wakes it in the morning"
+        ]
+      },
+      {
+        "title": "Made for a screen that stays on",
+        "paragraphs": [],
+        "points": [
+          "Keeps the screen awake and refreshes itself",
+          "Gently shifts the layout to protect OLED screens",
+          "Big rounded type and high contrast, with Bold Text and Increase Contrast support"
+        ]
+      },
+      {
+        "title": "The whole family, one screen",
+        "paragraphs": [
+          "Set everything up from your iPhone and invite your family. Everyone edits the same lists and calendars from their own iPhone, and changes appear on every screen within seconds."
+        ],
+        "points": []
+      },
+      {
+        "title": "Private by design",
+        "paragraphs": [
+          "Kinboard has no servers of its own and no analytics. Everything syncs through your family's iCloud - the developer never sees your calendars, lists or photos."
+        ],
+        "points": []
+      },
+      {
+        "title": "Free trial, then one purchase",
+        "paragraphs": [
+          "Everything is open for 14 days. After that, the clock, weather, countdowns, night mode and one calendar stay free. Kinboard+ is a one-time purchase that unlocks every calendar, shared lists, chores and stars, the photo background, family invitations and the Top Shelf - on Apple TV, iPad and iPhone, and for your whole family through Family Sharing."
+        ],
+        "points": []
+      }
+    ]
+  },
+  "featuresTitle": "Key features",
+  "features": [
+    {
+      "t": "Everyone's calendar, one color each.",
+      "d": "Today and tomorrow side by side, from the calendars on the family's iPhones and iPads (Google and Outlook included) and any calendar link."
+    },
+    {
+      "t": "Shared lists.",
+      "d": "Groceries, packing and to-dos anyone can update from their iPhone or tick off on the iPad; open items also appear on the Apple TV Top Shelf."
+    },
+    {
+      "t": "Kids' chores with stars.",
+      "d": "Daily jobs on the days you choose, one to three stars each, and a weekly star count the kids can see."
+    },
+    {
+      "t": "Weather, countdowns and photos.",
+      "d": "Local weather, countdowns to birthdays and trips, and family photos slowly changing behind the schedule."
+    },
+    {
+      "t": "Made to stay on.",
+      "d": "Keeps the screen awake, refreshes itself, dims at night, gently shifts the layout to protect OLED screens, and supports Bold Text and Increase Contrast."
+    },
+    {
+      "t": "Private by design.",
+      "d": "No account and no analytics. Everything syncs through the family's iCloud, and the developer never sees it."
+    }
+  ],
+  "assetsTitle": "Images",
+  "assetsLede": "Free to use in coverage of Kinboard. Click a picture for the original.",
+  "shotsTitle": "Screenshots",
+  "shotsLede": "Full-resolution App Store screenshots in English: iPhone 6.9-inch, iPad 13-inch and Apple TV 4K.",
+  "shots": [
+    {
+      "file": "kinboard-tv-1",
+      "w": 3840,
+      "h": 2160,
+      "alt": "Kinboard on Apple TV: the clock, what's up next, weather, countdowns, today's and tomorrow's events, chores and the grocery list"
+    },
+    {
+      "file": "kinboard-ipad-1",
+      "w": 2752,
+      "h": 2064,
+      "alt": "Kinboard on iPad in landscape, the family board with the tabs at the top"
+    },
+    {
+      "file": "kinboard-ipad-2",
+      "w": 2064,
+      "h": 2752,
+      "alt": "Kinboard on iPad in portrait, with a large clock and hourly weather"
+    },
+    {
+      "file": "kinboard-ipad-3",
+      "w": 2752,
+      "h": 2064,
+      "alt": "A grocery list open on iPad"
+    },
+    {
+      "file": "kinboard-iphone-1",
+      "w": 1320,
+      "h": 2868,
+      "alt": "The Family tab on iPhone: four family members, each with their own color and calendar"
+    },
+    {
+      "file": "kinboard-iphone-2",
+      "w": 1320,
+      "h": 2868,
+      "alt": "The Lists tab on iPhone"
+    },
+    {
+      "file": "kinboard-iphone-3",
+      "w": 1320,
+      "h": 2868,
+      "alt": "The Chores tab on iPhone, with stars per chore"
+    },
+    {
+      "file": "kinboard-iphone-4",
+      "w": 1320,
+      "h": 2868,
+      "alt": "The Settings tab on iPhone: theme, photo background and dimming at night"
+    }
+  ],
+  "brandTitle": "Icon, logo and banner",
+  "brand": [
+    {
+      "file": "kinboard-icon-1024.png",
+      "thumb": "kinboard-icon-1024.png",
+      "alt": "The Kinboard app icon",
+      "label": "App icon, 1024 px PNG",
+      "cls": "icon"
+    },
+    {
+      "file": "kinboard-logo-on-light.png",
+      "thumb": "thumbs/kinboard-logo-on-light.webp",
+      "alt": "The Kinboard logo on a light background",
+      "label": "Logo on light, 2400 x 1000 PNG",
+      "cls": "wide"
+    },
+    {
+      "file": "kinboard-logo-on-dark.png",
+      "thumb": "thumbs/kinboard-logo-on-dark.webp",
+      "alt": "The Kinboard logo on a dark background",
+      "label": "Logo on dark, 2400 x 1000 PNG",
+      "cls": "wide"
+    },
+    {
+      "file": "kinboard-header-5244x2950.png",
+      "thumb": "thumbs/kinboard-header.webp",
+      "alt": "The Kinboard banner: the logo over a blurred family board",
+      "label": "Banner, 5244 x 2950 PNG",
+      "cls": "wide"
+    }
+  ],
+  "zip": "Download everything (ZIP, {zipsize})",
+  "contactTitle": "Contact",
+  "contact": "Ramiz Kichibekov, <a href=\"mailto:{pressemail}?subject=Kinboard%20press\">{pressemail}</a>. Offer codes for Kinboard+ are available for reviews, giveaways and videos. Replies in English or Russian.",
+  "trademarks": "Apple, Apple TV, iPad, iPhone, iCloud and App Store are trademarks of Apple Inc."
+}

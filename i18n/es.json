@@ -1,0 +1,363 @@
+{
+  "_notes": {
+    "about": "See en.json _notes: they explain every tricky key."
+  },
+  "lang": "es",
+  "path": "/es/",
+  "badgeLang": "es",
+  "ui": {
+    "skip": "Ir al contenido",
+    "language": "Idioma",
+    "theme": {
+      "label": "Aspecto",
+      "auto": "Automático",
+      "light": "Claro",
+      "dark": "Oscuro"
+    },
+    "badgeAlt": "Descárgalo en el App Store",
+    "siteNav": "Sitio",
+    "home": "Inicio",
+    "support": "Soporte",
+    "privacy": "Política de privacidad",
+    "copyright": "© 2026 Ramiz Kichibekov",
+    "trademarks": "Apple, Apple TV, iPad, iPhone e iCloud son marcas comerciales de Apple Inc.",
+    "press": "Prensa"
+  },
+  "home": {
+    "meta": {
+      "title": "Kinboard - la pantalla familiar para Apple TV y iPad",
+      "description": "Convierte el Apple TV o iPad que ya tienes en la pantalla familiar: calendarios de todos, listas compartidas, tareas de los niños y el tiempo. 14 días gratis.",
+      "ogTitle": "Kinboard - la pantalla familiar para Apple TV y iPad",
+      "ogDescription": "Los calendarios de todos, listas compartidas, las tareas de los niños y el tiempo en la pantalla que ya tienes. Sin cuenta y sin suscripción.",
+      "ogAlt": "El logotipo de Kinboard: la pantalla familiar para Apple TV y iPad"
+    },
+    "hero": {
+      "eyebrow": "Para Apple TV, iPad y iPhone",
+      "title": "La pantalla familiar que ya tienes",
+      "sub": "El día de cada uno, la lista de la compra, las tareas de los niños y el tiempo - en el Apple TV del salón o en el iPad de la pared de la cocina. Se lee desde la otra punta de la sala y siempre está encendida.",
+      "note": "14 días gratis y después una sola compra. Sin cuenta y sin suscripción.",
+      "requires": "Requiere iOS 26, iPadOS 26 o tvOS 26.",
+      "shotAlt": "Kinboard en un Apple TV: el reloj, lo siguiente en la agenda, el tiempo, cuentas atrás, los eventos de hoy y de mañana, las tareas de los niños y la lista de la compra"
+    },
+    "how": {
+      "title": "Una pantalla en la pared, el mando en el bolsillo",
+      "lede": "No hace falta comprar ningún aparato. Kinboard usa los dispositivos Apple que tu familia ya tiene.",
+      "steps": [
+        {
+          "title": "La pantalla",
+          "text": "Un Apple TV en el salón o un iPad en la pared de la cocina. Muestra el día de la familia, se mantiene encendida y se actualiza sola."
+        },
+        {
+          "title": "El mando",
+          "text": "Tu iPhone. En sus cuatro pestañas - Listas, Niños, Familia y Ajustes - añades personas, eliges calendarios y marcas lo que ya está hecho."
+        },
+        {
+          "title": "El mismo iCloud",
+          "text": "Instala Kinboard en ambos con la misma cuenta de iCloud y la pantalla se rellena sola. Invita a tu familia y cada uno podrá editar desde su propio iPhone."
+        }
+      ],
+      "shotAlt": "Kinboard en un iPad colgado en la pared, con las pestañas Tablero, Listas, Niños, Familia y Ajustes arriba"
+    },
+    "features": {
+      "title": "Todo lo que la familia necesita, de un vistazo",
+      "lede": "Configúralo una vez en tu iPhone. Los cambios aparecen en todas las pantallas en segundos.",
+      "items": [
+        {
+          "title": "Los calendarios de todos",
+          "text": "Cada persona tiene su color, así ves de un vistazo quién está dónde.",
+          "points": [
+            "Hoy y mañana uno al lado del otro, con lo que pasa ahora mismo arriba",
+            "Calendarios de tu iPhone y iPad, incluidas las cuentas de Google y Outlook añadidas allí",
+            "Cualquier calendario al que te puedas suscribir con un enlace - cole, club deportivo, festivos"
+          ],
+          "shotAlt": "La pestaña Familia en el iPhone: mamá, papá, Mia y Leo, cada uno con su color y sus calendarios"
+        },
+        {
+          "title": "Listas compartidas",
+          "text": "La compra, la maleta y pendientes que cualquiera puede actualizar desde su iPhone.",
+          "points": [
+            "Marca elementos directamente en el iPad",
+            "Los pendientes aparecen en la pantalla y en el Top Shelf del Apple TV"
+          ],
+          "shotAlt": "La pestaña Listas en el iPhone con una lista de la compra y otra para la escapada de fin de semana"
+        },
+        {
+          "title": "Tareas y estrellas para los niños",
+          "text": "Tareas diarias para cada niño, los días que elijas.",
+          "points": [
+            "De una a tres estrellas por tarea y un recuento semanal que los niños pueden ver",
+            "Los niños marcan ellos mismos sus tareas en el iPad"
+          ],
+          "shotAlt": "La pestaña Niños en el iPhone: dar de comer al gato, hacer la cama, vaciar el lavavajillas y regar las plantas, con estrellas"
+        },
+        {
+          "title": "Más en la pantalla",
+          "text": "Lo que una familia consulta cada día, sin coger el móvil.",
+          "points": [
+            "El tiempo donde estés",
+            "Cuentas atrás para cumpleaños, viajes y la próxima visita de la abuela",
+            "Fotos familiares que cambian despacio detrás de la agenda",
+            "El modo noche atenúa la pantalla a la hora de dormir y la reactiva por la mañana"
+          ],
+          "shotAlt": "La pestaña Ajustes en el iPhone con el tema, el fondo de fotos y la atenuación de noche"
+        }
+      ]
+    },
+    "alwaysOn": {
+      "title": "Hecha para una pantalla siempre encendida",
+      "lede": "Kinboard está pensado para dejarlo funcionando todo el día, así que cuida de la pantalla por ti.",
+      "facts": [
+        {
+          "title": "Siempre activa",
+          "text": "Mantiene la pantalla encendida y se actualiza sola."
+        },
+        {
+          "title": "A continuación",
+          "text": "El siguiente evento siempre está arriba, con lo que falta para que empiece."
+        },
+        {
+          "title": "Top Shelf",
+          "text": "Los próximos eventos y listas en la pantalla de inicio del Apple TV."
+        },
+        {
+          "title": "Cuida el OLED",
+          "text": "Desplaza suavemente el diseño para proteger las pantallas OLED."
+        },
+        {
+          "title": "Se lee desde el sofá",
+          "text": "Letra grande y redondeada y alto contraste, compatible con “Texto en negrita” y “Aumentar contraste”."
+        },
+        {
+          "title": "Se atenúa de noche",
+          "text": "Para que la pantalla no ilumine la cocina a oscuras."
+        }
+      ],
+      "shotAlt": "Kinboard en un iPad: un reloj grande, el tiempo por horas, cuentas atrás, los eventos de hoy y de mañana, tareas y listas"
+    },
+    "privacy": {
+      "title": "Privacidad de serie",
+      "text": "Kinboard no tiene servidores propios ni analíticas. Todo se sincroniza a través del iCloud de tu familia - el desarrollador nunca ve tus calendarios, listas ni fotos.",
+      "points": [
+        "Sin cuentas que crear",
+        "Sin analíticas, sin anuncios, sin seguimiento",
+        "Tus datos se quedan en el iCloud de tu familia"
+      ],
+      "link": "Leer la política de privacidad"
+    },
+    "pricing": {
+      "title": "Prueba gratis y luego una sola compra",
+      "lede": "Pruébalo todo primero en tu propia pantalla. Si Kinboard se gana su sitio en la pared, quédatelo con una única compra.",
+      "trial": {
+        "title": "14 días gratis",
+        "text": "Todo está abierto desde el primer momento. Sin registro y sin nada que cancelar."
+      },
+      "free": {
+        "title": "Gratis tras la prueba",
+        "items": [
+          "El reloj",
+          "El tiempo",
+          "Cuentas atrás",
+          "Modo noche",
+          "Un calendario"
+        ]
+      },
+      "plus": {
+        "title": "Kinboard+",
+        "text": "Una compra única, sin suscripción.",
+        "items": [
+          "Todos los calendarios",
+          "Listas compartidas",
+          "Tareas y estrellas",
+          "El fondo de fotos",
+          "Invitaciones a la familia",
+          "El Top Shelf del Apple TV"
+        ],
+        "price": "{price} en el App Store de EE. UU. En otros países, el App Store muestra el precio en tu moneda.",
+        "family": "En Apple TV, iPad y iPhone, y para toda tu familia con En familia."
+      },
+      "kept": "Cuando termina la prueba no se borra nada de lo que añadiste: vuelve en cuanto desbloqueas Kinboard+."
+    },
+    "faq": {
+      "title": "Preguntas",
+      "items": [
+        {
+          "q": "¿Qué dispositivos necesito?",
+          "a": "Un Apple TV o un iPad para la pantalla familiar y, a ser posible, un iPhone para configurarlo y editarlo todo. También puedes configurarlo directamente en el iPad o el Apple TV, pero con el iPhone es más fácil. Kinboard requiere iOS 26, iPadOS 26 o tvOS 26."
+        },
+        {
+          "q": "¿Necesito una cuenta?",
+          "a": "No. Kinboard se sincroniza a través de iCloud, igual que tus Notas y Recordatorios. El desarrollador nunca ve tus calendarios, listas ni fotos."
+        },
+        {
+          "q": "¿Hay suscripción?",
+          "a": "No. Kinboard+ es una compra única, con una prueba gratuita de 14 días para que primero lo veas en tu propia pantalla. El reloj, el tiempo, las cuentas atrás, el modo noche y un calendario siguen siendo gratis después de la prueba."
+        },
+        {
+          "q": "¿Funciona con Google Calendar y Outlook?",
+          "a": "Sí. Los calendarios de tu iPhone o iPad aparecen en la pantalla, incluidas las cuentas de Google y Outlook añadidas allí, además de cualquier calendario al que te puedas suscribir con un enlace (ICS o webcal), como muchos calendarios escolares. Kinboard solo lee los calendarios y nunca los cambia."
+        },
+        {
+          "q": "¿Puede editarlo toda la familia?",
+          "a": "Sí. En tu iPhone, abre Familia → Invitar a la familia. Todas las personas que invites ven y editan las mismas listas, calendarios y cuentas atrás desde su propio iPhone, y los cambios aparecen en todas las pantallas en segundos."
+        },
+        {
+          "q": "¿Mi familia también tiene que comprarlo?",
+          "a": "No. Kinboard+ funciona con En familia: cómpralo una vez y se desbloquea para todos los miembros de tu grupo familiar de Apple, en Apple TV, iPad y iPhone."
+        },
+        {
+          "q": "¿Qué pasa cuando termina la prueba?",
+          "a": "El reloj, el tiempo, las cuentas atrás, el modo noche y un calendario siguen funcionando. Las listas, tareas, fotos y demás calendarios se guardan y vuelven en cuanto desbloqueas Kinboard+."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Dale a tu familia una pantalla",
+      "text": "Pruébalo todo gratis durante 14 días en el Apple TV o el iPad que ya tienes."
+    }
+  },
+  "support": {
+    "meta": {
+      "title": "Soporte de Kinboard",
+      "description": "Ayuda con Kinboard, la pantalla familiar para Apple TV, iPad y iPhone: primeros pasos, calendarios, el tiempo, Kinboard+ y contacto."
+    },
+    "title": "Soporte",
+    "lede": "Kinboard lo hace un único desarrollador independiente. Escribe cuando quieras - todos los mensajes se leen y se responden, normalmente en un plazo de dos días.",
+    "emailLabel": "Correo:",
+    "emailHint": "Indica tus dispositivos (Apple TV, iPad, iPhone) y qué esperabas ver.",
+    "start": {
+      "title": "Primeros pasos",
+      "steps": [
+        "Instala Kinboard en el Apple TV o el iPad que será la pantalla familiar, y en tu iPhone.",
+        "En el iPhone, añade a los miembros de la familia y elige los calendarios que quieres mostrar. Los cambios aparecen en todas las pantallas a través de iCloud.",
+        "Para que otros puedan editar listas y calendarios, abre Familia → Invitar a la familia en tu iPhone."
+      ]
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        {
+          "q": "Los eventos no aparecen en la pantalla.",
+          "a": "Asegúrate de que todos los dispositivos tienen la sesión iniciada con la misma cuenta de iCloud (o se han unido a tu familia con una invitación) y de que iCloud Drive está activado. Los calendarios de un iPhone se actualizan cuando se abre Kinboard en él y, de vez en cuando, en segundo plano."
+        },
+        {
+          "q": "¿Cómo añado un calendario de Google o Outlook?",
+          "a": "Añade la cuenta en Ajustes → Calendario → Cuentas del iPhone y luego elige sus calendarios en Kinboard. También puedes pegar el enlace de suscripción de un calendario (ICS o webcal)."
+        },
+        {
+          "q": "No se muestra el tiempo.",
+          "a": "Permite que Kinboard use tu ubicación: en el iPhone y el iPad, en Ajustes → Apps → Kinboard → Ubicación (Ajustes → Privacidad y seguridad → Localización en algunas versiones). En el Apple TV, pulsa Seleccionar en el mando y elige “Mostrar el tiempo local”."
+        },
+        {
+          "q": "¿Qué es gratis y qué incluye Kinboard+?",
+          "a": "Todo está abierto durante 14 días. Después, el reloj, el tiempo, las cuentas atrás, el modo noche y un calendario siguen siendo gratis. Kinboard+ es una compra única que desbloquea todos los calendarios, las listas compartidas, las tareas y estrellas, el fondo de fotos, las invitaciones a la familia y el Top Shelf del Apple TV. Cuando termina la prueba no se borra nada de lo que añadiste."
+        },
+        {
+          "q": "Compré Kinboard+ en otro dispositivo.",
+          "a": "Abre Kinboard+ en la parte superior de los ajustes de Kinboard y toca “Restaurar compras”. Con En familia, la compra aparece para todos los miembros de tu grupo familiar de Apple."
+        },
+        {
+          "q": "¿Cómo pido un reembolso?",
+          "a": "Los reembolsos los gestiona Apple en <a href=\"https://reportaproblem.apple.com\">reportaproblem.apple.com</a>."
+        }
+      ]
+    }
+  },
+  "privacy": {
+    "meta": {
+      "title": "Política de privacidad de Kinboard",
+      "description": "Cómo trata Kinboard tus datos: sin cuentas, sin analíticas, todo se queda en el iCloud de tu familia."
+    },
+    "title": "Política de privacidad",
+    "updatedLabel": "Última actualización:",
+    "updated": "7 de noviembre de 2026",
+    "lede": "Kinboard no tiene cuentas, ni servidores propios, ni analíticas, ni anuncios. El desarrollador nunca recibe tus calendarios, listas, fotos ni tu ubicación.",
+    "sections": [
+      {
+        "title": "Dónde están tus datos",
+        "paragraphs": [
+          "Todo lo que configuras en Kinboard - miembros de la familia, calendarios, listas, tareas, cuentas atrás, fotos y ajustes - se guarda en tus dispositivos y en tu propia cuenta de iCloud mediante CloudKit de Apple. Cuando invitas a miembros de la familia, los mismos datos se comparten con las personas que invitas, a través de sus cuentas de iCloud. El desarrollador no puede verlos ni acceder a ellos."
+        ],
+        "points": []
+      },
+      {
+        "title": "Calendarios",
+        "paragraphs": [],
+        "points": [
+          "Con tu permiso, Kinboard en el iPhone o el iPad lee los calendarios que eliges y copia sus próximos eventos en tu iCloud para que tu pantalla familiar pueda mostrarlos. Kinboard nunca cambia ni elimina eventos.",
+          "Tu dispositivo descarga los enlaces de calendario que añades (ICS o webcal) directamente del proveedor del calendario."
+        ]
+      },
+      {
+        "title": "Ubicación y tiempo",
+        "paragraphs": [
+          "Para mostrar el tiempo local, Kinboard pide tu ubicación aproximada. Solo se usa en tu dispositivo para solicitar una previsión a Apple Tiempo (WeatherKit). Kinboard no guarda ni comparte tu ubicación."
+        ],
+        "points": []
+      },
+      {
+        "title": "Fotos",
+        "paragraphs": [],
+        "points": [
+          "Las fotos familiares que añades se guardan en tu iCloud para que todas las pantallas familiares puedan mostrarlas.",
+          "Si eliges un álbum de la app Fotos, sus imágenes solo se leen en ese dispositivo y nunca se suben."
+        ]
+      },
+      {
+        "title": "Compras",
+        "paragraphs": [
+          "La prueba gratuita, la compra de Kinboard+ y las tres propinas opcionales de «Propinas» las gestiona Apple a través del App Store. Las propinas no desbloquean nada; son solo una forma de apoyar al desarrollador. Kinboard solo sabe si una compra se completó y si Kinboard+ está activo; nunca ve tus datos de pago."
+        ],
+        "points": []
+      },
+      {
+        "title": "Diagnósticos",
+        "paragraphs": [
+          "En iPhone y iPad, iOS y iPadOS pueden entregar a Kinboard informes sobre los cierres y el rendimiento de la app (Apple MetricKit). Los informes describen cómo funciona la app y no contienen calendarios, listas, fotos ni ubicación. El Apple TV no ofrece estos informes."
+        ],
+        "points": [
+          "Los informes se quedan en tu dispositivo: como máximo cinco de cada tipo, durante no más de siete días, y quedan excluidos de las copias de seguridad.",
+          "Solo llegan al desarrollador si activas «Adjuntar diagnósticos al correo» (desactivado por omisión) y envías tú mismo el correo desde «Escribir al desarrollador». Se envía a <a href=\"mailto:{supportemail}\">{supportemail}</a>.",
+          "Ese correo incluye además el identificador del modelo del dispositivo, la versión del sistema, la versión de la app, el idioma y la región de la app, y si Kinboard+ está activo. Nunca incluye el nombre del dispositivo ni datos de tu familia.",
+          "El desarrollador usa los informes solo para corregir problemas y los elimina cuando ya no los necesita."
+        ]
+      },
+      {
+        "title": "Niños",
+        "paragraphs": [
+          "Kinboard es una app familiar y no recoge datos personales de nadie, tampoco de los niños."
+        ],
+        "points": []
+      },
+      {
+        "title": "Seguimiento",
+        "paragraphs": [
+          "Kinboard no te rastrea entre apps ni sitios web y no contiene código de analíticas ni de publicidad de terceros. Este sitio web no usa cookies y no carga nada de otros servidores; solo recuerda en tu navegador si elegiste el aspecto claro u oscuro."
+        ],
+        "points": []
+      },
+      {
+        "title": "Eliminar tus datos",
+        "paragraphs": [
+          "Elimina la app de tus dispositivos y después borra sus datos de iCloud en Ajustes → tu nombre → iCloud → Gestionar almacenamiento de la cuenta → Kinboard. Los miembros que se unieron a tu familia pueden salir de ella en cualquier momento desde Kinboard en su iPhone."
+        ],
+        "points": []
+      },
+      {
+        "title": "Cambios y contacto",
+        "paragraphs": [
+          "Si esta política cambia, la nueva versión se publicará en esta página con una fecha nueva. Preguntas sobre privacidad: <a href=\"mailto:{privacyemail}\">{privacyemail}</a>."
+        ],
+        "points": []
+      }
+    ]
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "text": "Esta página no existe. Puede que se haya movido.",
+    "back": "Ir a la página de inicio"
+  },
+  "jsonld": {
+    "description": "Kinboard convierte el Apple TV o el iPad que ya tienes en una pantalla familiar: los calendarios de todos, listas compartidas, tareas con estrellas para los niños, cuentas atrás, el tiempo y fotos familiares, todo editable desde cualquier iPhone.",
+    "plusDescription": "Compra única dentro de la app, compatible con En familia"
+  }
+}

@@ -1,332 +1,242 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kinboard — the family screen you already own</title>
-<meta name="description" content="Turn your Apple TV or an old iPad into a family calendar and command center. One purchase. No account. No subscription.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --paper: #f6f1e7;
-    --paper-2: #efe7d8;
-    --ink: #1d1b26;
-    --ink-soft: #5b5766;
-    --accent: #d2603a;
-    --accent-ink: #fff;
-    --tv: #14131c;
-    --line: #ddd3c1;
-    --c1: #e07a5f; /* mom */
-    --c2: #3d8bbf; /* dad */
-    --c3: #81b29a; /* kid 1 */
-    --c4: #e9b949; /* kid 2 */
-    --radius: 18px;
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0; background: var(--paper); color: var(--ink);
-    font: 17px/1.55 Inter, -apple-system, system-ui, sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
-  h1, h2, h3 { font-family: Fraunces, Georgia, serif; font-weight: 600; letter-spacing: -0.01em; margin: 0; }
-  a { color: inherit; }
-  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
-
-  /* nav */
-  nav { display: flex; align-items: center; justify-content: space-between; padding: 22px 0; }
-  .logo { font-family: Fraunces, serif; font-weight: 700; font-size: 22px; display: flex; gap: 10px; align-items: center; text-decoration: none; }
-  .logo-mark { width: 26px; height: 26px; border-radius: 7px; background: var(--ink); display: grid; grid-template-columns: 1fr 1fr; gap: 3px; padding: 5px; }
-  .logo-mark i { border-radius: 2px; }
-  .logo-mark i:nth-child(1){background:var(--c1)} .logo-mark i:nth-child(2){background:var(--c2)}
-  .logo-mark i:nth-child(3){background:var(--c3)} .logo-mark i:nth-child(4){background:var(--c4)}
-  .btn { display: inline-block; background: var(--accent); color: var(--accent-ink); text-decoration: none; font-weight: 600;
-         padding: 12px 22px; border-radius: 999px; border: 0; cursor: pointer; font: inherit; font-weight: 600;
-         transition: transform .15s ease, box-shadow .15s ease; box-shadow: 0 6px 18px -8px rgba(210,96,58,.7); }
-  .btn:hover { transform: translateY(-1px); box-shadow: 0 10px 24px -10px rgba(210,96,58,.8); }
-  .btn.ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--ink); }
-
-  /* hero */
-  .hero { padding: 40px 0 30px; text-align: center; }
-  .eyebrow { display: inline-block; font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
-             color: var(--accent); background: #f3dccf; padding: 6px 12px; border-radius: 999px; }
-  .hero h1 { font-size: clamp(40px, 6vw, 68px); line-height: 1.04; margin: 20px auto 18px; max-width: 14ch; }
-  .hero h1 em { font-style: italic; color: var(--accent); }
-  .hero p.lead { font-size: 20px; color: var(--ink-soft); max-width: 40ch; margin: 0 auto 28px; }
-  .hero .ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-  .fine { font-size: 14px; color: var(--ink-soft); margin-top: 14px; }
-
-  /* TV mockup */
-  .stage { position: relative; margin: 56px auto 0; max-width: 980px; }
-  .tv { background: #0b0a10; border-radius: 22px; padding: 14px; box-shadow: 0 40px 80px -40px rgba(29,27,38,.55), 0 0 0 1px #2a2834; }
-  .screen { aspect-ratio: 16/9; border-radius: 10px; overflow: hidden; position: relative; color: #fff;
-            background:
-              radial-gradient(120% 90% at 85% 10%, rgba(233,185,73,.35), transparent 55%),
-              radial-gradient(100% 80% at 10% 100%, rgba(61,139,191,.45), transparent 60%),
-              linear-gradient(160deg, #2b3a4a, #1a1f2b 60%, #241c22);
-            display: grid; grid-template-columns: 1.05fr 1.6fr 1fr; gap: 1.6%; padding: 3%; text-align: left;
-            font-size: clamp(7px, 1.25vw, 13px); }
-  .screen::after { /* faux photo vignette */ content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.35)); pointer-events: none; }
-  .panel { position: relative; z-index: 1; background: rgba(15,14,22,.42); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
-           border: 1px solid rgba(255,255,255,.08); border-radius: 1.2em; padding: 1.2em 1.3em; }
-  .clock { font-family: Fraunces, serif; font-size: 4.6em; line-height: 1; font-weight: 600; }
-  .date { opacity: .8; margin-top: .3em; font-size: 1.15em; }
-  .wx { display: flex; align-items: center; gap: .6em; margin-top: 1.3em; font-size: 1.1em; }
-  .wx b { font-size: 2.1em; font-family: Fraunces, serif; font-weight: 600; }
-  .wx-row { display: flex; justify-content: space-between; margin-top: .9em; opacity: .85; font-size: .95em; }
-  .wx-row span { display: grid; text-align: center; gap: .2em; }
-  .count { margin-top: 1.3em; padding-top: 1em; border-top: 1px solid rgba(255,255,255,.12); }
-  .count b { font-family: Fraunces, serif; font-size: 1.9em; color: var(--c4); }
-  .ptitle { font-size: .82em; letter-spacing: .1em; text-transform: uppercase; opacity: .65; margin-bottom: .8em; font-weight: 600; }
-  .ev { display: grid; grid-template-columns: 4.2em .35em 1fr; gap: .7em; align-items: center; padding: .55em 0; border-bottom: 1px solid rgba(255,255,255,.07); }
-  .ev:last-child { border-bottom: 0; }
-  .ev time { opacity: .7; font-variant-numeric: tabular-nums; }
-  .ev i { height: 1.9em; border-radius: 3px; }
-  .ev small { display: block; opacity: .6; font-size: .85em; }
-  .who { display: flex; gap: .5em; margin-top: .9em; flex-wrap: wrap; }
-  .who span { display: inline-flex; align-items: center; gap: .35em; font-size: .85em; opacity: .85; }
-  .who span::before { content: ""; width: .7em; height: .7em; border-radius: 50%; background: var(--c); }
-  .li { display: flex; gap: .6em; align-items: center; padding: .4em 0; }
-  .li .box { width: 1.05em; height: 1.05em; border-radius: .3em; border: 1.5px solid rgba(255,255,255,.55); flex: none; }
-  .li.done { opacity: .45; text-decoration: line-through; }
-  .li.done .box { background: var(--c3); border-color: var(--c3); }
-  .chore { display: flex; justify-content: space-between; padding: .35em 0; }
-  .chore em { font-style: normal; color: var(--c4); }
-  .stand { width: 22%; height: 18px; margin: 0 auto; background: linear-gradient(#22202b, #0f0e14); border-radius: 0 0 8px 8px; }
-
-  .ipad, .tag { z-index: 5; }
-  @media (max-width: 1040px) { .ipad { right: 1%; } .tag { left: 2%; } }
-  .ipad { position: absolute; right: -2%; bottom: -8%; width: 27%; background: #111; border-radius: 16px; padding: 7px;
-          box-shadow: 0 30px 50px -25px rgba(0,0,0,.6); transform: rotate(3deg); }
-  .ipad .screen { aspect-ratio: 4/3; grid-template-columns: 1fr; padding: 7%; gap: 5%; font-size: clamp(5px, .75vw, 8.5px); }
-  .tag { position: absolute; left: -1%; bottom: 6%; background: #fff; color: var(--ink); border-radius: 12px; padding: 10px 14px;
-         font-size: 14px; box-shadow: 0 16px 30px -18px rgba(0,0,0,.45); display: flex; gap: 10px; align-items: center; transform: rotate(-2deg); }
-  .tag b { font-family: Fraunces, serif; }
-
-  /* sections */
-  section { padding: 90px 0; }
-  .sec-head { max-width: 640px; margin-bottom: 44px; }
-  .sec-head h2 { font-size: clamp(30px, 4vw, 44px); line-height: 1.1; }
-  .sec-head p { color: var(--ink-soft); font-size: 19px; margin-top: 14px; }
-
-  .problem { background: var(--ink); color: var(--paper); }
-  .problem .sec-head p { color: #b9b3c4; }
-  .price-cmp { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-  .pc { border-radius: var(--radius); padding: 26px; background: #262433; }
-  .pc h3 { font-size: 20px; }
-  .pc .big { font-family: Fraunces, serif; font-size: 44px; margin: 14px 0 4px; }
-  .pc p { margin: 0; color: #b9b3c4; font-size: 15px; }
-  .pc.us { background: var(--accent); }
-  .pc.us p { color: #fde6dc; }
-  .note { font-size: 13px; color: #8e889b; margin-top: 18px; }
-
-  .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-  .f { background: #fffaf1; border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; }
-  .f .ic { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; font-size: 22px; margin-bottom: 16px; background: var(--paper-2); }
-  .f h3 { font-size: 21px; margin-bottom: 8px; }
-  .f p { margin: 0; color: var(--ink-soft); font-size: 16px; }
-
-  .how { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; counter-reset: s; }
-  .how div { counter-increment: s; }
-  .how div::before { content: counter(s); font-family: Fraunces, serif; font-size: 54px; color: var(--accent); line-height: 1; display: block; margin-bottom: 8px; }
-  .how h3 { font-size: 22px; margin-bottom: 6px; }
-  .how p { margin: 0; color: var(--ink-soft); }
-
-  /* launch */
-  .wl { background: var(--paper-2); }
-  .wl-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 50px; align-items: start; }
-  .perk { display: flex; gap: 12px; margin: 16px 0; }
-  .perk span { color: var(--accent); font-weight: 700; }
-  .card { background: #fffaf1; border: 1px solid var(--line); border-radius: 22px; padding: 30px; }
-  .card h3 { font-size: 24px; margin-bottom: 10px; }
-  .card p { color: var(--ink-soft); margin: 0 0 12px; }
-  footer nav { padding: 0; gap: 18px; }
-
-  .faq details { border-bottom: 1px solid var(--line); padding: 18px 0; }
-  .faq summary { cursor: pointer; font-family: Fraunces, serif; font-size: 21px; font-weight: 600; list-style: none; display: flex; justify-content: space-between; }
-  .faq summary::after { content: "+"; color: var(--accent); }
-  .faq details[open] summary::after { content: "–"; }
-  .faq p { color: var(--ink-soft); margin: 10px 0 0; max-width: 70ch; }
-
-  footer { padding: 40px 0 60px; color: var(--ink-soft); font-size: 14px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
-
-  @media (max-width: 860px) {
-    .price-cmp, .features, .how, .wl-grid { grid-template-columns: 1fr; }
-    .screen { grid-template-columns: 1fr 1.5fr; }
-    .screen .panel:nth-child(3) { display: none; }
-    .ipad, .tag { display: none; }
-    section { padding: 64px 0; }
-  }
-  @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#1a1f2b" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f8f3ea" media="(prefers-color-scheme: light)">
+<title>Kinboard - the family screen for Apple TV and iPad</title>
+<meta name="description" content="Turn the Apple TV or iPad you already own into the family screen: everyone's calendars, shared lists, kids' chores and the weather. 14 days free.">
+<link rel="canonical" href="https://kinboard-family.app/">
+<link rel="alternate" hreflang="en" href="https://kinboard-family.app/">
+<link rel="alternate" hreflang="ru" href="https://kinboard-family.app/ru/">
+<link rel="alternate" hreflang="ar" href="https://kinboard-family.app/ar/">
+<link rel="alternate" hreflang="de" href="https://kinboard-family.app/de/">
+<link rel="alternate" hreflang="es" href="https://kinboard-family.app/es/">
+<link rel="alternate" hreflang="fr" href="https://kinboard-family.app/fr/">
+<link rel="alternate" hreflang="hi" href="https://kinboard-family.app/hi/">
+<link rel="alternate" hreflang="id" href="https://kinboard-family.app/id/">
+<link rel="alternate" hreflang="it" href="https://kinboard-family.app/it/">
+<link rel="alternate" hreflang="ja" href="https://kinboard-family.app/ja/">
+<link rel="alternate" hreflang="ko" href="https://kinboard-family.app/ko/">
+<link rel="alternate" hreflang="pt-BR" href="https://kinboard-family.app/pt-br/">
+<link rel="alternate" hreflang="tr" href="https://kinboard-family.app/tr/">
+<link rel="alternate" hreflang="uk" href="https://kinboard-family.app/uk/">
+<link rel="alternate" hreflang="vi" href="https://kinboard-family.app/vi/">
+<link rel="alternate" hreflang="zh-Hans" href="https://kinboard-family.app/zh-hans/">
+<link rel="alternate" hreflang="zh-Hant" href="https://kinboard-family.app/zh-hant/">
+<link rel="alternate" hreflang="x-default" href="https://kinboard-family.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kinboard">
+<meta property="og:title" content="Kinboard - the family screen for Apple TV and iPad">
+<meta property="og:description" content="Everyone's calendars, shared lists, kids' chores and the weather on the screen you already own. No account, no subscription.">
+<meta property="og:url" content="https://kinboard-family.app/">
+<meta property="og:image" content="https://kinboard-family.app/og/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Kinboard logo: the family screen for Apple TV and iPad">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="id_ID">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="uk_UA">
+<meta property="og:locale:alternate" content="vi_VN">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kinboard - the family screen for Apple TV and iPad">
+<meta name="twitter:description" content="Everyone's calendars, shared lists, kids' chores and the weather on the screen you already own. No account, no subscription.">
+<meta name="twitter:image" content="https://kinboard-family.app/og/og-en.png">
+<meta name="twitter:image:alt" content="The Kinboard logo: the family screen for Apple TV and iPad">
+<meta name="apple-itunes-app" content="app-id=6831690840">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/icon.png">
+<link rel="stylesheet" href="/assets/home.42bad389da.css">
+<script src="/assets/theme-init.1862146f72.js"></script>
+<script type="module" src="/assets/menus.184c7bd90c.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"Kinboard","alternateName":"Kinboard: Family Calendar","url":"https://kinboard-family.app/","inLanguage":"en","description":"Kinboard turns the Apple TV or iPad you already own into a family screen: everyone's calendars, shared lists, kids' chores with stars, countdowns, weather and family photos, edited from any iPhone.","image":"https://kinboard-family.app/icon.png","screenshot":"https://kinboard-family.app/assets/tv-1-en.77ba0195c1.webp","operatingSystem":"iOS 26, iPadOS 26, tvOS 26","applicationCategory":"LifestyleApplication","installUrl":"https://apps.apple.com/app/id6831690840","downloadUrl":"https://apps.apple.com/app/id6831690840","author":{"@type":"Person","name":"Ramiz Kichibekov"},"offers":[{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://apps.apple.com/app/id6831690840"},{"@type":"Offer","name":"Kinboard+","description":"One-time in-app purchase with Family Sharing","price":"19.99","priceCurrency":"USD","url":"https://apps.apple.com/app/id6831690840"}]}</script>
 </head>
-<body>
-
-<header class="wrap">
-  <nav>
-    <a class="logo" href="/"><span class="logo-mark"><i></i><i></i><i></i><i></i></span>Kinboard</a>
-    <a class="btn" href="#launch">Coming soon</a>
-  </nav>
-</header>
-
-<main>
-  <div class="wrap hero">
-    <span class="eyebrow">For Apple TV &amp; iPad</span>
-    <h1>The family screen <em>you already own.</em></h1>
-    <p class="lead">Everyone's calendar, the grocery list, kids' chores, weather and your photos — on the Apple TV in the living room or the old iPad on the kitchen wall.</p>
-    <div class="ctas">
-      <a class="btn" href="#launch">Coming to the App Store</a>
-      <a class="btn ghost" href="#how">How it works</a>
+<body class="p-home">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="bar">
+    <a class="brand" href="/" aria-current="page"><svg class="logo" width="30" height="30" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="8" fill="#1a1f2b"/><rect x="2" y="2" width="28" height="28" rx="6.5" fill="#fff" fill-opacity=".1"/><rect x="6.5" y="6.5" width="8.5" height="8.5" rx="2.3" fill="#E07A5F"/><rect x="17" y="6.5" width="8.5" height="8.5" rx="2.3" fill="#3D8BBF"/><rect x="6.5" y="17" width="8.5" height="8.5" rx="2.3" fill="#81B29A"/><rect x="17" y="17" width="8.5" height="8.5" rx="2.3" fill="#E9B949"/></svg><span>Kinboard</span></a>
+    <nav class="topnav" aria-label="Language · Appearance">
+    <div class="menu-wrap lang-menu">
+      <button class="chip menu-btn" type="button" aria-expanded="false" aria-controls="lang-list"><span class="vh">Language: English</span> <svg class="globe" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.25"/><path d="M1.75 8h12.5M8 1.75c1.8 1.7 2.7 3.8 2.7 6.25S9.8 12.55 8 14.25M8 1.75C6.2 3.45 5.3 5.55 5.3 8s.9 4.55 2.7 6.25"/></svg><span aria-hidden="true">EN</span><svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 6.5 3 3 3-3"/></svg></button>
+      <ul class="menu" id="lang-list" aria-label="Language"><li><a class="menu-item" tabindex="-1" href="/" hreflang="en" lang="en" aria-current="page"><span class="label">English</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/ru/" hreflang="ru" lang="ru"><span class="label">Русский</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/ar/" hreflang="ar" lang="ar"><span class="label">العربية</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/de/" hreflang="de" lang="de"><span class="label">Deutsch</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/es/" hreflang="es" lang="es"><span class="label">Español</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/fr/" hreflang="fr" lang="fr"><span class="label">Français</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/hi/" hreflang="hi" lang="hi"><span class="label">हिन्दी</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/id/" hreflang="id" lang="id"><span class="label">Bahasa Indonesia</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/it/" hreflang="it" lang="it"><span class="label">Italiano</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/ja/" hreflang="ja" lang="ja"><span class="label">日本語</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/ko/" hreflang="ko" lang="ko"><span class="label">한국어</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/pt-br/" hreflang="pt-BR" lang="pt-BR"><span class="label">Português (Brasil)</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/tr/" hreflang="tr" lang="tr"><span class="label">Türkçe</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/uk/" hreflang="uk" lang="uk"><span class="label">Українська</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/vi/" hreflang="vi" lang="vi"><span class="label">Tiếng Việt</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/zh-hans/" hreflang="zh-Hans" lang="zh-Hans"><span class="label">简体中文</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li><li><a class="menu-item" tabindex="-1" href="/zh-hant/" hreflang="zh-Hant" lang="zh-Hant"><span class="label">繁體中文</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></a></li></ul>
     </div>
-    <p class="fine">14 days free, then one purchase. No account. No subscription. Your data stays in your iCloud.</p>
+    <div class="menu-wrap theme-menu" data-theme-menu>
+      <button class="chip menu-btn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="theme-list"><span class="vh">Appearance:</span> <span class="tv tv-auto"><svg class="ico" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="5.75"/><path d="M8 2.25a5.75 5.75 0 0 0 0 11.5Z" fill="currentColor"/></svg><span class="tvl">Auto</span></span><span class="tv tv-light"><svg class="ico" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="2.75"/><path d="M8 1.5v1.25M8 13.25v1.25M1.5 8h1.25M13.25 8h1.25M3.4 3.4l.9.9M11.7 11.7l.9.9M3.4 12.6l.9-.9M11.7 4.3l.9-.9"/></svg><span class="tvl">Light</span></span><span class="tv tv-dark"><svg class="ico" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13.25 9.6A5.5 5.5 0 0 1 6.4 2.75a5.5 5.5 0 1 0 6.85 6.85Z"/></svg><span class="tvl">Dark</span></span><svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 6.5 3 3 3-3"/></svg></button>
+      <div class="menu" id="theme-list" role="menu" aria-label="Appearance"><button class="menu-item" type="button" role="menuitemradio" aria-checked="true" tabindex="-1" data-value="auto"><svg class="ico" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="5.75"/><path d="M8 2.25a5.75 5.75 0 0 0 0 11.5Z" fill="currentColor"/></svg><span class="label">Auto</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></button><button class="menu-item" type="button" role="menuitemradio" aria-checked="false" tabindex="-1" data-value="light"><svg class="ico" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="2.75"/><path d="M8 1.5v1.25M8 13.25v1.25M1.5 8h1.25M13.25 8h1.25M3.4 3.4l.9.9M11.7 11.7l.9.9M3.4 12.6l.9-.9M11.7 4.3l.9-.9"/></svg><span class="label">Light</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></button><button class="menu-item" type="button" role="menuitemradio" aria-checked="false" tabindex="-1" data-value="dark"><svg class="ico" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13.25 9.6A5.5 5.5 0 0 1 6.4 2.75a5.5 5.5 0 1 0 6.85 6.85Z"/></svg><span class="label">Dark</span><svg class="tick" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8.5 3 3 6-7"/></svg></button></div>
+    </div>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <p class="eyebrow">For Apple TV, iPad and iPhone</p>
+      <h1 id="hero-title">The family screen you already own</h1>
+      <p class="sub">Everyone's day, the grocery list, the kids' chores and the weather - on the Apple TV in the living room or the iPad on the kitchen wall. Readable from across the room, and always on.</p>
+      <div class="cta"><a class="badge" href="https://apps.apple.com/app/id6831690840"><img class="b-black" src="/assets/badge-black-en.a26fc5b383.svg" alt="Download on the App Store" width="144" height="48"><img class="b-white" src="/assets/badge-white-en.056de2f81f.svg" alt="Download on the App Store" width="144" height="48"></a></div>
+      <p class="note">14 days free, then one purchase. No account, no subscription.<br><span class="req">Requires iOS 26, iPadOS 26 or tvOS 26.</span></p>
+    </div>
+    <figure class="frame-tv">
+      <img src="/assets/tv-1-en.77ba0195c1.webp" alt="Kinboard on an Apple TV: the clock, what's up next, the weather, countdowns, today's and tomorrow's events, the kids' chores and the grocery list" width="1600" height="900" fetchpriority="high" decoding="async">
+    </figure>
+  </div>
+</section>
 
-    <div class="stage" aria-label="Preview of Kinboard on an Apple TV and an iPad">
-      <div class="tv">
-        <div class="screen">
-          <div class="panel">
-            <div class="clock" id="clock">7:42</div>
-            <div class="date" id="date">Friday, November 6</div>
-            <div class="wx"><span aria-hidden="true">⛅️</span><b>12°</b><span>Partly cloudy<br><small style="opacity:.7">H 15° · L 6°</small></span></div>
-            <div class="wx-row"><span>9am<b>☀️</b>10°</span><span>12pm<b>⛅️</b>14°</span><span>3pm<b>🌦</b>13°</span><span>6pm<b>🌙</b>9°</span></div>
-            <div class="count">
-              <div class="ptitle" style="margin:0">Countdown</div>
-              <b>12</b> days to Grandma's visit
-            </div>
-          </div>
-          <div class="panel">
-            <div class="ptitle">Today</div>
-            <div class="ev"><time>8:00</time><i style="background:var(--c3)"></i><div>School drop-off<small>Mia · Leo</small></div></div>
-            <div class="ev"><time>10:30</time><i style="background:var(--c2)"></i><div>Dentist<small>Dad</small></div></div>
-            <div class="ev"><time>15:45</time><i style="background:var(--c4)"></i><div>Swimming practice<small>Leo · pick-up: Mom</small></div></div>
-            <div class="ev"><time>17:00</time><i style="background:var(--c1)"></i><div>Yoga<small>Mom</small></div></div>
-            <div class="ev"><time>19:30</time><i style="background:linear-gradient(var(--c1),var(--c2),var(--c3),var(--c4))"></i><div>Pizza &amp; movie night<small>Everyone</small></div></div>
-            <div class="who"><span style="--c:var(--c1)">Mom</span><span style="--c:var(--c2)">Dad</span><span style="--c:var(--c3)">Mia</span><span style="--c:var(--c4)">Leo</span></div>
-          </div>
-          <div class="panel">
-            <div class="ptitle">Groceries</div>
-            <div class="li done"><span class="box"></span>Milk</div>
-            <div class="li"><span class="box"></span>Apples</div>
-            <div class="li"><span class="box"></span>Pizza dough</div>
-            <div class="li done"><span class="box"></span>Coffee</div>
-            <div class="ptitle" style="margin-top:1.2em">Chores</div>
-            <div class="chore">Feed the cat <em>Mia ★</em></div>
-            <div class="chore">Empty dishwasher <em>Leo</em></div>
-          </div>
-        </div>
-      </div>
-      <div class="stand"></div>
+<section class="how" id="how" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="how-title">One screen on the wall, the remote in your pocket</h2>
+      <p class="lede">No extra gadget to buy. Kinboard uses the Apple devices your family already has.</p>
+    </div>
+    <ol class="steps">
+      <li class="card"><span class="num" aria-hidden="true">1</span><h3>The screen</h3><p>An Apple TV in the living room or an iPad on the kitchen wall. It shows the family's day, keeps itself awake and refreshes on its own.</p></li><li class="card"><span class="num" aria-hidden="true">2</span><h3>The remote</h3><p>Your iPhone. Its four tabs - Lists, Chores, Family and Settings - are where you add people, pick calendars and tick things off.</p></li><li class="card"><span class="num" aria-hidden="true">3</span><h3>The same iCloud</h3><p>Install Kinboard on both with the same iCloud account and the screen fills in by itself. Invite your family, and everyone edits from their own iPhone.</p></li>
+    </ol>
+    <figure class="ipad">
+      <img src="/assets/ipad-1-en.cda184cbf0.webp" alt="Kinboard on an iPad on the wall, with the tabs Board, Lists, Chores, Family and Settings at the top" width="1400" height="1050" loading="lazy" decoding="async">
+    </figure>
+  </div>
+</section>
 
-      <div class="ipad" aria-hidden="true">
-        <div class="screen">
-          <div class="panel">
-            <div class="clock" id="clock2" style="font-size:3.4em">7:42</div>
-            <div class="date">Fri · 12° ⛅️</div>
-          </div>
-          <div class="panel">
-            <div class="ptitle">Groceries</div>
-            <div class="li"><span class="box"></span>Apples</div>
-            <div class="li"><span class="box"></span>Pizza dough</div>
-            <div class="li done"><span class="box"></span>Milk</div>
-          </div>
-        </div>
+<section class="features" id="features" aria-labelledby="features-title">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="features-title">Everything the family needs at a glance</h2>
+      <p class="lede">Set it up once on your iPhone. Changes appear on every screen within seconds.</p>
+    </div>
+    <article class="feature">
+      <figure class="phone"><img src="/assets/iphone-1-en.88430e33d5.webp" alt="The Family tab on iPhone: Mom, Dad, Mia and Leo, each in their own color, with their calendars" width="600" height="1304" loading="lazy" decoding="async"></figure>
+      <div class="feature-copy">
+        <span class="dot dot-1" aria-hidden="true"></span>
+        <h3>Everyone's calendar</h3>
+        <p>Each person gets their own color, so you can tell at a glance who is where.</p>
+        <ul class="ticks"><li><svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4.5 10.5 3.5 3.5 7.5-8"/></svg><span>Today and tomorrow side by side, with what's happening right now on top</span></li><li><svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4.5 10.5 3.5 3.5 7.5-8"/></svg><span>Calendars from your iPhone and iPad, including Google and Outlook accounts added there</span></li><li><svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4.5 10.5 3.5 3.5 7.5-8"/></svg><span>Any calendar you can subscribe to by link - school, sports club, holidays</span></li></ul>
       </div>
-      <div class="tag"><span aria-hidden="true">📱</span><span><b>Edit from any iPhone</b><br>Changes appear on every screen</span></div>
+    </article><article class="feature">
+      <figure class="phone"><img src="/assets/iphone-2-en.630e6c2ae3.webp" alt="The Lists tab on iPhone with a grocery list and a weekend trip list" width="600" height="1304" loading="lazy" decoding="async"></figure>
+      <div class="feature-copy">
+        <span class="dot dot-2" aria-hidden="true"></span>
+        <h3>Shared lists</h3>
+        <p>Groceries, packing and to-dos that anyone can update from their iPhone.</p>
+        <ul class="ticks"><li><svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4.5 10.5 3.5 3.5 7.5-8"/></svg><span>Tick items off right on the iPad</span></li><li><svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4.5 10.5 3.5 3.5 7.5-8"/></svg><span>Open items appear on the screen and on the Apple TV Top Shelf</span></li></ul>
+      </div>
+    </article><article class="feature">
+      <figure class="phone"><img src="/assets/iphone-3-en.2cf961f87d.webp" alt="The Chores tab on iPhone: feed the cat, make the bed, empty the dishwasher and water the plants, with stars" width="600" height="1304" loading="lazy" decoding="async"></figure>
+      <div class="feature-copy">
+        <span class="dot dot-3" aria-hidden="true"></span>
+        <h3>Kids' chores and stars</h3>
+        <p>Daily jobs for each child, on the days you choose.</p>
+        <ul class="ticks"><li><svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4.5 10.5 3.5 3.5 7.5-8"/></svg><span>One to three stars per chore, and a weekly star count kids can see</span></li><li><svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4.5 10.5 3.5 3.5 7.5-8"/></svg><span>Kids mark chores done themselves on the iPad</span></li></ul>
+      </div>
+    </article><article class="feature">
+      <figure class="phone"><img src="/assets/iphone-4-en.25cb0b281d.webp" alt="The Settings tab on iPhone with the theme, the photo background and dimming at night" width="600" height="1304" loading="lazy" decoding="async"></figure>
+      <div class="feature-copy">
+        <span class="dot dot-4" aria-hidden="true"></span>
+        <h3>More on the screen</h3>
+        <p>The things a family checks every day, without picking up a phone.</p>
+        <ul class="ticks"><li><svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4.5 10.5 3.5 3.5 7.5-8"/></svg><span>Weather for where you are</span></li><li><svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4.5 10.5 3.5 3.5 7.5-8"/></svg><span>Countdowns to birthdays, trips and the next visit from Grandma</span></li><li><svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4.5 10.5 3.5 3.5 7.5-8"/></svg><span>Family photos slowly changing behind the schedule</span></li><li><svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4.5 10.5 3.5 3.5 7.5-8"/></svg><span>Night mode dims the screen at bedtime and wakes it in the morning</span></li></ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="always" aria-labelledby="always-title">
+  <div class="wrap always-in">
+    <div>
+      <div class="head">
+        <h2 id="always-title">Made for a screen that stays on</h2>
+        <p class="lede">Kinboard is meant to be left running all day, so it takes care of the screen for you.</p>
+      </div>
+      <ul class="facts">
+        <li><svg class="ico24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg><div><h3>Always awake</h3><p>Keeps the screen on and refreshes itself.</p></div></li><li><svg class="ico24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5"/><path d="M9.5 2.5h5"/></svg><div><h3>Up next</h3><p>The next event is always at the top, with how long until it starts.</p></div></li><li><svg class="ico24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="4" width="19" height="12.5" rx="2"/><path d="M8 20h8"/><path d="M6 7.5h5"/></svg><div><h3>Top Shelf</h3><p>The next events and lists right on the Apple TV Home Screen.</p></div></li><li><svg class="ico24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="13" height="13" rx="2.5"/><rect x="8" y="8" width="13" height="13" rx="2.5"/></svg><div><h3>Kind to OLED</h3><p>Gently shifts the layout to protect OLED screens.</p></div></li><li><svg class="ico24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 19 8 5l5 14"/><path d="M4.8 14h6.4"/><path d="M15 12.5a3 3 0 1 1 0 4.5"/><path d="M21 10v9"/></svg><div><h3>Readable from the sofa</h3><p>Big rounded type and high contrast, with Bold Text and Increase Contrast support.</p></div></li><li><svg class="ico24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg><div><h3>Dims at night</h3><p>So the screen doesn't light up a dark kitchen.</p></div></li>
+      </ul>
+    </div>
+    <figure class="ipad tall">
+      <img src="/assets/ipad-2-en.b727b83bb5.webp" alt="Kinboard on an iPad: a large clock, the weather by the hour, countdowns, today's and tomorrow's events, chores and lists" width="900" height="1200" loading="lazy" decoding="async">
+    </figure>
+  </div>
+</section>
+
+<section class="privacy" id="privacy" aria-labelledby="privacy-title">
+  <div class="wrap">
+    <div class="card privacy-card">
+      <svg class="ico24 lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></svg>
+      <h2 id="privacy-title">Private by design</h2>
+      <p class="lede">Kinboard has no servers of its own and no analytics. Everything syncs through your family's iCloud - the developer never sees your calendars, lists or photos.</p>
+      <ul class="ticks"><li><svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4.5 10.5 3.5 3.5 7.5-8"/></svg><span>No account to create</span></li><li><svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4.5 10.5 3.5 3.5 7.5-8"/></svg><span>No analytics, no ads, no tracking</span></li><li><svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4.5 10.5 3.5 3.5 7.5-8"/></svg><span>Your data stays in your family's own iCloud</span></li></ul>
+      <p><a href="/privacy/">Read the privacy policy</a></p>
     </div>
   </div>
+</section>
 
-  <section class="problem" style="margin-top:60px">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2>Family wall calendars are great. Buying one isn't.</h2>
-        <p>Dedicated displays cost hundreds of dollars and still want a monthly fee for the good parts. You probably already have a better screen.</p>
-      </div>
-      <div class="price-cmp">
-        <div class="pc"><h3>Smart wall calendar A</h3><div class="big">~$300</div><p>+ $79/year for photos, meal planning and extras</p></div>
-        <div class="pc"><h3>Smart wall calendar B</h3><div class="big">$699</div><p>+ $9/month membership for the full experience</p></div>
-        <div class="pc us"><h3>Kinboard</h3><div class="big">One price</div><p>Runs on the Apple TV or iPad you already own. No subscription, ever.</p></div>
-      </div>
-      <p class="note">Prices of popular dedicated family displays as listed by their makers and retailers, November 2026.</p>
+<section class="pricing" id="pricing" aria-labelledby="pricing-title">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="pricing-title">Free trial, then one purchase</h2>
+      <p class="lede">Try everything on your own screen first. If Kinboard earns its place on the wall, keep it with a single purchase.</p>
     </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="sec-head">
-        <h2>Everything your family needs at a glance</h2>
-        <p>Designed for the couch and the kitchen — readable from across the room.</p>
+    <div class="plans">
+      <div class="card plan">
+        <h3>14 days free</h3>
+        <p>Everything is open from the first launch. No sign-up, nothing to cancel.</p>
+        <h4>Free after the trial</h4>
+        <ul class="ticks"><li><svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4.5 10.5 3.5 3.5 7.5-8"/></svg><span>The clock</span></li><li><svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4.5 10.5 3.5 3.5 7.5-8"/></svg><span>Weather</span></li><li><svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4.5 10.5 3.5 3.5 7.5-8"/></svg><span>Countdowns</span></li><li><svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4.5 10.5 3.5 3.5 7.5-8"/></svg><span>Night mode</span></li><li><svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4.5 10.5 3.5 3.5 7.5-8"/></svg><span>One calendar</span></li></ul>
       </div>
-      <div class="features">
-        <div class="f"><div class="ic">🗓</div><h3>Everyone's calendar</h3><p>iCloud, Google and Outlook calendars, one color per person, so you instantly see who's where.</p></div>
-        <div class="f"><div class="ic">🛒</div><h3>Shared lists</h3><p>Groceries and to-dos that anyone can update from their iPhone — or tick off on the iPad.</p></div>
-        <div class="f"><div class="ic">⭐️</div><h3>Kids' chores</h3><p>Simple chore charts with stars kids can actually see, right where the family gathers.</p></div>
-        <div class="f"><div class="ic">⛅️</div><h3>Weather &amp; countdowns</h3><p>Today's forecast, plus countdowns to birthdays, trips and the next visit from Grandma.</p></div>
-        <div class="f"><div class="ic">🖼</div><h3>Your photos</h3><p>A shared album slowly rotating in the background. Night mode dims everything after bedtime.</p></div>
-        <div class="f"><div class="ic">🔒</div><h3>Private by design</h3><p>No sign-up, no servers of ours. Everything syncs through your family's own iCloud.</p></div>
+      <div class="card plan plus">
+        <h3><svg class="logo inline" width="24" height="24" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="8" fill="#1a1f2b"/><rect x="2" y="2" width="28" height="28" rx="6.5" fill="#fff" fill-opacity=".1"/><rect x="6.5" y="6.5" width="8.5" height="8.5" rx="2.3" fill="#E07A5F"/><rect x="17" y="6.5" width="8.5" height="8.5" rx="2.3" fill="#3D8BBF"/><rect x="6.5" y="17" width="8.5" height="8.5" rx="2.3" fill="#81B29A"/><rect x="17" y="17" width="8.5" height="8.5" rx="2.3" fill="#E9B949"/></svg><bdi>Kinboard+</bdi></h3>
+        <p>A one-time purchase, no subscription.</p>
+        <ul class="ticks"><li><svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4.5 10.5 3.5 3.5 7.5-8"/></svg><span>Every calendar</span></li><li><svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4.5 10.5 3.5 3.5 7.5-8"/></svg><span>Shared lists</span></li><li><svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4.5 10.5 3.5 3.5 7.5-8"/></svg><span>Chores and stars</span></li><li><svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4.5 10.5 3.5 3.5 7.5-8"/></svg><span>The photo background</span></li><li><svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4.5 10.5 3.5 3.5 7.5-8"/></svg><span>Family invitations</span></li><li><svg class="tick" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4.5 10.5 3.5 3.5 7.5-8"/></svg><span>The Apple TV Top Shelf</span></li></ul>
+        <p class="small">On Apple TV, iPad and iPhone, and for your whole family through Family Sharing.</p>
+        <p class="small muted">$19.99 in the US App Store. Elsewhere the App Store shows the price in your currency.</p>
       </div>
     </div>
-  </section>
+    <p class="kept">Nothing you added is deleted when the trial ends: it comes back as soon as Kinboard+ is unlocked.</p>
+  </div>
+</section>
 
-  <section id="how" style="padding-top:20px">
-    <div class="wrap">
-      <div class="sec-head"><h2>Up and running in two minutes</h2></div>
-      <div class="how">
-        <div><h3>Install on Apple TV or iPad</h3><p>One purchase covers your Apple TV, iPad and iPhone.</p></div>
-        <div><h3>Pick calendars on your iPhone</h3><p>Choose whose calendars to show and invite family members to edit lists.</p></div>
-        <div><h3>Leave it on</h3><p>Kinboard keeps the screen awake, refreshes itself and dims at night.</p></div>
-      </div>
-    </div>
-  </section>
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <div class="wrap narrow">
+    <h2 id="faq-title">Questions</h2>
+    <details><summary>Which devices do I need?</summary><p>An Apple TV or an iPad for the family screen, and ideally an iPhone to set things up and edit them. You can also set up right on the iPad or the Apple TV, but the iPhone is the easiest. Kinboard requires iOS 26, iPadOS 26 or tvOS 26.</p></details><details><summary>Do I need an account?</summary><p>No. Kinboard syncs through iCloud, the same way your Notes and Reminders do. The developer never sees your calendars, lists or photos.</p></details><details><summary>Is there a subscription?</summary><p>No. Kinboard+ is a one-time purchase, with a 14-day free trial so you can see it on your own screen first. The clock, weather, countdowns, night mode and one calendar stay free after the trial.</p></details><details><summary>Does it work with Google Calendar and Outlook?</summary><p>Yes. Calendars from your iPhone or iPad appear on the screen, including Google and Outlook accounts added there, plus any calendar you can subscribe to by link (ICS or webcal), such as many school calendars. Kinboard only reads calendars and never changes them.</p></details><details><summary>Can the whole family edit it?</summary><p>Yes. On your iPhone, open Family → Invite Family Members. Everyone you invite sees and edits the same lists, calendars and countdowns from their own iPhone, and changes appear on every screen within seconds.</p></details><details><summary>Does my family have to buy it too?</summary><p>No. Kinboard+ works with Family Sharing: buy it once and it is unlocked for everyone in your Apple family group, on Apple TV, iPad and iPhone.</p></details><details><summary>What happens when the trial ends?</summary><p>The clock, weather, countdowns, night mode and one calendar keep working. Lists, chores, photos and the other calendars are kept and come back as soon as Kinboard+ is unlocked.</p></details>
+  </div>
+</section>
 
-  <section class="wl" id="launch">
-    <div class="wrap wl-grid">
-      <div>
-        <div class="sec-head" style="margin-bottom:20px">
-          <h2>Coming soon to the App Store</h2>
-          <p>Kinboard for Apple TV, iPad and iPhone is almost ready. Try everything free for 14 days, then keep it with a single purchase.</p>
-        </div>
-        <div class="perk"><span>✓</span><div><b>One purchase</b> covers Apple TV, iPad and iPhone.</div></div>
-        <div class="perk"><span>✓</span><div><b>Family Sharing</b> - buy once for the whole family.</div></div>
-        <div class="perk"><span>✓</span><div><b>Free forever:</b> the clock, weather, countdowns and one calendar.</div></div>
-      </div>
-      <div class="card">
-        <h3>Questions or ideas?</h3>
-        <p>Kinboard is made by one independent developer. Every message is read and answered.</p>
-        <a class="btn" href="/support/">Contact support</a>
-      </div>
-    </div>
-  </section>
+<section class="final" aria-labelledby="final-title">
+  <div class="wrap final-in">
+    <svg class="logo big" width="64" height="64" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="8" fill="#1a1f2b"/><rect x="2" y="2" width="28" height="28" rx="6.5" fill="#fff" fill-opacity=".1"/><rect x="6.5" y="6.5" width="8.5" height="8.5" rx="2.3" fill="#E07A5F"/><rect x="17" y="6.5" width="8.5" height="8.5" rx="2.3" fill="#3D8BBF"/><rect x="6.5" y="17" width="8.5" height="8.5" rx="2.3" fill="#81B29A"/><rect x="17" y="17" width="8.5" height="8.5" rx="2.3" fill="#E9B949"/></svg>
+    <h2 id="final-title">Give your family one screen</h2>
+    <p class="lede">Try everything free for 14 days on the Apple TV or iPad you already own.</p>
+    <div class="cta"><a class="badge" href="https://apps.apple.com/app/id6831690840"><img class="b-black" src="/assets/badge-black-en.a26fc5b383.svg" alt="Download on the App Store" width="144" height="48"><img class="b-white" src="/assets/badge-white-en.056de2f81f.svg" alt="Download on the App Store" width="144" height="48"></a></div>
+  </div>
+</section>
 
-  <section class="faq">
-    <div class="wrap">
-      <div class="sec-head"><h2>Questions</h2></div>
-      <details><summary>Which devices will it support?</summary><p>Apple TV (tvOS) and iPad for the display, plus an iPhone companion for setup and editing. One purchase covers all of them.</p></details>
-      <details><summary>Do I need an account?</summary><p>No. Kinboard syncs through iCloud, the same way your Notes and Reminders do. We never see your calendar or photos.</p></details>
-      <details><summary>Will there be a subscription?</summary><p>No. Kinboard is a one-time purchase, with a 14-day free trial so you can see it on your own screen first. The clock, weather, countdowns and one calendar stay free after the trial.</p></details>
-      <details><summary>Does it work with Google Calendar?</summary><p>Yes. Calendars from your iPhone or iPad appear on the screen, including Google and Outlook accounts added there, plus any calendar you can subscribe to by link (including many school calendars).</p></details>
-      <details><summary>When does it launch?</summary><p>Very soon. Kinboard is in final testing and will be on the App Store shortly.</p></details>
-    </div>
-  </section>
 </main>
-
-<footer class="wrap">
-  <span>© 2026 Ramiz Kichibekov. Apple TV and iPad are trademarks of Apple Inc.</span>
-  <nav><a href="/privacy/">Privacy</a><a href="/support/">Support</a></nav>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <nav class="site" aria-label="Site">
+      <a href="/" aria-current="page">Home</a>
+      <a href="/support/">Support</a>
+      <a href="/privacy/">Privacy Policy</a>
+      <a href="/press/" hreflang="en">Press</a>
+    </nav>
+    <p class="legal">© 2026 Ramiz Kichibekov · Apple, Apple TV, iPad, iPhone and iCloud are trademarks of Apple Inc.</p>
+  </div>
 </footer>
-
-<script>
-  // Live clock in the mockup
-  (function tick() {
-    const now = new Date();
-    const time = now.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", hour12: false });
-    document.getElementById("clock").textContent = time;
-    document.getElementById("clock2").textContent = time;
-    document.getElementById("date").textContent =
-      now.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" });
-    setTimeout(tick, 15000);
-  })();
-
-</script>
 </body>
 </html>

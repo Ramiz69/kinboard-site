@@ -1,10 +1,11 @@
 {
-  // Статический сайт Kinboard: папка public/ как есть, своего кода у воркера нет.
-  // Публикует Cloudflare Workers Builds при пуше в main.
+  // Static site: public/ as it is (built by `node build.mjs` and committed), no Worker code.
+  // Cloudflare Workers Builds runs `npx wrangler deploy` on every push to main.
   "name": "kinboard",
   "compatibility_date": "2026-11-01",
   "assets": {
     "directory": "./public",
+    "not_found_handling": "404-page",
     "html_handling": "auto-trailing-slash"
   }
 }

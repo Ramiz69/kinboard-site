@@ -1,0 +1,363 @@
+{
+  "_notes": {
+    "about": "See en.json _notes: they explain every tricky key."
+  },
+  "lang": "zh-Hant",
+  "path": "/zh-hant/",
+  "badgeLang": "zh-Hant",
+  "ui": {
+    "skip": "跳至內容",
+    "language": "語言",
+    "theme": {
+      "label": "外觀",
+      "auto": "自動",
+      "light": "淺色",
+      "dark": "深色"
+    },
+    "badgeAlt": "在 App Store 下載",
+    "siteNav": "網站",
+    "home": "首頁",
+    "support": "支援",
+    "privacy": "隱私權政策",
+    "copyright": "© 2026 拉米茲·基奇別科夫",
+    "trademarks": "Apple、Apple TV、iPad、iPhone 和 iCloud 是 Apple Inc. 的商標。",
+    "press": "媒體"
+  },
+  "home": {
+    "meta": {
+      "title": "Kinboard - Apple TV 和 iPad 上的家庭螢幕",
+      "description": "把你家的 Apple TV 或 iPad 變成家庭螢幕：每個人的行事曆、共享列表、孩子的家務和天氣一目了然。免費試用 14 天。",
+      "ogTitle": "Kinboard - Apple TV 和 iPad 上的家庭螢幕",
+      "ogDescription": "每個人的行事曆、共享列表、孩子的家務和天氣，就在你已經有的螢幕上。不必註冊帳號，也不必訂閱。",
+      "ogAlt": "Kinboard 標誌：Apple TV 和 iPad 上的家庭螢幕"
+    },
+    "hero": {
+      "eyebrow": "適用於 Apple TV、iPad 和 iPhone",
+      "title": "家庭螢幕，你家早就有了",
+      "sub": "每個人的一天、購物清單、孩子的家務和天氣，顯示在客廳的 Apple TV 或廚房牆上的 iPad。在房間另一頭也看得清楚，而且一直亮著。",
+      "note": "免費試用 14 天，之後一次購買。不必註冊帳號，也不必訂閱。",
+      "requires": "需要 iOS 26、iPadOS 26 或 tvOS 26。",
+      "shotAlt": "Apple TV 上的 Kinboard：時鐘、接下來的行程、天氣、倒數、今天和明天的行程、孩子的家務和購物清單"
+    },
+    "how": {
+      "title": "螢幕掛在牆上，遙控器就在口袋裡",
+      "lede": "不必另外購買裝置。Kinboard 使用你家已經有的 Apple 裝置。",
+      "steps": [
+        {
+          "title": "螢幕",
+          "text": "客廳的 Apple TV 或廚房牆上的 iPad。它會顯示全家的一天，保持喚醒，並自動更新。"
+        },
+        {
+          "title": "遙控器",
+          "text": "就是你的 iPhone。在「列表」、「家務」、「家人」和「設定」四個標籤頁中，你可以加入家人、選擇行事曆，並把完成的事項打勾。"
+        },
+        {
+          "title": "同一個 iCloud",
+          "text": "以同一個 iCloud 帳號在兩台裝置上安裝 Kinboard，螢幕上的內容就會自動出現。邀請家人後，每個人都能用自己的 iPhone 編輯。"
+        }
+      ],
+      "shotAlt": "牆上 iPad 中的 Kinboard，上方是「看板」、「列表」、「家務」、「家人」和「設定」標籤頁"
+    },
+    "features": {
+      "title": "全家需要的一切，一目了然",
+      "lede": "在 iPhone 上設定一次就好。變更會在幾秒內出現在每個螢幕上。",
+      "items": [
+        {
+          "title": "每個人的行事曆",
+          "text": "每個人都有自己的顏色，一眼就能看出誰在哪裡。",
+          "points": [
+            "今天和明天並排顯示，正在進行的行程放在最上方",
+            "支援 iPhone 和 iPad 上的行事曆，包括在裝置上加入的 Google 和 Outlook 帳號",
+            "任何可用連結訂閱的行事曆：學校、運動社團、假日"
+          ],
+          "shotAlt": "iPhone 上的「家人」標籤頁：媽媽、爸爸、米亞和小樂，各有自己的顏色和行事曆"
+        },
+        {
+          "title": "共享列表",
+          "text": "採買、打包和待辦事項，每個人都能用自己的 iPhone 更新。",
+          "points": [
+            "直接在 iPad 上打勾完成",
+            "未完成的項目會顯示在螢幕上和 Apple TV 的 Top Shelf"
+          ],
+          "shotAlt": "iPhone 上的「列表」標籤頁，有採買清單和週末出遊清單"
+        },
+        {
+          "title": "孩子的家務與星星",
+          "text": "每個孩子的每日工作，可選擇在哪幾天進行。",
+          "points": [
+            "每項家務一到三顆星，孩子能看到每週的星星總數",
+            "孩子可以自己在 iPad 上標示完成"
+          ],
+          "shotAlt": "iPhone 上的「家務」標籤頁：餵貓、整理床鋪、清空洗碗機和澆花，每項都有星星"
+        },
+        {
+          "title": "螢幕上還有更多",
+          "text": "家人每天都會看的資訊，不必拿起手機。",
+          "points": [
+            "你所在地的天氣",
+            "倒數生日、旅行，以及奶奶下次來訪的日子",
+            "家庭照片在行程背後緩緩輪換",
+            "夜間模式會在睡前調暗螢幕，早上再喚醒"
+          ],
+          "shotAlt": "iPhone 上的「設定」標籤頁，有主題、照片背景和夜間調暗"
+        }
+      ]
+    },
+    "alwaysOn": {
+      "title": "專為一直亮著的螢幕設計",
+      "lede": "Kinboard 本來就是要整天開著的，所以它會替你照顧好螢幕。",
+      "facts": [
+        {
+          "title": "一直喚醒",
+          "text": "保持螢幕開啟並自動更新。"
+        },
+        {
+          "title": "接下來",
+          "text": "下一個行程一定在最上方，並顯示還有多久開始。"
+        },
+        {
+          "title": "Top Shelf",
+          "text": "接下來的行程和列表直接顯示在 Apple TV 主畫面上。"
+        },
+        {
+          "title": "呵護 OLED",
+          "text": "輕微移動版面配置，保護 OLED 螢幕。"
+        },
+        {
+          "title": "坐在沙發上也看得清",
+          "text": "圓潤的大字體和高對比度，支援「粗體文字」和「增加對比」。"
+        },
+        {
+          "title": "夜間調暗",
+          "text": "讓螢幕不會照亮黑暗的廚房。"
+        }
+      ],
+      "shotAlt": "iPad 上的 Kinboard：大時鐘、每小時天氣、倒數、今天和明天的行程、家務和列表"
+    },
+    "privacy": {
+      "title": "從設計上注重隱私",
+      "text": "Kinboard 沒有自己的伺服器，也沒有分析工具。所有資料都透過你家人的 iCloud 同步，開發者永遠看不到你的行事曆、列表或照片。",
+      "points": [
+        "不必建立帳號",
+        "沒有分析、沒有廣告、沒有追蹤",
+        "你的資料留在你家人自己的 iCloud"
+      ],
+      "link": "閱讀隱私權政策"
+    },
+    "pricing": {
+      "title": "免費試用，之後一次購買",
+      "lede": "先在你自己的螢幕上試用所有功能。如果 Kinboard 值得掛在牆上，只要購買一次就能一直使用。",
+      "trial": {
+        "title": "免費 14 天",
+        "text": "第一次打開就能使用所有功能。不必註冊，也沒有什麼需要取消。"
+      },
+      "free": {
+        "title": "試用結束後仍免費",
+        "items": [
+          "時鐘",
+          "天氣",
+          "倒數",
+          "夜間模式",
+          "一個行事曆"
+        ]
+      },
+      "plus": {
+        "title": "Kinboard+",
+        "text": "一次購買，無需訂閱。",
+        "items": [
+          "所有行事曆",
+          "共享列表",
+          "家務與星星",
+          "照片背景",
+          "家人邀請",
+          "Apple TV Top Shelf"
+        ],
+        "price": "美國 App Store 售價為 {price}。在其他地區，App Store 會以當地貨幣顯示價格。",
+        "family": "適用於 Apple TV、iPad 和 iPhone，並可透過家人共享供全家使用。"
+      },
+      "kept": "試用結束時，你加入的內容都不會被刪除：解鎖 Kinboard+ 後就會立刻回來。"
+    },
+    "faq": {
+      "title": "常見問題",
+      "items": [
+        {
+          "q": "我需要哪些裝置？",
+          "a": "一台 Apple TV 或 iPad 當作家庭螢幕，最好再加一支 iPhone 用來設定和編輯。你也可以直接在 iPad 或 Apple TV 上設定，但用 iPhone 最簡單。Kinboard 需要 iOS 26、iPadOS 26 或 tvOS 26。"
+        },
+        {
+          "q": "需要註冊帳號嗎？",
+          "a": "不需要。Kinboard 透過 iCloud 同步，就像你的備忘錄和提醒事項一樣。開發者永遠看不到你的行事曆、列表或照片。"
+        },
+        {
+          "q": "需要訂閱嗎？",
+          "a": "不需要。Kinboard+ 是一次購買，並提供 14 天免費試用，讓你先在自己的螢幕上看看效果。試用結束後，時鐘、天氣、倒數、夜間模式和一個行事曆仍然免費。"
+        },
+        {
+          "q": "支援 Google 日曆和 Outlook 嗎？",
+          "a": "支援。iPhone 或 iPad 上的行事曆會顯示在螢幕上，包括在裝置上加入的 Google 和 Outlook 帳號；此外，任何可用連結（ICS 或 webcal）訂閱的行事曆也能顯示，例如許多學校的行事曆。Kinboard 只會讀取行事曆，絕不會更改。"
+        },
+        {
+          "q": "全家人都能編輯嗎？",
+          "a": "可以。在 iPhone 上打開「家人」→「邀請家人」。你邀請的每個人都能用自己的 iPhone 查看和編輯相同的列表、行事曆和倒數，變更會在幾秒內出現在每個螢幕上。"
+        },
+        {
+          "q": "家人也要各自購買嗎？",
+          "a": "不用。Kinboard+ 支援家人共享：購買一次，你 Apple 家庭群組中的每個人都能在 Apple TV、iPad 和 iPhone 上使用。"
+        },
+        {
+          "q": "試用結束後會怎樣？",
+          "a": "時鐘、天氣、倒數、夜間模式和一個行事曆可以繼續使用。列表、家務、照片和其他行事曆都會保留，解鎖 Kinboard+ 後就會立刻回來。"
+        }
+      ]
+    },
+    "cta": {
+      "title": "給全家一個共同的螢幕",
+      "text": "在你已經有的 Apple TV 或 iPad 上，免費試用所有功能 14 天。"
+    }
+  },
+  "support": {
+    "meta": {
+      "title": "Kinboard 支援",
+      "description": "Kinboard（Apple TV、iPad 和 iPhone 上的家庭螢幕）說明：開始使用、行事曆、天氣、Kinboard+ 和聯絡方式。"
+    },
+    "title": "支援",
+    "lede": "Kinboard 由一位獨立開發者製作。歡迎隨時來信：每則訊息都會被閱讀並回覆，通常在兩天內。",
+    "emailLabel": "電子郵件：",
+    "emailHint": "請註明你使用的裝置（Apple TV、iPad、iPhone），以及你原本預期會看到什麼。",
+    "start": {
+      "title": "開始使用",
+      "steps": [
+        "在要當作家庭螢幕的 Apple TV 或 iPad 上，以及你的 iPhone 上安裝 Kinboard。",
+        "在 iPhone 上加入家人，並選擇要顯示的行事曆。變更會透過 iCloud 出現在每個螢幕上。",
+        "若要讓其他人也能編輯列表和行事曆，請在 iPhone 上打開「家人」→「邀請家人」。"
+      ]
+    },
+    "faq": {
+      "title": "常見問題",
+      "items": [
+        {
+          "q": "行程沒有出現在螢幕上。",
+          "a": "請確認每台裝置都登入同一個 iCloud 帳號（或已透過邀請加入你的家庭），並且已開啟 iCloud 雲碟。iPhone 上的行事曆會在那支 iPhone 打開 Kinboard 時更新，也會不時在背景更新。"
+        },
+        {
+          "q": "如何加入 Google 或 Outlook 行事曆？",
+          "a": "在 iPhone 的「設定」→「行事曆」→「帳號」中加入帳號，然後在 Kinboard 中選擇它的行事曆。你也可以貼上行事曆的訂閱連結（ICS 或 webcal）。"
+        },
+        {
+          "q": "天氣沒有顯示。",
+          "a": "請允許 Kinboard 使用你的位置：在 iPhone 和 iPad 上前往「設定」→「App」→ Kinboard →「位置」（某些版本為「設定」→「隱私權與安全性」→「定位服務」）。在 Apple TV 上，按下遙控器的選取鍵，再選擇「顯示當地天氣」。"
+        },
+        {
+          "q": "哪些免費，哪些屬於 Kinboard+？",
+          "a": "所有功能開放 14 天。之後，時鐘、天氣、倒數、夜間模式和一個行事曆仍然免費。Kinboard+ 是一次性購買，可解鎖所有行事曆、共享列表、家務與星星、照片背景、家人邀請和 Apple TV Top Shelf。試用結束時，你加入的內容都不會被刪除。"
+        },
+        {
+          "q": "我在另一台裝置上購買了 Kinboard+。",
+          "a": "打開 Kinboard 設定最上方的 Kinboard+，然後點一下「回復購買項目」。使用家人共享時，你 Apple 家庭群組中的每個人都會取得這項購買。"
+        },
+        {
+          "q": "如何申請退款？",
+          "a": "退款由 Apple 透過 <a href=\"https://reportaproblem.apple.com\">reportaproblem.apple.com</a> 處理。"
+        }
+      ]
+    }
+  },
+  "privacy": {
+    "meta": {
+      "title": "Kinboard 隱私權政策",
+      "description": "Kinboard 如何處理你的資料：沒有帳號、沒有分析，一切都留在你家人的 iCloud。"
+    },
+    "title": "隱私權政策",
+    "updatedLabel": "最後更新：",
+    "updated": "2026年11月7日",
+    "lede": "Kinboard 沒有帳號、沒有自己的伺服器、沒有分析，也沒有廣告。開發者永遠不會收到你的行事曆、列表、照片或位置。",
+    "sections": [
+      {
+        "title": "你的資料存放在哪裡",
+        "paragraphs": [
+          "你在 Kinboard 中設定的一切（家人、行事曆、列表、家務、倒數、照片和設定）都會透過 Apple 的 CloudKit 儲存在你的裝置和你自己的 iCloud 帳號中。當你邀請家人時，同樣的資料會透過受邀者的 iCloud 帳號與他們共享。開發者無法查看或取用其中任何資料。"
+        ],
+        "points": []
+      },
+      {
+        "title": "行事曆",
+        "paragraphs": [],
+        "points": [
+          "經你允許後，iPhone 或 iPad 上的 Kinboard 會讀取你選擇的行事曆，並將其即將到來的行程複製到你的 iCloud，讓家庭螢幕可以顯示。Kinboard 絕不會更改或刪除行程。",
+          "你加入的行事曆連結（ICS 或 webcal）會由你的裝置直接從行事曆提供者下載。"
+        ]
+      },
+      {
+        "title": "位置和天氣",
+        "paragraphs": [
+          "為了顯示當地天氣，Kinboard 會要求取得你的大略位置。該位置只會在你的裝置上使用，用來向 Apple 天氣（WeatherKit）要求天氣預報。Kinboard 不會儲存或分享你的位置。"
+        ],
+        "points": []
+      },
+      {
+        "title": "照片",
+        "paragraphs": [],
+        "points": [
+          "你加入的家庭照片會儲存到你的 iCloud，讓每個家庭螢幕都能顯示。",
+          "如果你從「照片」App 選擇一個相簿，其中的照片只會在那台裝置上讀取，絕不會上傳。"
+        ]
+      },
+      {
+        "title": "購買",
+        "paragraphs": [
+          "免費試用、Kinboard+ 購買以及「小費」中的三種選擇性小費均由 Apple 透過 App Store 處理。小費不會解鎖任何功能，只是支持開發者的一種方式。Kinboard 只會知道購買是否成功以及 Kinboard+ 是否有效，絕不會看到你的付款資訊。"
+        ],
+        "points": []
+      },
+      {
+        "title": "診斷資訊",
+        "paragraphs": [
+          "在 iPhone 和 iPad 上，iOS 和 iPadOS 可能會向 Kinboard 提供有關 App 當機與效能的報告（Apple MetricKit）。這些報告描述 App 的運作情況，不包含行事曆、列表、照片或位置。Apple TV 不提供這類報告。"
+        ],
+        "points": [
+          "報告儲存在你的裝置上：每種最多五份，保留不超過七天，且不包含在備份中。",
+          "只有你開啟「在郵件中附加診斷資訊」（預設為關閉）並親自透過「聯絡開發者」傳送郵件時，報告才會送到開發者手中。郵件會寄至 <a href=\"mailto:{supportemail}\">{supportemail}</a>。",
+          "這封郵件也會包含裝置型號識別碼、系統版本、App 版本、App 語言與地區，以及 Kinboard+ 是否有效。郵件絕不包含裝置名稱或任何家庭資料。",
+          "開發者只會將這些報告用於修正問題，並在不再需要時將其刪除。"
+        ]
+      },
+      {
+        "title": "兒童",
+        "paragraphs": [
+          "Kinboard 是一款家庭 App，不會向任何人（包括兒童）收集個人資料。"
+        ],
+        "points": []
+      },
+      {
+        "title": "追蹤",
+        "paragraphs": [
+          "Kinboard 不會跨 App 或網站追蹤你，也不包含任何第三方分析或廣告程式碼。本網站不設定 Cookie，也不從其他伺服器載入任何內容；它只會在你的瀏覽器中記住你選擇的淺色或深色外觀。"
+        ],
+        "points": []
+      },
+      {
+        "title": "刪除你的資料",
+        "paragraphs": [
+          "從你的裝置刪除 App，然後在「設定」→「你的名稱」→「iCloud」→「管理帳號儲存空間」→「Kinboard」中移除它的 iCloud 資料。加入你家庭的家人可隨時從他們 iPhone 上的 Kinboard 退出家庭。"
+        ],
+        "points": []
+      },
+      {
+        "title": "變更與聯絡",
+        "paragraphs": [
+          "如果本政策有所變更，新版本將連同新的日期公布在此頁面。隱私相關問題：<a href=\"mailto:{privacyemail}\">{privacyemail}</a>"
+        ],
+        "points": []
+      }
+    ]
+  },
+  "notFound": {
+    "title": "找不到網頁",
+    "text": "此網頁不存在，可能已經移動。",
+    "back": "前往首頁"
+  },
+  "jsonld": {
+    "description": "Kinboard 能把你已經有的 Apple TV 或 iPad 變成家庭螢幕：每個人的行事曆、共享列表、可得星星的孩子家務、倒數、天氣和家庭照片，可用任何一支 iPhone 編輯。",
+    "plusDescription": "支援家人共享的一次性 App 內購買"
+  }
+}

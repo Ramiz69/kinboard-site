@@ -1,0 +1,363 @@
+{
+  "_notes": {
+    "about": "See en.json _notes: they explain every tricky key."
+  },
+  "lang": "tr",
+  "path": "/tr/",
+  "badgeLang": "tr",
+  "ui": {
+    "skip": "İçeriğe geç",
+    "language": "Dil",
+    "theme": {
+      "label": "Görünüm",
+      "auto": "Otomatik",
+      "light": "Açık",
+      "dark": "Koyu"
+    },
+    "badgeAlt": "App Store’dan indirin",
+    "siteNav": "Site",
+    "home": "Ana Sayfa",
+    "support": "Destek",
+    "privacy": "Gizlilik Politikası",
+    "copyright": "© 2026 Ramiz Kichibekov",
+    "trademarks": "Apple, Apple TV, iPad, iPhone ve iCloud, Apple Inc.’in ticari markalarıdır.",
+    "press": "Basın"
+  },
+  "home": {
+    "meta": {
+      "title": "Kinboard - Apple TV ve iPad için aile ekranı",
+      "description": "Zaten sahip olduğunuz Apple TV veya iPad’i aile ekranına dönüştürün: herkesin takvimi, ortak listeler, çocukların görevleri ve hava durumu. 14 gün ücretsiz.",
+      "ogTitle": "Kinboard - Apple TV ve iPad için aile ekranı",
+      "ogDescription": "Herkesin takvimi, ortak listeler, çocukların görevleri ve hava durumu, zaten sahip olduğunuz ekranda. Hesap yok, abonelik yok.",
+      "ogAlt": "Kinboard logosu: Apple TV ve iPad için aile ekranı"
+    },
+    "hero": {
+      "eyebrow": "Apple TV, iPad ve iPhone için",
+      "title": "Aile ekranınız zaten evinizde",
+      "sub": "Herkesin günü, market listesi, çocukların görevleri ve hava durumu - oturma odasındaki Apple TV’de ya da mutfak duvarındaki iPad’de. Odanın öbür ucundan okunur ve hep açık kalır.",
+      "note": "14 gün ücretsiz, sonra tek seferlik satın alma. Hesap yok, abonelik yok.",
+      "requires": "iOS 26, iPadOS 26 veya tvOS 26 gerektirir.",
+      "shotAlt": "Apple TV’de Kinboard: saat, sıradaki etkinlik, hava durumu, geri sayımlar, bugünün ve yarının etkinlikleri, çocukların görevleri ve market listesi"
+    },
+    "how": {
+      "title": "Duvarda bir ekran, kumanda cebinizde",
+      "lede": "Ek bir cihaz almanıza gerek yok. Kinboard, ailenizde zaten olan Apple cihazlarını kullanır.",
+      "steps": [
+        {
+          "title": "Ekran",
+          "text": "Oturma odasında bir Apple TV ya da mutfak duvarında bir iPad. Ailenin gününü gösterir, uyanık kalır ve kendiliğinden yenilenir."
+        },
+        {
+          "title": "Kumanda",
+          "text": "iPhone’unuz. Dört sekmesi - Listeler, Görevler, Aile ve Ayarlar - kişi eklediğiniz, takvim seçtiğiniz ve işleri işaretlediğiniz yerdir."
+        },
+        {
+          "title": "Aynı iCloud",
+          "text": "Kinboard’u ikisine de aynı iCloud hesabıyla yükleyin, ekran kendiliğinden dolar. Ailenizi davet edin, herkes kendi iPhone’undan düzenlesin."
+        }
+      ],
+      "shotAlt": "Duvardaki bir iPad’de Kinboard, üstte Pano, Listeler, Görevler, Aile ve Ayarlar sekmeleriyle"
+    },
+    "features": {
+      "title": "Ailenin ihtiyacı olan her şey bir bakışta",
+      "lede": "iPhone’unuzda bir kez kurun. Değişiklikler saniyeler içinde tüm ekranlarda görünür.",
+      "items": [
+        {
+          "title": "Herkesin takvimi",
+          "text": "Herkesin kendi rengi var, kimin nerede olduğu bir bakışta anlaşılır.",
+          "points": [
+            "Bugün ve yarın yan yana, şu an olan en üstte",
+            "iPhone ve iPad’deki takvimler, oraya eklenmiş Google ve Outlook hesapları dahil",
+            "Bağlantıyla abone olabileceğiniz her takvim - okul, spor kulübü, tatil günleri"
+          ],
+          "shotAlt": "iPhone’da Aile sekmesi: Anne, Baba, Mia ve Leo, her biri kendi renginde ve kendi takvimleriyle"
+        },
+        {
+          "title": "Ortak listeler",
+          "text": "Herkesin kendi iPhone’undan güncelleyebileceği market, bavul ve yapılacaklar listeleri.",
+          "points": [
+            "Öğeleri doğrudan iPad’de işaretleyin",
+            "Bekleyen öğeler ekranda ve Apple TV Top Shelf’te görünür"
+          ],
+          "shotAlt": "iPhone’da Listeler sekmesi: market listesi ve hafta sonu gezisi listesi"
+        },
+        {
+          "title": "Çocukların görevleri ve yıldızlar",
+          "text": "Her çocuk için, seçtiğiniz günlerde günlük görevler.",
+          "points": [
+            "Görev başına bir ila üç yıldız ve çocukların görebildiği haftalık yıldız sayısı",
+            "Çocuklar yaptıkları görevleri iPad’de kendileri işaretler"
+          ],
+          "shotAlt": "iPhone’da Görevler sekmesi: kediyi besle, yatağı topla, bulaşık makinesini boşalt ve çiçekleri sula, yıldızlarıyla"
+        },
+        {
+          "title": "Ekranda daha fazlası",
+          "text": "Ailenin her gün baktığı şeyler, telefona uzanmadan.",
+          "points": [
+            "Bulunduğunuz yerin hava durumu",
+            "Doğum günlerine, tatillere ve büyükannenin bir sonraki ziyaretine geri sayım",
+            "Programın arkasında yavaşça değişen aile fotoğrafları",
+            "Gece modu yatma saatinde ekranı karartır, sabah yeniden aydınlatır"
+          ],
+          "shotAlt": "iPhone’da Ayarlar sekmesi: tema, fotoğraflı arka plan ve geceleri karartma"
+        }
+      ]
+    },
+    "alwaysOn": {
+      "title": "Hep açık kalan bir ekran için",
+      "lede": "Kinboard gün boyu açık bırakılmak için yapıldı, bu yüzden ekranla o ilgilenir.",
+      "facts": [
+        {
+          "title": "Hep uyanık",
+          "text": "Ekranı açık tutar ve kendini yeniler."
+        },
+        {
+          "title": "Sırada",
+          "text": "Sıradaki etkinlik hep en üstte, başlamasına ne kadar kaldığıyla birlikte."
+        },
+        {
+          "title": "Top Shelf",
+          "text": "Sıradaki etkinlikler ve listeler doğrudan Apple TV Ana Ekranı’nda."
+        },
+        {
+          "title": "OLED dostu",
+          "text": "OLED ekranları korumak için yerleşimi hafifçe kaydırır."
+        },
+        {
+          "title": "Kanepeden okunur",
+          "text": "Büyük, yuvarlak yazılar ve yüksek kontrast; Kalın Metin ve Kontrastı Artır desteği."
+        },
+        {
+          "title": "Geceleri kararır",
+          "text": "Böylece ekran karanlık mutfağı aydınlatmaz."
+        }
+      ],
+      "shotAlt": "iPad’de Kinboard: büyük bir saat, saatlik hava durumu, geri sayımlar, bugünün ve yarının etkinlikleri, görevler ve listeler"
+    },
+    "privacy": {
+      "title": "Gizlilik öncelikli",
+      "text": "Kinboard’un kendi sunucuları ve analitiği yoktur. Her şey ailenizin iCloud’u üzerinden eşzamanlanır - geliştirici takvimlerinizi, listelerinizi veya fotoğraflarınızı asla görmez.",
+      "points": [
+        "Hesap oluşturmanız gerekmez",
+        "Analitik yok, reklam yok, izleme yok",
+        "Verileriniz ailenizin kendi iCloud’unda kalır"
+      ],
+      "link": "Gizlilik politikasını okuyun"
+    },
+    "pricing": {
+      "title": "Ücretsiz deneme, sonra tek seferlik satın alma",
+      "lede": "Önce her şeyi kendi ekranınızda deneyin. Kinboard duvardaki yerini hak ederse, tek bir satın almayla sizin olsun.",
+      "trial": {
+        "title": "14 gün ücretsiz",
+        "text": "İlk açılıştan itibaren her şey açık. Kayıt yok, iptal edilecek bir şey yok."
+      },
+      "free": {
+        "title": "Denemeden sonra ücretsiz",
+        "items": [
+          "Saat",
+          "Hava durumu",
+          "Geri sayımlar",
+          "Gece modu",
+          "Bir takvim"
+        ]
+      },
+      "plus": {
+        "title": "Kinboard+",
+        "text": "Tek seferlik satın alma, abonelik yok.",
+        "items": [
+          "Tüm takvimler",
+          "Paylaşılan listeler",
+          "Görevler ve yıldızlar",
+          "Fotoğraflı arka plan",
+          "Aile davetleri",
+          "Apple TV Top Shelf"
+        ],
+        "price": "ABD App Store’da {price}. Diğer ülkelerde App Store fiyatı kendi para biriminizde gösterir.",
+        "family": "Apple TV, iPad ve iPhone’da; Aile Paylaşımı ile de tüm aileniz için."
+      },
+      "kept": "Deneme sona erdiğinde eklediğiniz hiçbir şey silinmez: Kinboard+ açılır açılmaz geri gelir."
+    },
+    "faq": {
+      "title": "Sorular",
+      "items": [
+        {
+          "q": "Hangi cihazlara ihtiyacım var?",
+          "a": "Aile ekranı için bir Apple TV ya da iPad, kurmak ve düzenlemek için de tercihen bir iPhone. Kurulumu doğrudan iPad’de ya da Apple TV’de de yapabilirsiniz, ama en kolayı iPhone’dur. Kinboard, iOS 26, iPadOS 26 veya tvOS 26 gerektirir."
+        },
+        {
+          "q": "Hesap gerekiyor mu?",
+          "a": "Hayır. Kinboard, Notlar ve Anımsatıcılar’da olduğu gibi iCloud üzerinden eşzamanlanır. Geliştirici takvimlerinizi, listelerinizi veya fotoğraflarınızı asla görmez."
+        },
+        {
+          "q": "Abonelik var mı?",
+          "a": "Hayır. Kinboard+ tek seferlik bir satın almadır ve önce kendi ekranınızda görebilmeniz için 14 günlük ücretsiz deneme sunar. Denemeden sonra saat, hava durumu, geri sayımlar, gece modu ve bir takvim ücretsiz kalır."
+        },
+        {
+          "q": "Google Takvim ve Outlook ile çalışıyor mu?",
+          "a": "Evet. iPhone veya iPad’inizdeki takvimler ekranda görünür, oraya eklenmiş Google ve Outlook hesapları dahil; ayrıca birçok okul takvimi gibi bağlantıyla abone olabileceğiniz her takvim (ICS veya webcal). Kinboard takvimleri yalnızca okur, asla değiştirmez."
+        },
+        {
+          "q": "Tüm aile düzenleyebilir mi?",
+          "a": "Evet. iPhone’unuzda Aile → Aile Üyelerini Davet Et’i açın. Davet ettiğiniz herkes aynı listeleri, takvimleri ve geri sayımları kendi iPhone’undan görür ve düzenler; değişiklikler saniyeler içinde tüm ekranlarda görünür."
+        },
+        {
+          "q": "Ailemin de satın alması gerekiyor mu?",
+          "a": "Hayır. Kinboard+ Aile Paylaşımı ile çalışır: bir kez satın alın, Apple aile grubunuzdaki herkes için Apple TV, iPad ve iPhone’da açılsın."
+        },
+        {
+          "q": "Deneme sona erince ne olur?",
+          "a": "Saat, hava durumu, geri sayımlar, gece modu ve bir takvim çalışmaya devam eder. Listeler, görevler, fotoğraflar ve diğer takvimler saklanır ve Kinboard+ açılır açılmaz geri gelir."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ailenize tek bir ekran verin",
+      "text": "Zaten sahip olduğunuz Apple TV veya iPad’de her şeyi 14 gün ücretsiz deneyin."
+    }
+  },
+  "support": {
+    "meta": {
+      "title": "Kinboard Destek",
+      "description": "Apple TV, iPad ve iPhone için aile ekranı Kinboard hakkında yardım: başlarken, takvimler, hava durumu, Kinboard+ ve iletişim."
+    },
+    "title": "Destek",
+    "lede": "Kinboard’u tek bir bağımsız geliştirici yapıyor. İstediğiniz zaman yazın - her mesaj okunur ve genellikle iki gün içinde yanıtlanır.",
+    "emailLabel": "E-posta:",
+    "emailHint": "Lütfen cihazlarınızı (Apple TV, iPad, iPhone) ve ne görmeyi beklediğinizi belirtin.",
+    "start": {
+      "title": "Başlarken",
+      "steps": [
+        "Kinboard’u aile ekranı olacak Apple TV’ye veya iPad’e ve iPhone’unuza yükleyin.",
+        "iPhone’da aile üyelerini ekleyin ve gösterilecek takvimleri seçin. Değişiklikler iCloud üzerinden tüm ekranlarda görünür.",
+        "Başkalarının da listeleri ve takvimleri düzenleyebilmesi için iPhone’unuzda Aile → Aile Üyelerini Davet Et’i açın."
+      ]
+    },
+    "faq": {
+      "title": "Sık sorulan sorular",
+      "items": [
+        {
+          "q": "Etkinlikler ekranda görünmüyor.",
+          "a": "Tüm cihazların aynı iCloud hesabında oturum açtığından (ya da bir davetle ailenize katıldığından) ve iCloud Drive’ın açık olduğundan emin olun. iPhone’daki takvimler, Kinboard orada açıldığında ve zaman zaman arka planda güncellenir."
+        },
+        {
+          "q": "Google veya Outlook takvimini nasıl eklerim?",
+          "a": "Hesabı iPhone’da Ayarlar → Takvim → Hesaplar bölümünden ekleyin, ardından takvimlerini Kinboard’da seçin. Bir takvimin abonelik bağlantısını (ICS veya webcal) da yapıştırabilirsiniz."
+        },
+        {
+          "q": "Hava durumu görünmüyor.",
+          "a": "Kinboard’un konumunuzu kullanmasına izin verin: iPhone ve iPad’de Ayarlar → Uygulamalar → Kinboard → Konum (bazı sürümlerde Ayarlar → Gizlilik ve Güvenlik → Konum Servisleri). Apple TV’de kumandadaki Seç düğmesine basın, ardından Yerel Hava Durumunu Göster’i seçin."
+        },
+        {
+          "q": "Neler ücretsiz, Kinboard+’ta neler var?",
+          "a": "14 gün boyunca her şey açık. Sonrasında saat, hava durumu, geri sayımlar, gece modu ve bir takvim ücretsiz kalır. Kinboard+ tek seferlik bir satın almadır; tüm takvimleri, paylaşılan listeleri, görevleri ve yıldızları, fotoğraflı arka planı, aile davetlerini ve Apple TV Top Shelf’i açar. Deneme sona erdiğinde eklediğiniz hiçbir şey silinmez."
+        },
+        {
+          "q": "Kinboard+’ı başka bir cihazda satın aldım.",
+          "a": "Kinboard ayarlarının en üstündeki Kinboard+’ı açın ve Satın Alınanları Geri Yükle’ye dokunun. Aile Paylaşımı ile satın alma, Apple aile grubunuzdaki herkes için görünür."
+        },
+        {
+          "q": "Nasıl para iadesi alırım?",
+          "a": "Para iadeleri Apple tarafından <a href=\"https://reportaproblem.apple.com\">reportaproblem.apple.com</a> adresinde yapılır."
+        }
+      ]
+    }
+  },
+  "privacy": {
+    "meta": {
+      "title": "Kinboard Gizlilik Politikası",
+      "description": "Kinboard verilerinizi nasıl işler: hesap yok, analitik yok, her şey ailenizin iCloud’unda kalır."
+    },
+    "title": "Gizlilik Politikası",
+    "updatedLabel": "Son güncelleme:",
+    "updated": "7 Kasım 2026",
+    "lede": "Kinboard’da hesap, kendine ait sunucu, analitik ve reklam yoktur. Takvimleriniz, listeleriniz, fotoğraflarınız veya konumunuz hiçbir zaman geliştiriciye ulaşmaz.",
+    "sections": [
+      {
+        "title": "Verileriniz nerede durur",
+        "paragraphs": [
+          "Kinboard’da kurduğunuz her şey - aile üyeleri, takvimler, listeler, görevler, geri sayımlar, fotoğraflar ve ayarlar - cihazlarınızda ve Apple’ın CloudKit’i aracılığıyla kendi iCloud hesabınızda saklanır. Aile üyelerini davet ettiğinizde aynı veriler, davet ettiğiniz kişilerle onların iCloud hesapları üzerinden paylaşılır. Geliştirici bunların hiçbirini göremez ve hiçbirine erişemez."
+        ],
+        "points": []
+      },
+      {
+        "title": "Takvimler",
+        "paragraphs": [],
+        "points": [
+          "İzninizle, iPhone veya iPad’deki Kinboard seçtiğiniz takvimleri okur ve aile ekranınızın gösterebilmesi için yaklaşan etkinliklerini iCloud’unuza kopyalar. Kinboard etkinlikleri asla değiştirmez veya silmez.",
+          "Eklediğiniz takvim bağlantıları (ICS veya webcal) cihazınız tarafından doğrudan takvim sağlayıcısından indirilir."
+        ]
+      },
+      {
+        "title": "Konum ve hava durumu",
+        "paragraphs": [
+          "Yerel hava durumunu göstermek için Kinboard yaklaşık konumunuzu ister. Bu bilgi yalnızca cihazınızda, Apple Hava Durumu’ndan (WeatherKit) tahmin istemek için kullanılır. Kinboard konumunuzu saklamaz ve paylaşmaz."
+        ],
+        "points": []
+      },
+      {
+        "title": "Fotoğraflar",
+        "paragraphs": [],
+        "points": [
+          "Eklediğiniz aile fotoğrafları, tüm aile ekranlarında gösterilebilmeleri için iCloud’unuza kaydedilir.",
+          "Fotoğraflar uygulamasından bir albüm seçerseniz, resimleri yalnızca o cihazda okunur ve asla yüklenmez."
+        ]
+      },
+      {
+        "title": "Satın almalar",
+        "paragraphs": [
+          "Ücretsiz deneme, Kinboard+ satın alımı ve “Bahşiş” bölümündeki üç isteğe bağlı bahşiş, App Store aracılığıyla Apple tarafından yürütülür. Bahşişler hiçbir özelliğin kilidini açmaz, yalnızca geliştiriciyi desteklemenin bir yoludur. Kinboard yalnızca bir satın almanın tamamlanıp tamamlanmadığını ve Kinboard+’ın etkin olup olmadığını öğrenir; ödeme bilgilerinizi asla görmez."
+        ],
+        "points": []
+      },
+      {
+        "title": "Tanılama",
+        "paragraphs": [
+          "iPhone ve iPad’de iOS ve iPadOS, uygulamanın çökmeleri ve performansıyla ilgili raporları Kinboard’a iletebilir (Apple MetricKit). Raporlar uygulamanın nasıl çalıştığını anlatır; takvim, liste, fotoğraf veya konum içermez. Apple TV bu raporları sağlamaz."
+        ],
+        "points": [
+          "Raporlar cihazınızda kalır: her türden en fazla beş tane, en fazla yedi gün boyunca saklanır ve yedeklemelere dahil edilmez.",
+          "Geliştiriciye yalnızca “E-postaya Tanılama Ekle”yi açar (varsayılan olarak kapalıdır) ve e-postayı “Geliştiriciye Yaz” üzerinden kendiniz gönderirseniz ulaşır. E-posta <a href=\"mailto:{supportemail}\">{supportemail}</a> adresine gider.",
+          "Bu e-posta ayrıca cihaz model tanımlayıcısını, sistem sürümünü, uygulama sürümünü, uygulamanın dilini ve bölgesini ve Kinboard+’ın etkin olup olmadığını içerir. Cihazınızın adını veya aile verilerinizi asla içermez.",
+          "Geliştirici raporları yalnızca sorunları gidermek için kullanır ve artık gerekmediğinde siler."
+        ]
+      },
+      {
+        "title": "Çocuklar",
+        "paragraphs": [
+          "Kinboard bir aile uygulamasıdır ve çocuklar dahil hiç kimseden kişisel veri toplamaz."
+        ],
+        "points": []
+      },
+      {
+        "title": "İzleme",
+        "paragraphs": [
+          "Kinboard sizi uygulamalar veya web siteleri arasında izlemez ve üçüncü taraf analitik ya da reklam kodu içermez. Bu web sitesi çerez kullanmaz ve başka sunuculardan hiçbir şey yüklemez; yalnızca açık veya koyu görünüm tercihinizi tarayıcınızda hatırlar."
+        ],
+        "points": []
+      },
+      {
+        "title": "Verilerinizi silme",
+        "paragraphs": [
+          "Uygulamayı cihazlarınızdan silin, ardından iCloud verilerini Ayarlar → adınız → iCloud → Hesap Depolama Alanını Yönet → Kinboard bölümünden kaldırın. Ailenize katılan aile üyeleri, iPhone’larındaki Kinboard’dan istedikleri zaman aileden ayrılabilir."
+        ],
+        "points": []
+      },
+      {
+        "title": "Değişiklikler ve iletişim",
+        "paragraphs": [
+          "Bu politika değişirse yeni sürüm, yeni bir tarihle bu sayfada yayımlanır. Gizlilikle ilgili sorular için: <a href=\"mailto:{privacyemail}\">{privacyemail}</a>."
+        ],
+        "points": []
+      }
+    ]
+  },
+  "notFound": {
+    "title": "Sayfa bulunamadı",
+    "text": "Bu sayfa mevcut değil. Taşınmış olabilir.",
+    "back": "Ana sayfaya git"
+  },
+  "jsonld": {
+    "description": "Kinboard, zaten sahip olduğunuz Apple TV veya iPad’i bir aile ekranına dönüştürür: herkesin takvimi, ortak listeler, yıldızlı çocuk görevleri, geri sayımlar, hava durumu ve aile fotoğrafları; hepsi herhangi bir iPhone’dan düzenlenir.",
+    "plusDescription": "Aile Paylaşımı destekli tek seferlik uygulama içi satın alma"
+  }
+}

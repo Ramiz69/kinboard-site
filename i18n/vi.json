@@ -1,0 +1,363 @@
+{
+  "_notes": {
+    "about": "See en.json _notes: they explain every tricky key."
+  },
+  "lang": "vi",
+  "path": "/vi/",
+  "badgeLang": "vi",
+  "ui": {
+    "skip": "Chuyển đến nội dung",
+    "language": "Ngôn ngữ",
+    "theme": {
+      "label": "Giao diện",
+      "auto": "Tự động",
+      "light": "Sáng",
+      "dark": "Tối"
+    },
+    "badgeAlt": "Tải về trên App Store",
+    "siteNav": "Trang web",
+    "home": "Trang chủ",
+    "support": "Hỗ trợ",
+    "privacy": "Chính sách quyền riêng tư",
+    "copyright": "© 2026 Ramiz Kichibekov",
+    "trademarks": "Apple, Apple TV, iPad, iPhone và iCloud là nhãn hiệu của Apple Inc.",
+    "press": "Báo chí"
+  },
+  "home": {
+    "meta": {
+      "title": "Kinboard - màn hình gia đình cho Apple TV và iPad",
+      "description": "Biến Apple TV hoặc iPad bạn đang có thành màn hình gia đình: lịch của mọi người, danh sách chung, nhiệm vụ của bé và thời tiết. Miễn phí 14 ngày.",
+      "ogTitle": "Kinboard - màn hình gia đình cho Apple TV và iPad",
+      "ogDescription": "Lịch của mọi người, danh sách chung, nhiệm vụ của bé và thời tiết trên màn hình bạn đang có. Không tài khoản, không đăng ký.",
+      "ogAlt": "Logo Kinboard: màn hình gia đình cho Apple TV và iPad"
+    },
+    "hero": {
+      "eyebrow": "Cho Apple TV, iPad và iPhone",
+      "title": "Màn hình gia đình bạn đã có sẵn",
+      "sub": "Một ngày của mọi người, danh sách đi chợ, nhiệm vụ của các bé và thời tiết - trên Apple TV trong phòng khách hoặc iPad trên tường bếp. Đọc được từ phía bên kia phòng, và luôn bật.",
+      "note": "Miễn phí 14 ngày, sau đó mua một lần. Không tài khoản, không đăng ký.",
+      "requires": "Yêu cầu iOS 26, iPadOS 26 hoặc tvOS 26.",
+      "shotAlt": "Kinboard trên Apple TV: đồng hồ, sự kiện sắp tới, thời tiết, đếm ngược, sự kiện hôm nay và ngày mai, nhiệm vụ của các bé và danh sách đi chợ"
+    },
+    "how": {
+      "title": "Một màn hình trên tường, điều khiển trong túi bạn",
+      "lede": "Không cần mua thêm thiết bị. Kinboard dùng các thiết bị Apple mà gia đình bạn đã có.",
+      "steps": [
+        {
+          "title": "Màn hình",
+          "text": "Apple TV trong phòng khách hoặc iPad trên tường bếp. Màn hình hiển thị một ngày của cả nhà, luôn thức và tự làm mới."
+        },
+        {
+          "title": "Điều khiển",
+          "text": "iPhone của bạn. Bốn tab của nó - Danh sách, Trẻ em, Gia đình và Cài đặt - là nơi bạn thêm người, chọn lịch và đánh dấu việc đã xong."
+        },
+        {
+          "title": "Cùng một iCloud",
+          "text": "Cài Kinboard trên cả hai với cùng tài khoản iCloud, màn hình sẽ tự điền. Mời gia đình bạn, và mỗi người chỉnh sửa từ iPhone của mình."
+        }
+      ],
+      "shotAlt": "Kinboard trên iPad treo tường, với các tab Màn hình, Danh sách, Trẻ em, Gia đình và Cài đặt ở trên cùng"
+    },
+    "features": {
+      "title": "Mọi thứ gia đình cần, chỉ một cái nhìn",
+      "lede": "Thiết lập một lần trên iPhone. Thay đổi hiện trên mọi màn hình chỉ sau vài giây.",
+      "items": [
+        {
+          "title": "Lịch của mọi người",
+          "text": "Mỗi người một màu, nhìn là biết ai đang ở đâu.",
+          "points": [
+            "Hôm nay và ngày mai cạnh nhau, việc đang diễn ra hiện ở trên cùng",
+            "Lịch từ iPhone và iPad, gồm cả tài khoản Google và Outlook đã thêm ở đó",
+            "Mọi lịch có thể đăng ký bằng liên kết - trường học, câu lạc bộ thể thao, ngày lễ"
+          ],
+          "shotAlt": "Tab Gia đình trên iPhone: Mẹ, Bố, Mia và Leo, mỗi người một màu, cùng lịch của họ"
+        },
+        {
+          "title": "Danh sách chung",
+          "text": "Đi chợ, đồ mang theo và việc cần làm mà ai cũng cập nhật được từ iPhone của mình.",
+          "points": [
+            "Đánh dấu mục ngay trên iPad",
+            "Mục chưa xong hiện trên màn hình và trên Top Shelf của Apple TV"
+          ],
+          "shotAlt": "Tab Danh sách trên iPhone với danh sách đi chợ và danh sách cho chuyến đi cuối tuần"
+        },
+        {
+          "title": "Nhiệm vụ của bé và sao",
+          "text": "Việc hằng ngày cho từng bé, vào những ngày bạn chọn.",
+          "points": [
+            "Một đến ba sao cho mỗi nhiệm vụ, và tổng sao trong tuần để bé cùng xem",
+            "Bé tự đánh dấu việc đã xong trên iPad"
+          ],
+          "shotAlt": "Tab Trẻ em trên iPhone: cho mèo ăn, dọn giường, dỡ máy rửa bát và tưới cây, kèm sao"
+        },
+        {
+          "title": "Thêm nữa trên màn hình",
+          "text": "Những điều cả nhà xem mỗi ngày, không cần cầm điện thoại lên.",
+          "points": [
+            "Thời tiết tại nơi bạn ở",
+            "Đếm ngược đến sinh nhật, chuyến đi và lần bà đến chơi tiếp theo",
+            "Ảnh gia đình chậm rãi thay đổi phía sau lịch trình",
+            "Chế độ ban đêm giảm sáng màn hình lúc đi ngủ và sáng lại vào buổi sáng"
+          ],
+          "shotAlt": "Tab Cài đặt trên iPhone với chủ đề, hình nền ảnh và giảm sáng ban đêm"
+        }
+      ]
+    },
+    "alwaysOn": {
+      "title": "Dành cho màn hình luôn bật",
+      "lede": "Kinboard được làm để bật suốt cả ngày, nên nó tự lo cho màn hình thay bạn.",
+      "facts": [
+        {
+          "title": "Luôn thức",
+          "text": "Giữ màn hình luôn sáng và tự làm mới."
+        },
+        {
+          "title": "Sắp tới",
+          "text": "Sự kiện tiếp theo luôn ở trên cùng, kèm thời gian còn lại đến lúc bắt đầu."
+        },
+        {
+          "title": "Top Shelf",
+          "text": "Sự kiện và danh sách sắp tới ngay trên Màn hình chính của Apple TV."
+        },
+        {
+          "title": "Thân thiện với OLED",
+          "text": "Bố cục dịch chuyển nhẹ để bảo vệ màn hình OLED."
+        },
+        {
+          "title": "Đọc được từ ghế sofa",
+          "text": "Chữ lớn bo tròn, độ tương phản cao, hỗ trợ Chữ in đậm và Tăng độ tương phản."
+        },
+        {
+          "title": "Giảm sáng ban đêm",
+          "text": "Để màn hình không rọi sáng căn bếp tối."
+        }
+      ],
+      "shotAlt": "Kinboard trên iPad: đồng hồ lớn, thời tiết theo giờ, đếm ngược, sự kiện hôm nay và ngày mai, nhiệm vụ và danh sách"
+    },
+    "privacy": {
+      "title": "Riêng tư ngay từ thiết kế",
+      "text": "Kinboard không có máy chủ riêng và không thu thập phân tích. Mọi thứ đồng bộ qua iCloud của gia đình bạn - nhà phát triển không bao giờ thấy lịch, danh sách hay ảnh của bạn.",
+      "points": [
+        "Không cần tạo tài khoản",
+        "Không phân tích, không quảng cáo, không theo dõi",
+        "Dữ liệu của bạn ở lại trong iCloud của chính gia đình bạn"
+      ],
+      "link": "Đọc chính sách quyền riêng tư"
+    },
+    "pricing": {
+      "title": "Dùng thử miễn phí, sau đó mua một lần",
+      "lede": "Hãy thử mọi thứ trên màn hình của bạn trước. Nếu Kinboard xứng đáng có chỗ trên tường, hãy giữ nó chỉ với một lần mua.",
+      "trial": {
+        "title": "Miễn phí 14 ngày",
+        "text": "Mọi thứ đều mở ngay từ lần đầu mở app. Không cần đăng ký tài khoản, không có gì phải hủy."
+      },
+      "free": {
+        "title": "Miễn phí sau thời gian dùng thử",
+        "items": [
+          "Đồng hồ",
+          "Thời tiết",
+          "Đếm ngược",
+          "Chế độ ban đêm",
+          "Một lịch"
+        ]
+      },
+      "plus": {
+        "title": "Kinboard+",
+        "text": "Mua một lần, không đăng ký.",
+        "items": [
+          "Mọi lịch",
+          "Danh sách chung",
+          "Nhiệm vụ và sao",
+          "Hình nền ảnh",
+          "Lời mời gia đình",
+          "Top Shelf trên Apple TV"
+        ],
+        "price": "{price} trên App Store Hoa Kỳ. Ở nơi khác, App Store hiển thị giá theo đơn vị tiền tệ của bạn.",
+        "family": "Trên Apple TV, iPad và iPhone, và cho cả gia đình qua Chia sẻ trong gia đình."
+      },
+      "kept": "Khi hết thời gian dùng thử, không có gì bạn đã thêm bị xóa: mọi thứ quay lại ngay khi mở khóa Kinboard+."
+    },
+    "faq": {
+      "title": "Câu hỏi",
+      "items": [
+        {
+          "q": "Tôi cần những thiết bị nào?",
+          "a": "Một Apple TV hoặc iPad làm màn hình gia đình, và tốt nhất là một iPhone để thiết lập và chỉnh sửa. Bạn cũng có thể thiết lập ngay trên iPad hoặc Apple TV, nhưng dùng iPhone là dễ nhất. Kinboard yêu cầu iOS 26, iPadOS 26 hoặc tvOS 26."
+        },
+        {
+          "q": "Tôi có cần tài khoản không?",
+          "a": "Không. Kinboard đồng bộ qua iCloud, giống như Ghi chú và Lời nhắc của bạn. Nhà phát triển không bao giờ thấy lịch, danh sách hay ảnh của bạn."
+        },
+        {
+          "q": "Có phải đăng ký trả phí không?",
+          "a": "Không. Kinboard+ là giao dịch mua một lần, kèm 14 ngày dùng thử miễn phí để bạn xem trước trên màn hình của mình. Đồng hồ, thời tiết, đếm ngược, chế độ ban đêm và một lịch vẫn miễn phí sau thời gian dùng thử."
+        },
+        {
+          "q": "Có dùng được với Google Calendar và Outlook không?",
+          "a": "Có. Lịch từ iPhone hoặc iPad của bạn hiện trên màn hình, gồm cả tài khoản Google và Outlook đã thêm ở đó, cùng mọi lịch có thể đăng ký bằng liên kết (ICS hoặc webcal), như nhiều lịch của trường học. Kinboard chỉ đọc lịch và không bao giờ thay đổi chúng."
+        },
+        {
+          "q": "Cả nhà có cùng chỉnh sửa được không?",
+          "a": "Có. Trên iPhone, mở Gia đình → Mời thành viên gia đình. Người bạn mời sẽ xem và chỉnh cùng danh sách, lịch và đếm ngược từ iPhone của họ, và thay đổi hiện trên mọi màn hình chỉ sau vài giây."
+        },
+        {
+          "q": "Gia đình tôi có phải mua nữa không?",
+          "a": "Không. Kinboard+ hỗ trợ Chia sẻ trong gia đình: mua một lần là mở khóa cho mọi người trong nhóm gia đình Apple của bạn, trên Apple TV, iPad và iPhone."
+        },
+        {
+          "q": "Điều gì xảy ra khi hết thời gian dùng thử?",
+          "a": "Đồng hồ, thời tiết, đếm ngược, chế độ ban đêm và một lịch vẫn hoạt động. Danh sách, nhiệm vụ, ảnh và các lịch khác được giữ lại và quay lại ngay khi mở khóa Kinboard+."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Cho gia đình bạn một màn hình chung",
+      "text": "Dùng thử miễn phí mọi thứ trong 14 ngày trên Apple TV hoặc iPad bạn đang có."
+    }
+  },
+  "support": {
+    "meta": {
+      "title": "Hỗ trợ Kinboard",
+      "description": "Trợ giúp về Kinboard, màn hình gia đình cho Apple TV, iPad và iPhone: bắt đầu, lịch, thời tiết, Kinboard+ và liên hệ."
+    },
+    "title": "Hỗ trợ",
+    "lede": "Kinboard do một nhà phát triển độc lập làm ra. Hãy viết bất cứ lúc nào - mọi tin nhắn đều được đọc và trả lời, thường trong vòng hai ngày.",
+    "emailLabel": "Email:",
+    "emailHint": "Vui lòng cho biết thiết bị của bạn (Apple TV, iPad, iPhone) và điều bạn mong đợi sẽ thấy.",
+    "start": {
+      "title": "Bắt đầu",
+      "steps": [
+        "Cài Kinboard trên Apple TV hoặc iPad sẽ làm màn hình gia đình, và trên iPhone của bạn.",
+        "Trên iPhone, thêm thành viên gia đình và chọn lịch để hiển thị. Thay đổi hiện trên mọi màn hình qua iCloud.",
+        "Để người khác cùng chỉnh danh sách và lịch, mở Gia đình → Mời thành viên gia đình trên iPhone của bạn."
+      ]
+    },
+    "faq": {
+      "title": "Câu hỏi thường gặp",
+      "items": [
+        {
+          "q": "Sự kiện không hiện trên màn hình.",
+          "a": "Hãy kiểm tra rằng mọi thiết bị đều đăng nhập cùng một tài khoản iCloud (hoặc đã tham gia gia đình bạn qua lời mời), và iCloud Drive đang bật. Lịch từ iPhone được cập nhật khi mở Kinboard trên đó, và thỉnh thoảng ở chế độ nền."
+        },
+        {
+          "q": "Làm sao để thêm lịch Google hoặc Outlook?",
+          "a": "Thêm tài khoản trong Cài đặt → Lịch → Tài khoản trên iPhone, rồi chọn các lịch của tài khoản đó trong Kinboard. Bạn cũng có thể dán liên kết đăng ký của lịch (ICS hoặc webcal)."
+        },
+        {
+          "q": "Thời tiết không hiện.",
+          "a": "Cho phép Kinboard dùng vị trí của bạn: trên iPhone và iPad trong Cài đặt → Ứng dụng → Kinboard → Vị trí (ở một số phiên bản là Cài đặt → Quyền riêng tư &amp; Bảo mật → Dịch vụ định vị). Trên Apple TV, nhấn Chọn trên điều khiển, rồi chọn Hiện thời tiết tại chỗ."
+        },
+        {
+          "q": "Những gì miễn phí và Kinboard+ có gì?",
+          "a": "Mọi thứ đều mở trong 14 ngày. Sau đó, đồng hồ, thời tiết, đếm ngược, chế độ ban đêm và một lịch vẫn miễn phí. Kinboard+ là giao dịch mua một lần, mở khóa mọi lịch, danh sách chung, nhiệm vụ và sao, hình nền ảnh, lời mời gia đình và Top Shelf trên Apple TV. Khi hết thời gian dùng thử, không có gì bạn đã thêm bị xóa."
+        },
+        {
+          "q": "Tôi đã mua Kinboard+ trên thiết bị khác.",
+          "a": "Mở Kinboard+ ở đầu phần cài đặt của Kinboard và chạm vào Khôi phục giao dịch mua. Với Chia sẻ trong gia đình, giao dịch mua sẽ hiện cho mọi người trong nhóm gia đình Apple của bạn."
+        },
+        {
+          "q": "Làm sao để được hoàn tiền?",
+          "a": "Việc hoàn tiền do Apple xử lý tại <a href=\"https://reportaproblem.apple.com\">reportaproblem.apple.com</a>."
+        }
+      ]
+    }
+  },
+  "privacy": {
+    "meta": {
+      "title": "Chính sách quyền riêng tư của Kinboard",
+      "description": "Cách Kinboard xử lý dữ liệu của bạn: không tài khoản, không phân tích, mọi thứ ở lại trong iCloud của gia đình bạn."
+    },
+    "title": "Chính sách quyền riêng tư",
+    "updatedLabel": "Cập nhật lần cuối:",
+    "updated": "Ngày 7 tháng 11 năm 2026",
+    "lede": "Kinboard không có tài khoản, không có máy chủ riêng, không có phân tích và không có quảng cáo. Nhà phát triển không bao giờ nhận được lịch, danh sách, ảnh hay vị trí của bạn.",
+    "sections": [
+      {
+        "title": "Dữ liệu của bạn được lưu ở đâu",
+        "paragraphs": [
+          "Mọi thứ bạn thiết lập trong Kinboard - thành viên gia đình, lịch, danh sách, nhiệm vụ, đếm ngược, ảnh và cài đặt - được lưu trên thiết bị của bạn và trong tài khoản iCloud của chính bạn thông qua CloudKit của Apple. Khi bạn mời thành viên gia đình, cùng dữ liệu đó được chia sẻ với những người bạn mời, qua tài khoản iCloud của họ. Nhà phát triển không thể xem hay truy cập bất kỳ dữ liệu nào trong số đó."
+        ],
+        "points": []
+      },
+      {
+        "title": "Lịch",
+        "paragraphs": [],
+        "points": [
+          "Khi được bạn cho phép, Kinboard trên iPhone hoặc iPad đọc các lịch bạn chọn và sao chép các sự kiện sắp tới của chúng vào iCloud của bạn để màn hình gia đình có thể hiển thị. Kinboard không bao giờ thay đổi hay xóa sự kiện.",
+          "Các liên kết lịch bạn thêm (ICS hoặc webcal) được thiết bị của bạn tải trực tiếp từ nhà cung cấp lịch."
+        ]
+      },
+      {
+        "title": "Vị trí và thời tiết",
+        "paragraphs": [
+          "Để hiển thị thời tiết tại chỗ, Kinboard xin vị trí gần đúng của bạn. Vị trí này chỉ được dùng trên thiết bị của bạn để yêu cầu dự báo từ Thời tiết Apple (WeatherKit). Kinboard không lưu trữ hay chia sẻ vị trí của bạn."
+        ],
+        "points": []
+      },
+      {
+        "title": "Ảnh",
+        "paragraphs": [],
+        "points": [
+          "Ảnh gia đình bạn thêm được lưu vào iCloud của bạn để mọi màn hình gia đình đều có thể hiển thị.",
+          "Nếu bạn chọn một album từ app Ảnh, hình ảnh trong đó chỉ được đọc trên thiết bị ấy và không bao giờ được tải lên."
+        ]
+      },
+      {
+        "title": "Giao dịch mua",
+        "paragraphs": [
+          "Bản dùng thử miễn phí, giao dịch mua Kinboard+ và ba khoản tip không bắt buộc trong Tiền tip do Apple xử lý qua App Store. Tiền tip không mở khóa tính năng nào, đó chỉ là cách ủng hộ nhà phát triển. Kinboard chỉ biết giao dịch mua có thành công hay không và Kinboard+ có đang hiệu lực hay không; Kinboard không bao giờ thấy thông tin thanh toán của bạn."
+        ],
+        "points": []
+      },
+      {
+        "title": "Chẩn đoán",
+        "paragraphs": [
+          "Trên iPhone và iPad, iOS và iPadOS có thể chuyển cho Kinboard các báo cáo về sự cố và hiệu năng của ứng dụng (Apple MetricKit). Các báo cáo này mô tả cách ứng dụng hoạt động và không chứa lịch, danh sách, ảnh hay vị trí. Apple TV không cung cấp các báo cáo này."
+        ],
+        "points": [
+          "Báo cáo nằm trên thiết bị của bạn: tối đa năm báo cáo mỗi loại, không quá bảy ngày, và không được đưa vào bản sao lưu.",
+          "Báo cáo chỉ đến tay nhà phát triển nếu bạn bật Đính kèm chẩn đoán vào email (mặc định tắt) và tự gửi email từ Viết cho nhà phát triển. Email được gửi tới <a href=\"mailto:{supportemail}\">{supportemail}</a>.",
+          "Email đó cũng có mã định danh kiểu máy, phiên bản hệ điều hành, phiên bản ứng dụng, ngôn ngữ và khu vực của ứng dụng, và Kinboard+ có đang hiệu lực hay không. Email không bao giờ có tên thiết bị hay dữ liệu gia đình của bạn.",
+          "Nhà phát triển chỉ dùng báo cáo để khắc phục sự cố và xóa chúng khi không còn cần nữa."
+        ]
+      },
+      {
+        "title": "Trẻ em",
+        "paragraphs": [
+          "Kinboard là ứng dụng gia đình và không thu thập dữ liệu cá nhân của bất kỳ ai, kể cả trẻ em."
+        ],
+        "points": []
+      },
+      {
+        "title": "Theo dõi",
+        "paragraphs": [
+          "Kinboard không theo dõi bạn trên các ứng dụng hay trang web khác và không chứa mã phân tích hay quảng cáo của bên thứ ba. Trang web này không đặt cookie và không tải gì từ máy chủ khác; nó chỉ ghi nhớ lựa chọn giao diện sáng hoặc tối của bạn trong trình duyệt."
+        ],
+        "points": []
+      },
+      {
+        "title": "Xóa dữ liệu của bạn",
+        "paragraphs": [
+          "Xóa ứng dụng khỏi các thiết bị của bạn, rồi xóa dữ liệu iCloud của nó trong Cài đặt → tên của bạn → iCloud → Quản lý dung lượng tài khoản → Kinboard. Những thành viên đã tham gia gia đình của bạn có thể rời đi bất cứ lúc nào từ Kinboard trên iPhone của họ."
+        ],
+        "points": []
+      },
+      {
+        "title": "Thay đổi và liên hệ",
+        "paragraphs": [
+          "Nếu chính sách này thay đổi, phiên bản mới sẽ được đăng trên trang này với ngày mới. Câu hỏi về quyền riêng tư: <a href=\"mailto:{privacyemail}\">{privacyemail}</a>."
+        ],
+        "points": []
+      }
+    ]
+  },
+  "notFound": {
+    "title": "Không tìm thấy trang",
+    "text": "Trang này không tồn tại. Có thể nó đã được chuyển đi.",
+    "back": "Về trang chủ"
+  },
+  "jsonld": {
+    "description": "Kinboard biến Apple TV hoặc iPad bạn đang có thành màn hình gia đình: lịch của mọi người, danh sách chung, nhiệm vụ của bé kèm sao, đếm ngược, thời tiết và ảnh gia đình, chỉnh sửa từ bất kỳ iPhone nào.",
+    "plusDescription": "Giao dịch mua trong ứng dụng một lần, hỗ trợ Chia sẻ trong gia đình"
+  }
+}

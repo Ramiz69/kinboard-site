@@ -1,0 +1,18 @@
+<div class="doc">
+  <h1>{{support.title}}</h1>
+  <p class="lede-doc">{{support.lede}}</p>
+  <div class="card mail">
+    <p><b>{{support.emailLabel}}</b> <a href="mailto:{{supportEmail}}?subject=Kinboard">{{supportEmail}}</a></p>
+    <p class="muted small">{{support.emailHint}}</p>
+  </div>
+
+  <h2>{{support.start.title}}</h2>
+  <ol>
+    {{#startSteps}}<li>{{.}}</li>{{/startSteps}}
+  </ol>
+
+  <h2>{{support.faq.title}}</h2>
+  {{#supportFaq}}<h3>{{.q}}</h3><p>{{.a}}</p>{{/supportFaq}}
+
+  <div class="cta doc-cta">{{badge}}</div>
+</div>

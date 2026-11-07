@@ -1,0 +1,43 @@
+<div class="doc press">
+  <h1>{{press.title}}</h1>
+  <p class="updated">{{press.updated}}</p>
+  <p class="lede-doc">{{press.lede}}</p>
+  <p><a class="button" href="{{zipHref}}" download>{{press.zip}}</a></p>
+
+  <h2>{{press.factsTitle}}</h2>
+  <dl class="facts">
+    {{#press.facts}}<dt>{{.k}}</dt><dd>{{.v}}</dd>{{/press.facts}}
+  </dl>
+
+  <h2>{{press.shortTitle}}</h2>
+  {{#press.short}}<p>{{.}}</p>{{/press.short}}
+
+  <h2>{{press.longTitle}}</h2>
+  <div class="long">
+  {{longHtml}}
+  </div>
+
+  <h2>{{press.featuresTitle}}</h2>
+  <ul class="features-list">
+    {{#press.features}}<li><strong>{{.t}}</strong> {{.d}}</li>{{/press.features}}
+  </ul>
+
+  <h2>{{press.assetsTitle}}</h2>
+  <p>{{press.assetsLede}}</p>
+
+  <h3>{{press.brandTitle}}</h3>
+  <ul class="assets">
+    {{#brandItems}}<li class="{{.cls}}"><a href="/press/{{.file}}" download><img src="/press/{{.thumb}}" alt="{{.alt}}" width="{{.thumbW}}" height="{{.thumbH}}" loading="lazy" decoding="async"></a><span>{{.label}} · {{.size}}</span></li>{{/brandItems}}
+  </ul>
+
+  <h3>{{press.shotsTitle}}</h3>
+  <p class="muted">{{press.shotsLede}}</p>
+  <ul class="assets shots">
+    {{#shotItems}}<li class="{{.cls}}"><a href="/press/{{.file}}.jpg"><img src="/press/thumbs/{{.file}}.webp" alt="{{.alt}}" width="{{.thumbW}}" height="{{.thumbH}}" loading="lazy" decoding="async"></a><span>{{.w}} x {{.h}} JPEG · {{.size}}</span></li>{{/shotItems}}
+  </ul>
+  <p><a class="button" href="{{zipHref}}" download>{{press.zip}}</a></p>
+
+  <h2>{{press.contactTitle}}</h2>
+  <p>{{press.contact}}</p>
+  <p class="updated">{{press.trademarks}}</p>
+</div>

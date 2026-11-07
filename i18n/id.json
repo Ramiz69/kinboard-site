@@ -1,0 +1,363 @@
+{
+  "_notes": {
+    "about": "See en.json _notes: they explain every tricky key."
+  },
+  "lang": "id",
+  "path": "/id/",
+  "badgeLang": "id",
+  "ui": {
+    "skip": "Langsung ke konten",
+    "language": "Bahasa",
+    "theme": {
+      "label": "Tampilan",
+      "auto": "Otomatis",
+      "light": "Terang",
+      "dark": "Gelap"
+    },
+    "badgeAlt": "Unduh di App Store",
+    "siteNav": "Situs",
+    "home": "Beranda",
+    "support": "Dukungan",
+    "privacy": "Kebijakan Privasi",
+    "copyright": "© 2026 Ramiz Kichibekov",
+    "trademarks": "Apple, Apple TV, iPad, iPhone, dan iCloud adalah merek dagang Apple Inc.",
+    "press": "Pers"
+  },
+  "home": {
+    "meta": {
+      "title": "Kinboard - layar keluarga untuk Apple TV dan iPad",
+      "description": "Jadikan Apple TV atau iPad yang sudah Anda punya sebagai layar keluarga: kalender semua orang, daftar bersama, tugas anak, dan cuaca. Gratis 14 hari.",
+      "ogTitle": "Kinboard - layar keluarga untuk Apple TV dan iPad",
+      "ogDescription": "Kalender semua orang, daftar bersama, tugas anak, dan cuaca di layar yang sudah Anda punya. Tanpa akun, tanpa langganan.",
+      "ogAlt": "Logo Kinboard: layar keluarga untuk Apple TV dan iPad"
+    },
+    "hero": {
+      "eyebrow": "Untuk Apple TV, iPad, dan iPhone",
+      "title": "Layar keluarga yang sudah Anda punya",
+      "sub": "Hari setiap orang, daftar belanja, tugas anak-anak, dan cuaca - di Apple TV ruang keluarga atau iPad di dinding dapur. Terbaca dari seberang ruangan, dan selalu menyala.",
+      "note": "Gratis 14 hari, lalu sekali beli. Tanpa akun, tanpa langganan.",
+      "requires": "Memerlukan iOS 26, iPadOS 26, atau tvOS 26.",
+      "shotAlt": "Kinboard di Apple TV: jam, acara berikutnya, cuaca, hitung mundur, acara hari ini dan besok, tugas anak, dan daftar belanja"
+    },
+    "how": {
+      "title": "Satu layar di dinding, remote di saku Anda",
+      "lede": "Tidak perlu membeli perangkat tambahan. Kinboard memakai perangkat Apple yang sudah dimiliki keluarga Anda.",
+      "steps": [
+        {
+          "title": "Layar",
+          "text": "Apple TV di ruang keluarga atau iPad di dinding dapur. Layar ini menampilkan hari keluarga, tetap menyala, dan memperbarui dirinya sendiri."
+        },
+        {
+          "title": "Remote",
+          "text": "iPhone Anda. Di keempat tabnya - Daftar, Anak, Keluarga, dan Pengaturan - Anda menambahkan orang, memilih kalender, dan mencentang yang sudah selesai."
+        },
+        {
+          "title": "iCloud yang sama",
+          "text": "Instal Kinboard di keduanya dengan akun iCloud yang sama, dan layarnya terisi sendiri. Undang keluarga Anda, dan setiap orang bisa mengedit dari iPhone masing-masing."
+        }
+      ],
+      "shotAlt": "Kinboard di iPad yang terpasang di dinding, dengan tab Layar, Daftar, Anak, Keluarga, dan Pengaturan di bagian atas"
+    },
+    "features": {
+      "title": "Semua yang dibutuhkan keluarga, sekali lihat",
+      "lede": "Atur sekali di iPhone Anda. Perubahan muncul di setiap layar dalam hitungan detik.",
+      "items": [
+        {
+          "title": "Kalender semua orang",
+          "text": "Setiap orang punya warna sendiri, jadi langsung terlihat siapa ada di mana.",
+          "points": [
+            "Hari ini dan besok berdampingan, dengan yang sedang berlangsung di paling atas",
+            "Kalender dari iPhone dan iPad, termasuk akun Google dan Outlook yang ditambahkan di sana",
+            "Kalender apa pun yang bisa dilanggan lewat tautan - sekolah, klub olahraga, hari libur"
+          ],
+          "shotAlt": "Tab Keluarga di iPhone: Ibu, Ayah, Mia, dan Leo, masing-masing dengan warna dan kalendernya sendiri"
+        },
+        {
+          "title": "Daftar bersama",
+          "text": "Belanja, barang bawaan, dan urusan yang bisa diperbarui siapa saja dari iPhone-nya.",
+          "points": [
+            "Centang item langsung di iPad",
+            "Item yang belum selesai tampil di layar dan di Top Shelf Apple TV"
+          ],
+          "shotAlt": "Tab Daftar di iPhone dengan daftar belanja dan daftar liburan akhir pekan"
+        },
+        {
+          "title": "Tugas anak dan bintang",
+          "text": "Tugas harian untuk setiap anak, di hari yang Anda pilih.",
+          "points": [
+            "Satu sampai tiga bintang per tugas, dan jumlah bintang mingguan yang bisa dilihat anak",
+            "Anak-anak menandai sendiri tugas yang selesai di iPad"
+          ],
+          "shotAlt": "Tab Anak di iPhone: beri makan kucing, rapikan tempat tidur, kosongkan mesin cuci piring, dan siram tanaman, dengan bintang"
+        },
+        {
+          "title": "Lebih banyak di layar",
+          "text": "Hal-hal yang dicek keluarga setiap hari, tanpa perlu mengambil ponsel.",
+          "points": [
+            "Cuaca di tempat Anda",
+            "Hitung mundur ke ulang tahun, liburan, dan kunjungan Nenek berikutnya",
+            "Foto keluarga berganti perlahan di belakang jadwal",
+            "Mode malam meredupkan layar saat waktu tidur dan menyalakannya lagi di pagi hari"
+          ],
+          "shotAlt": "Tab Pengaturan di iPhone dengan tema, latar foto, dan peredupan di malam hari"
+        }
+      ]
+    },
+    "alwaysOn": {
+      "title": "Dibuat untuk layar yang selalu menyala",
+      "lede": "Kinboard memang dibiarkan menyala sepanjang hari, jadi ia yang mengurus layarnya untuk Anda.",
+      "facts": [
+        {
+          "title": "Selalu menyala",
+          "text": "Layar tetap menyala dan diperbarui sendiri."
+        },
+        {
+          "title": "Berikutnya",
+          "text": "Acara berikutnya selalu di paling atas, lengkap dengan berapa lama lagi dimulai."
+        },
+        {
+          "title": "Top Shelf",
+          "text": "Acara dan daftar berikutnya langsung di Layar Utama Apple TV."
+        },
+        {
+          "title": "Ramah OLED",
+          "text": "Tata letak bergeser perlahan untuk melindungi layar OLED."
+        },
+        {
+          "title": "Terbaca dari sofa",
+          "text": "Huruf besar dan membulat dengan kontras tinggi, mendukung Teks Tebal dan Tingkatkan Kontras."
+        },
+        {
+          "title": "Redup di malam hari",
+          "text": "Agar layar tidak menerangi dapur yang gelap."
+        }
+      ],
+      "shotAlt": "Kinboard di iPad: jam besar, cuaca per jam, hitung mundur, acara hari ini dan besok, tugas, dan daftar"
+    },
+    "privacy": {
+      "title": "Privasi sejak awal",
+      "text": "Kinboard tidak punya server sendiri dan tanpa analitik. Semua disinkronkan melalui iCloud keluarga Anda - pengembang tidak pernah melihat kalender, daftar, atau foto Anda.",
+      "points": [
+        "Tidak perlu membuat akun",
+        "Tanpa analitik, tanpa iklan, tanpa pelacakan",
+        "Data Anda tetap di iCloud milik keluarga Anda sendiri"
+      ],
+      "link": "Baca kebijakan privasi"
+    },
+    "pricing": {
+      "title": "Uji coba gratis, lalu sekali beli",
+      "lede": "Coba semuanya dulu di layar Anda sendiri. Jika Kinboard layak mendapat tempat di dinding, miliki dengan sekali beli.",
+      "trial": {
+        "title": "Gratis 14 hari",
+        "text": "Semua terbuka sejak pertama dibuka. Tanpa pendaftaran, tidak ada yang perlu dibatalkan."
+      },
+      "free": {
+        "title": "Gratis setelah uji coba",
+        "items": [
+          "Jam",
+          "Cuaca",
+          "Hitung mundur",
+          "Mode malam",
+          "Satu kalender"
+        ]
+      },
+      "plus": {
+        "title": "Kinboard+",
+        "text": "Pembelian sekali, tanpa langganan.",
+        "items": [
+          "Semua kalender",
+          "Daftar bersama",
+          "Tugas dan bintang",
+          "Latar foto",
+          "Undangan keluarga",
+          "Top Shelf Apple TV"
+        ],
+        "price": "{price} di App Store AS. Di negara lain, App Store menampilkan harga dalam mata uang Anda.",
+        "family": "Di Apple TV, iPad, dan iPhone, serta untuk seluruh keluarga melalui Berbagi Keluarga."
+      },
+      "kept": "Tidak ada yang Anda tambahkan yang dihapus saat uji coba berakhir: semuanya kembali begitu Kinboard+ dibuka."
+    },
+    "faq": {
+      "title": "Pertanyaan",
+      "items": [
+        {
+          "q": "Perangkat apa yang saya perlukan?",
+          "a": "Apple TV atau iPad untuk layar keluarga, dan sebaiknya iPhone untuk mengatur dan mengedit. Anda juga bisa mengatur langsung di iPad atau Apple TV, tetapi lewat iPhone paling mudah. Kinboard memerlukan iOS 26, iPadOS 26, atau tvOS 26."
+        },
+        {
+          "q": "Apakah saya perlu akun?",
+          "a": "Tidak. Kinboard disinkronkan melalui iCloud, sama seperti Catatan dan Pengingat Anda. Pengembang tidak pernah melihat kalender, daftar, atau foto Anda."
+        },
+        {
+          "q": "Apakah ada langganan?",
+          "a": "Tidak. Kinboard+ adalah pembelian sekali, dengan uji coba gratis 14 hari agar Anda bisa melihatnya dulu di layar sendiri. Jam, cuaca, hitung mundur, mode malam, dan satu kalender tetap gratis setelah uji coba."
+        },
+        {
+          "q": "Apakah bisa dengan Google Kalender dan Outlook?",
+          "a": "Bisa. Kalender dari iPhone atau iPad Anda tampil di layar, termasuk akun Google dan Outlook yang ditambahkan di sana, ditambah kalender apa pun yang bisa dilanggan lewat tautan (ICS atau webcal), seperti banyak kalender sekolah. Kinboard hanya membaca kalender dan tidak pernah mengubahnya."
+        },
+        {
+          "q": "Apakah seluruh keluarga bisa mengedit?",
+          "a": "Bisa. Di iPhone Anda, buka Keluarga → Undang Anggota Keluarga. Semua yang Anda undang melihat dan mengedit daftar, kalender, dan hitung mundur yang sama dari iPhone masing-masing, dan perubahan muncul di setiap layar dalam hitungan detik."
+        },
+        {
+          "q": "Apakah keluarga saya juga harus membelinya?",
+          "a": "Tidak. Kinboard+ mendukung Berbagi Keluarga: beli sekali, dan Kinboard+ terbuka untuk semua orang di grup keluarga Apple Anda, di Apple TV, iPad, dan iPhone."
+        },
+        {
+          "q": "Apa yang terjadi saat uji coba berakhir?",
+          "a": "Jam, cuaca, hitung mundur, mode malam, dan satu kalender tetap berfungsi. Daftar, tugas, foto, dan kalender lainnya tetap tersimpan dan kembali begitu Kinboard+ dibuka."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Beri keluarga Anda satu layar",
+      "text": "Coba semuanya gratis selama 14 hari di Apple TV atau iPad yang sudah Anda punya."
+    }
+  },
+  "support": {
+    "meta": {
+      "title": "Dukungan Kinboard",
+      "description": "Bantuan untuk Kinboard, layar keluarga untuk Apple TV, iPad, dan iPhone: memulai, kalender, cuaca, Kinboard+, dan kontak."
+    },
+    "title": "Dukungan",
+    "lede": "Kinboard dibuat oleh satu pengembang independen. Silakan menulis kapan saja - setiap pesan dibaca dan dibalas, biasanya dalam dua hari.",
+    "emailLabel": "Email:",
+    "emailHint": "Sebutkan perangkat Anda (Apple TV, iPad, iPhone) dan apa yang seharusnya Anda lihat.",
+    "start": {
+      "title": "Memulai",
+      "steps": [
+        "Instal Kinboard di Apple TV atau iPad yang akan menjadi layar keluarga, dan di iPhone Anda.",
+        "Di iPhone, tambahkan anggota keluarga dan pilih kalender yang akan ditampilkan. Perubahan muncul di setiap layar melalui iCloud.",
+        "Agar orang lain bisa mengedit daftar dan kalender, buka Keluarga → Undang Anggota Keluarga di iPhone Anda."
+      ]
+    },
+    "faq": {
+      "title": "Pertanyaan umum",
+      "items": [
+        {
+          "q": "Acara tidak muncul di layar.",
+          "a": "Pastikan setiap perangkat masuk ke akun iCloud yang sama (atau sudah bergabung ke keluarga Anda melalui undangan), dan iCloud Drive aktif. Kalender dari iPhone diperbarui saat Kinboard dibuka di sana, dan sesekali di latar belakang."
+        },
+        {
+          "q": "Bagaimana cara menambahkan kalender Google atau Outlook?",
+          "a": "Tambahkan akunnya di Pengaturan iPhone → Kalender → Akun, lalu pilih kalendernya di Kinboard. Anda juga bisa menempelkan tautan langganan kalender (ICS atau webcal)."
+        },
+        {
+          "q": "Cuaca tidak tampil.",
+          "a": "Izinkan Kinboard memakai lokasi Anda: di iPhone dan iPad melalui Pengaturan → App → Kinboard → Lokasi (di beberapa versi: Pengaturan → Privasi &amp; Keamanan → Layanan Lokasi). Di Apple TV, tekan Pilih di remote, lalu pilih Tampilkan Cuaca Setempat."
+        },
+        {
+          "q": "Apa yang gratis dan apa isi Kinboard+?",
+          "a": "Semua terbuka selama 14 hari. Setelah itu, jam, cuaca, hitung mundur, mode malam, dan satu kalender tetap gratis. Kinboard+ adalah pembelian sekali yang membuka semua kalender, daftar bersama, tugas dan bintang, latar foto, undangan keluarga, dan Top Shelf Apple TV. Tidak ada yang Anda tambahkan yang dihapus saat uji coba berakhir."
+        },
+        {
+          "q": "Saya membeli Kinboard+ di perangkat lain.",
+          "a": "Buka Kinboard+ di bagian atas pengaturan Kinboard, lalu ketuk Pulihkan Pembelian. Dengan Berbagi Keluarga, pembelian ini muncul untuk semua orang di grup keluarga Apple Anda."
+        },
+        {
+          "q": "Bagaimana cara mendapatkan pengembalian dana?",
+          "a": "Pengembalian dana ditangani oleh Apple di <a href=\"https://reportaproblem.apple.com\">reportaproblem.apple.com</a>."
+        }
+      ]
+    }
+  },
+  "privacy": {
+    "meta": {
+      "title": "Kebijakan Privasi Kinboard",
+      "description": "Cara Kinboard menangani data Anda: tanpa akun, tanpa analitik, semuanya tetap di iCloud keluarga Anda."
+    },
+    "title": "Kebijakan Privasi",
+    "updatedLabel": "Terakhir diperbarui:",
+    "updated": "7 November 2026",
+    "lede": "Kinboard tidak memiliki akun, server sendiri, analitik, maupun iklan. Pengembang tidak pernah menerima kalender, daftar, foto, atau lokasi Anda.",
+    "sections": [
+      {
+        "title": "Tempat data Anda disimpan",
+        "paragraphs": [
+          "Semua yang Anda atur di Kinboard - anggota keluarga, kalender, daftar, tugas, hitung mundur, foto, dan pengaturan - disimpan di perangkat Anda dan di akun iCloud Anda sendiri melalui CloudKit milik Apple. Saat Anda mengundang anggota keluarga, data yang sama dibagikan kepada orang yang Anda undang melalui akun iCloud mereka. Pengembang tidak dapat melihat atau mengakses data tersebut sama sekali."
+        ],
+        "points": []
+      },
+      {
+        "title": "Kalender",
+        "paragraphs": [],
+        "points": [
+          "Dengan izin Anda, Kinboard di iPhone atau iPad membaca kalender yang Anda pilih dan menyalin acara mendatangnya ke iCloud Anda agar layar keluarga dapat menampilkannya. Kinboard tidak pernah mengubah atau menghapus acara.",
+          "Tautan kalender yang Anda tambahkan (ICS atau webcal) diunduh langsung dari penyedia kalender oleh perangkat Anda."
+        ]
+      },
+      {
+        "title": "Lokasi dan cuaca",
+        "paragraphs": [
+          "Untuk menampilkan cuaca setempat, Kinboard meminta perkiraan lokasi Anda. Lokasi ini hanya dipakai di perangkat Anda untuk meminta prakiraan dari Cuaca Apple (WeatherKit). Kinboard tidak menyimpan atau membagikan lokasi Anda."
+        ],
+        "points": []
+      },
+      {
+        "title": "Foto",
+        "paragraphs": [],
+        "points": [
+          "Foto keluarga yang Anda tambahkan disimpan di iCloud Anda agar setiap layar keluarga dapat menampilkannya.",
+          "Jika Anda memilih album dari app Foto, gambarnya hanya dibaca di perangkat itu dan tidak pernah diunggah."
+        ]
+      },
+      {
+        "title": "Pembelian",
+        "paragraphs": [
+          "Uji coba gratis, pembelian Kinboard+, dan tiga tip opsional di Tip ditangani oleh Apple melalui App Store. Tip tidak membuka fitur apa pun; tip hanya cara untuk mendukung pengembang. Kinboard hanya mengetahui apakah pembelian berhasil dan apakah Kinboard+ aktif; Kinboard tidak pernah melihat detail pembayaran Anda."
+        ],
+        "points": []
+      },
+      {
+        "title": "Diagnostik",
+        "paragraphs": [
+          "Di iPhone dan iPad, iOS dan iPadOS dapat memberikan laporan tentang mogok dan kinerja app kepada Kinboard (Apple MetricKit). Laporan ini menjelaskan cara app berjalan dan tidak berisi kalender, daftar, foto, atau lokasi. Apple TV tidak menyediakan laporan ini."
+        ],
+        "points": [
+          "Laporan tetap di perangkat Anda: paling banyak lima untuk setiap jenis, tidak lebih dari tujuh hari, dan tidak disertakan dalam cadangan.",
+          "Laporan hanya sampai ke pengembang jika Anda menyalakan Lampirkan Diagnostik ke Email (mati secara default) dan mengirim sendiri emailnya dari Tulis ke Pengembang. Email dikirim ke <a href=\"mailto:{supportemail}\">{supportemail}</a>.",
+          "Email tersebut juga berisi pengenal model perangkat, versi sistem, versi app, bahasa dan wilayah app, serta apakah Kinboard+ aktif. Email tidak pernah berisi nama perangkat atau data keluarga Anda.",
+          "Pengembang menggunakan laporan hanya untuk memperbaiki masalah dan menghapusnya saat tidak diperlukan lagi."
+        ]
+      },
+      {
+        "title": "Anak-anak",
+        "paragraphs": [
+          "Kinboard adalah app keluarga dan tidak mengumpulkan data pribadi dari siapa pun, termasuk anak-anak."
+        ],
+        "points": []
+      },
+      {
+        "title": "Pelacakan",
+        "paragraphs": [
+          "Kinboard tidak melacak Anda di berbagai app atau situs web dan tidak berisi kode analitik atau iklan pihak ketiga. Situs web ini tidak memasang cookie dan tidak memuat apa pun dari server lain; situs ini hanya mengingat pilihan tampilan terang atau gelap Anda di browser."
+        ],
+        "points": []
+      },
+      {
+        "title": "Menghapus data Anda",
+        "paragraphs": [
+          "Hapus app dari perangkat Anda, lalu hapus data iCloud-nya di Pengaturan → nama Anda → iCloud → Kelola Penyimpanan Akun → Kinboard. Anggota keluarga yang bergabung ke keluarga Anda dapat keluar kapan saja dari Kinboard di iPhone mereka."
+        ],
+        "points": []
+      },
+      {
+        "title": "Perubahan dan kontak",
+        "paragraphs": [
+          "Jika kebijakan ini berubah, versi barunya akan dipasang di halaman ini dengan tanggal baru. Pertanyaan tentang privasi: <a href=\"mailto:{privacyemail}\">{privacyemail}</a>."
+        ],
+        "points": []
+      }
+    ]
+  },
+  "notFound": {
+    "title": "Halaman tidak ditemukan",
+    "text": "Halaman ini tidak ada. Mungkin sudah dipindahkan.",
+    "back": "Ke beranda"
+  },
+  "jsonld": {
+    "description": "Kinboard mengubah Apple TV atau iPad yang sudah Anda punya menjadi layar keluarga: kalender semua orang, daftar bersama, tugas anak dengan bintang, hitung mundur, cuaca, dan foto keluarga, yang bisa diedit dari iPhone mana pun.",
+    "plusDescription": "Pembelian dalam app sekali bayar dengan Berbagi Keluarga"
+  }
+}

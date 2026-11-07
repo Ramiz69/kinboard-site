@@ -1,0 +1,25 @@
+# Cloudflare response headers for static assets. https://developers.cloudflare.com/workers/static-assets/headers/
+# Strict CSP: no inline script or style anywhere, nothing from other origins. Scripts and styles
+# are files under /assets/. The JSON-LD block is a data block (not executed), so script-src does
+# not apply to it.
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Cross-Origin-Opener-Policy: same-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=(), browsing-topics=()
+  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'none'; connect-src 'none'; manifest-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+
+# Content-hashed files: the name changes whenever the content does.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/og/*
+  Cache-Control: public, max-age=86400
+
+/favicon.png
+  Cache-Control: public, max-age=86400
+
+/icon.png
+  Cache-Control: public, max-age=86400
