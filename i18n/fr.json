@@ -1,6 +1,8 @@
 {
   "_notes": {
-    "about": "See en.json _notes: they explain every tricky key."
+    "about": "See en.json _notes: they explain every tricky key.",
+    "privacy.sections.appleIntelligence": "The Apple Intelligence section follows Diagnostics. Its first sentence is the app's own wording (Intelligence.xcstrings, key \"Schedule import, summaries and chore ideas use Apple Intelligence...\"); take it as the app has it. Use Apple's name for Apple Intelligence in your language (zh-Hans: Apple 智能), and the app's feature names from Intelligence.xcstrings: Import Schedule, What Matters Tomorrow, Your Week, Chore Ideas, and the calendar name Imported.",
+    "appLink": "The landing page for app links (/app/..., /join/...) when Kinboard is not installed or the link is opened on a computer. join* strings are only on the /join page and explain the family invitation. Not indexed."
   },
   "lang": "fr",
   "path": "/fr/",
@@ -299,7 +301,8 @@
         "paragraphs": [],
         "points": [
           "Les photos de famille que vous ajoutez sont enregistrées dans votre iCloud pour que chaque écran familial puisse les afficher.",
-          "Si vous choisissez un album de l’app Photos, ses images sont lues uniquement sur cet appareil et ne sont jamais téléversées."
+          "Si vous choisissez un album de l’app Photos, ses images sont lues uniquement sur cet appareil et ne sont jamais téléversées.",
+          "Les photos et les PDF que vous choisissez pour importer un programme sont lus uniquement sur cet appareil et ne sont jamais téléversés. Seuls les événements que vous ajoutez sont enregistrés, dans le calendrier « Importés »."
         ]
       },
       {
@@ -319,6 +322,19 @@
           "Ils ne parviennent au développeur que si vous activez « Joindre les diagnostics à l’e-mail » (désactivé par défaut) et envoyez vous-même l’e-mail depuis « Écrire au développeur ». Il est adressé à <a href=\"mailto:{supportemail}\">{supportemail}</a>.",
           "Cet e-mail contient aussi l’identifiant du modèle de l’appareil, la version du système, la version de l’app, la langue et la région de l’app, et indique si Kinboard+ est actif. Il ne contient jamais le nom de l’appareil ni aucune donnée de votre famille.",
           "Le développeur utilise ces rapports uniquement pour corriger des problèmes et les supprime dès qu’ils ne sont plus nécessaires."
+        ]
+      },
+      {
+        "title": "Apple Intelligence",
+        "paragraphs": [
+          "L’import de programmes, les résumés et les idées de tâches utilisent Apple Intelligence sur votre iPhone ou iPad - photos, documents et projets de la famille ne quittent jamais l’appareil. Tout fonctionne avec le modèle d’Apple directement sur l’appareil, et rien n’est envoyé au développeur ni à aucun serveur."
+        ],
+        "points": [
+          "« Importer un programme » lit une photo ou un PDF d’un emploi du temps scolaire, d’un prospectus ou d’une lettre grâce à la reconnaissance de texte d’Apple (Vision) et au modèle d’Apple (Foundation Models) sur l’appareil, puis montre ce qu’il a trouvé avant d’ajouter quoi que ce soit.",
+          "« Ce qui compte demain » et « Votre semaine » sont de courts résumés rédigés sur l’appareil à partir du programme de la famille.",
+          "« Idées de tâches » propose des tâches selon l’âge d’un enfant. L’âge est enregistré uniquement sur cet iPhone ou iPad.",
+          "Les événements importés sont enregistrés dans un calendrier Kinboard nommé « Importés » dans l’iCloud de la famille, comme les autres données de Kinboard. Kinboard n’écrit jamais dans l’app Calendrier.",
+          "Si Apple Intelligence est désactivé ou indisponible, l’import de programmes repère les dates de façon simple sur l’appareil, et les résumés et les idées de tâches sont masqués. L’Apple TV ne propose aucune de ces fonctions."
         ]
       },
       {
@@ -355,6 +371,18 @@
     "title": "Page introuvable",
     "text": "Cette page n’existe pas. Elle a peut-être été déplacée.",
     "back": "Aller à l’accueil"
+  },
+  "appLink": {
+    "title": "Ouvrir dans Kinboard",
+    "text": "Ce lien ouvre Kinboard sur votre iPhone ou iPad.",
+    "install": "Si Kinboard n’est pas encore installé, téléchargez-le sur l’App Store, puis rouvrez le lien sur votre iPhone ou iPad.",
+    "joinTitle": "Rejoindre votre famille dans Kinboard",
+    "joinHeading": "Comment fonctionne une invitation familiale",
+    "joinSteps": [
+      "Un membre de la famille vous envoie une invitation depuis Kinboard sur son iPhone (Famille → Inviter la famille). C’est un lien iCloud.",
+      "Ouvrez-la sur l’iPhone ou l’iPad connecté à votre compte iCloud, avec Kinboard installé.",
+      "Kinboard vous demande si vous voulez rejoindre la famille. Vous voyez et modifiez ensuite les mêmes listes et calendriers."
+    ]
   },
   "jsonld": {
     "description": "Kinboard transforme l’Apple TV ou l’iPad que vous avez déjà en écran familial : les calendriers de tous, des listes partagées, les tâches des enfants avec des étoiles, des comptes à rebours, la météo et des photos de famille, le tout modifiable depuis n’importe quel iPhone.",

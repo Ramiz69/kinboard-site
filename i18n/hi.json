@@ -1,6 +1,8 @@
 {
   "_notes": {
-    "about": "See en.json _notes: they explain every tricky key."
+    "about": "See en.json _notes: they explain every tricky key.",
+    "privacy.sections.appleIntelligence": "The Apple Intelligence section follows Diagnostics. Its first sentence is the app's own wording (Intelligence.xcstrings, key \"Schedule import, summaries and chore ideas use Apple Intelligence...\"); take it as the app has it. Use Apple's name for Apple Intelligence in your language (zh-Hans: Apple 智能), and the app's feature names from Intelligence.xcstrings: Import Schedule, What Matters Tomorrow, Your Week, Chore Ideas, and the calendar name Imported.",
+    "appLink": "The landing page for app links (/app/..., /join/...) when Kinboard is not installed or the link is opened on a computer. join* strings are only on the /join page and explain the family invitation. Not indexed."
   },
   "lang": "hi",
   "path": "/hi/",
@@ -299,7 +301,8 @@
         "paragraphs": [],
         "points": [
           "आपकी जोड़ी गई परिवार की फ़ोटो आपके iCloud में सेव होती हैं, ताकि परिवार की हर स्क्रीन उन्हें दिखा सके।",
-          "अगर आप फ़ोटो ऐप से कोई एल्बम चुनते हैं, तो उसकी तस्वीरें सिर्फ़ उसी डिवाइस पर पढ़ी जाती हैं और कभी अपलोड नहीं होतीं।"
+          "अगर आप फ़ोटो ऐप से कोई एल्बम चुनते हैं, तो उसकी तस्वीरें सिर्फ़ उसी डिवाइस पर पढ़ी जाती हैं और कभी अपलोड नहीं होतीं।",
+          "शेड्यूल इम्पोर्ट के लिए चुनी गई फ़ोटो और PDF सिर्फ़ उसी डिवाइस पर पढ़ी जाती हैं और कभी अपलोड नहीं होतीं। सिर्फ़ आपके जोड़े गए इवेंट “इम्पोर्ट किए गए” कैलेंडर में सेव होते हैं।"
         ]
       },
       {
@@ -319,6 +322,19 @@
           "ये डेवलपर तक तभी पहुँचती हैं जब आप \"ईमेल में डायग्नोस्टिक्स जोड़ें\" चालू करें (यह शुरू में बंद रहता है) और \"डेवलपर को लिखें\" से ख़ुद ईमेल भेजें। ईमेल <a href=\"mailto:{supportemail}\">{supportemail}</a> पर जाता है।",
           "इस ईमेल में डिवाइस मॉडल आइडेंटिफ़ायर, सिस्टम वर्शन, ऐप वर्शन, ऐप की भाषा और क्षेत्र, और Kinboard+ सक्रिय है या नहीं, यह भी होता है। इसमें आपके डिवाइस का नाम या परिवार का कोई डेटा कभी नहीं होता।",
           "डेवलपर इन रिपोर्ट का इस्तेमाल सिर्फ़ समस्याएँ ठीक करने के लिए करता है और ज़रूरत न रहने पर इन्हें मिटा देता है।"
+        ]
+      },
+      {
+        "title": "Apple Intelligence",
+        "paragraphs": [
+          "शेड्यूल इम्पोर्ट, सारांश और काम के सुझाव आपके iPhone या iPad पर Apple Intelligence से चलते हैं - फ़ोटो, दस्तावेज़ और परिवार की योजनाएँ कभी डिवाइस से बाहर नहीं जातीं। सब कुछ डिवाइस पर ही Apple के मॉडल से होता है, और डेवलपर या किसी सर्वर को कुछ नहीं भेजा जाता।"
+        ],
+        "points": [
+          "“शेड्यूल इम्पोर्ट करें” स्कूल के शेड्यूल, पर्चे या पत्र की फ़ोटो या PDF को डिवाइस पर Apple की टेक्स्ट पहचान (Vision) और Apple के मॉडल (Foundation Models) से पढ़ता है, और कुछ भी जोड़ने से पहले दिखाता है कि उसे क्या मिला।",
+          "“कल क्या ज़रूरी है” और “आपका हफ़्ता” छोटे सारांश हैं, जो परिवार के शेड्यूल से डिवाइस पर ही लिखे जाते हैं।",
+          "“काम के सुझाव” बच्चे की उम्र के हिसाब से काम सुझाता है। उम्र सिर्फ़ उसी iPhone या iPad पर सेव रहती है।",
+          "इम्पोर्ट किए गए इवेंट, बाकी Kinboard डेटा की तरह, परिवार के iCloud में Kinboard के “इम्पोर्ट किए गए” नाम के कैलेंडर में सेव होते हैं। Kinboard कैलेंडर ऐप में कभी कुछ नहीं लिखता।",
+          "अगर Apple Intelligence बंद है या उपलब्ध नहीं है, तो शेड्यूल इम्पोर्ट डिवाइस पर एक आसान तरीके से तारीखें ढूँढता है, और सारांश व काम के सुझाव छिपे रहते हैं। Apple TV पर इनमें से कोई सुविधा नहीं है।"
         ]
       },
       {
@@ -355,6 +371,18 @@
     "title": "पेज नहीं मिला",
     "text": "यह पेज मौजूद नहीं है। शायद इसे कहीं और ले जाया गया है।",
     "back": "होम पेज पर जाएँ"
+  },
+  "appLink": {
+    "title": "Kinboard में खोलें",
+    "text": "यह लिंक आपके iPhone या iPad पर Kinboard खोलता है।",
+    "install": "अगर Kinboard अभी इंस्टॉल नहीं है, तो उसे App Store से डाउनलोड करें, फिर अपने iPhone या iPad पर लिंक दोबारा खोलें।",
+    "joinTitle": "Kinboard में अपने परिवार से जुड़ें",
+    "joinHeading": "परिवार का आमंत्रण कैसे काम करता है",
+    "joinSteps": [
+      "परिवार का कोई सदस्य अपने iPhone पर Kinboard से आपको आमंत्रण भेजता है (परिवार → परिवार के सदस्यों को आमंत्रित करें)। यह एक iCloud लिंक होता है।",
+      "इसे उस iPhone या iPad पर खोलें जिसमें आपके iCloud खाते से साइन इन है और Kinboard इंस्टॉल है।",
+      "Kinboard पूछता है कि क्या आप परिवार से जुड़ना चाहते हैं। इसके बाद आप वही लिस्ट और कैलेंडर देख और बदल सकते हैं।"
+    ]
   },
   "jsonld": {
     "description": "Kinboard आपके Apple TV या iPad को परिवार की स्क्रीन बना देता है: सबके कैलेंडर, शेयर की गई लिस्ट, स्टार वाले बच्चों के काम, काउंटडाउन, मौसम और परिवार की फ़ोटो, किसी भी iPhone से बदले जा सकते हैं।",

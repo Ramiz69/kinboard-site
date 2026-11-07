@@ -1,6 +1,8 @@
 {
   "_notes": {
-    "about": "See en.json _notes: they explain every tricky key."
+    "about": "See en.json _notes: they explain every tricky key.",
+    "privacy.sections.appleIntelligence": "The Apple Intelligence section follows Diagnostics. Its first sentence is the app's own wording (Intelligence.xcstrings, key \"Schedule import, summaries and chore ideas use Apple Intelligence...\"); take it as the app has it. Use Apple's name for Apple Intelligence in your language (zh-Hans: Apple 智能), and the app's feature names from Intelligence.xcstrings: Import Schedule, What Matters Tomorrow, Your Week, Chore Ideas, and the calendar name Imported.",
+    "appLink": "The landing page for app links (/app/..., /join/...) when Kinboard is not installed or the link is opened on a computer. join* strings are only on the /join page and explain the family invitation. Not indexed."
   },
   "lang": "tr",
   "path": "/tr/",
@@ -299,7 +301,8 @@
         "paragraphs": [],
         "points": [
           "Eklediğiniz aile fotoğrafları, tüm aile ekranlarında gösterilebilmeleri için iCloud’unuza kaydedilir.",
-          "Fotoğraflar uygulamasından bir albüm seçerseniz, resimleri yalnızca o cihazda okunur ve asla yüklenmez."
+          "Fotoğraflar uygulamasından bir albüm seçerseniz, resimleri yalnızca o cihazda okunur ve asla yüklenmez.",
+          "Program aktarma için seçtiğiniz fotoğraflar ve PDF’ler yalnızca o cihazda okunur ve asla yüklenmez. Yalnızca eklediğiniz etkinlikler “İçe Aktarılanlar” takvimine kaydedilir."
         ]
       },
       {
@@ -319,6 +322,19 @@
           "Geliştiriciye yalnızca “E-postaya Tanılama Ekle”yi açar (varsayılan olarak kapalıdır) ve e-postayı “Geliştiriciye Yaz” üzerinden kendiniz gönderirseniz ulaşır. E-posta <a href=\"mailto:{supportemail}\">{supportemail}</a> adresine gider.",
           "Bu e-posta ayrıca cihaz model tanımlayıcısını, sistem sürümünü, uygulama sürümünü, uygulamanın dilini ve bölgesini ve Kinboard+’ın etkin olup olmadığını içerir. Cihazınızın adını veya aile verilerinizi asla içermez.",
           "Geliştirici raporları yalnızca sorunları gidermek için kullanır ve artık gerekmediğinde siler."
+        ]
+      },
+      {
+        "title": "Apple Intelligence",
+        "paragraphs": [
+          "Program aktarma, özetler ve görev fikirleri iPhone ya da iPad’inizdeki Apple Intelligence’ı kullanır - fotoğraflar, belgeler ve ailenizin planları aygıttan hiç çıkmaz. Her şey Apple’ın modeliyle doğrudan aygıtta çalışır; geliştiriciye veya herhangi bir sunucuya hiçbir şey gönderilmez."
+        ],
+        "points": [
+          "“Programı İçe Aktar”, bir okul programının, broşürün veya mektubun fotoğrafını ya da PDF’ini aygıttaki Apple metin tanıma (Vision) ve Apple modeli (Foundation Models) ile okur ve bir şey eklemeden önce bulduklarını gösterir.",
+          "“Yarın Önemli Olanlar” ve “Haftanız”, ailenin programından aygıtta yazılan kısa özetlerdir.",
+          "“Görev Fikirleri”, çocuğun yaşına göre görevler önerir. Yaş yalnızca o iPhone ya da iPad’de saklanır.",
+          "İçe aktarılan etkinlikler, diğer Kinboard verileri gibi ailenin iCloud’unda “İçe Aktarılanlar” adlı bir Kinboard takvimine kaydedilir. Kinboard, Takvim uygulamasına asla bir şey yazmaz.",
+          "Apple Intelligence kapalıysa veya kullanılamıyorsa program aktarma tarihleri aygıtta basit bir yöntemle bulur; özetler ve görev fikirleri gizlenir. Apple TV’de bu özelliklerin hiçbiri yoktur."
         ]
       },
       {
@@ -355,6 +371,18 @@
     "title": "Sayfa bulunamadı",
     "text": "Bu sayfa mevcut değil. Taşınmış olabilir.",
     "back": "Ana sayfaya git"
+  },
+  "appLink": {
+    "title": "Kinboard’da Aç",
+    "text": "Bu bağlantı iPhone ya da iPad’inizde Kinboard’u açar.",
+    "install": "Kinboard henüz yüklü değilse App Store’dan indirin, ardından bağlantıyı iPhone ya da iPad’inizde yeniden açın.",
+    "joinTitle": "Kinboard’da ailenize katılın",
+    "joinHeading": "Aile daveti nasıl çalışır",
+    "joinSteps": [
+      "Bir aile üyesi, iPhone’undaki Kinboard’dan size davet gönderir (Aile → Aile Üyelerini Davet Et). Davet bir iCloud bağlantısıdır.",
+      "Daveti, iCloud hesabınızla giriş yapılmış ve Kinboard yüklü olan iPhone ya da iPad’de açın.",
+      "Kinboard aileye katılmak isteyip istemediğinizi sorar. Bundan sonra aynı listeleri ve takvimleri görür ve düzenlersiniz."
+    ]
   },
   "jsonld": {
     "description": "Kinboard, zaten sahip olduğunuz Apple TV veya iPad’i bir aile ekranına dönüştürür: herkesin takvimi, ortak listeler, yıldızlı çocuk görevleri, geri sayımlar, hava durumu ve aile fotoğrafları; hepsi herhangi bir iPhone’dan düzenlenir.",

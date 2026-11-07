@@ -1,6 +1,8 @@
 {
   "_notes": {
-    "about": "See en.json _notes: they explain every tricky key."
+    "about": "See en.json _notes: they explain every tricky key.",
+    "privacy.sections.appleIntelligence": "The Apple Intelligence section follows Diagnostics. Its first sentence is the app's own wording (Intelligence.xcstrings, key \"Schedule import, summaries and chore ideas use Apple Intelligence...\"); take it as the app has it. Use Apple's name for Apple Intelligence in your language (zh-Hans: Apple 智能), and the app's feature names from Intelligence.xcstrings: Import Schedule, What Matters Tomorrow, Your Week, Chore Ideas, and the calendar name Imported.",
+    "appLink": "The landing page for app links (/app/..., /join/...) when Kinboard is not installed or the link is opened on a computer. join* strings are only on the /join page and explain the family invitation. Not indexed."
   },
   "lang": "zh-Hant",
   "path": "/zh-hant/",
@@ -299,7 +301,8 @@
         "paragraphs": [],
         "points": [
           "你加入的家庭照片會儲存到你的 iCloud，讓每個家庭螢幕都能顯示。",
-          "如果你從「照片」App 選擇一個相簿，其中的照片只會在那台裝置上讀取，絕不會上傳。"
+          "如果你從「照片」App 選擇一個相簿，其中的照片只會在那台裝置上讀取，絕不會上傳。",
+          "你為行程匯入選擇的照片和 PDF 只會在那部裝置上讀取，絕不會上傳。只有你加入的行程會儲存到「已匯入」行事曆。"
         ]
       },
       {
@@ -319,6 +322,19 @@
           "只有你開啟「在郵件中附加診斷資訊」（預設為關閉）並親自透過「聯絡開發者」傳送郵件時，報告才會送到開發者手中。郵件會寄至 <a href=\"mailto:{supportemail}\">{supportemail}</a>。",
           "這封郵件也會包含裝置型號識別碼、系統版本、App 版本、App 語言與地區，以及 Kinboard+ 是否有效。郵件絕不包含裝置名稱或任何家庭資料。",
           "開發者只會將這些報告用於修正問題，並在不再需要時將其刪除。"
+        ]
+      },
+      {
+        "title": "Apple Intelligence",
+        "paragraphs": [
+          "行程匯入、摘要和家務點子使用你 iPhone 或 iPad 上的 Apple Intelligence - 照片、文件和家人的安排絕不會離開裝置。一切都由 Apple 的模型在裝置上完成，不會傳送任何內容給開發者或任何伺服器。"
+        ],
+        "points": [
+          "「匯入行程」使用裝置上的 Apple 文字辨識（Vision）和 Apple 模型（Foundation Models）讀取學校行程表、傳單或通知單的照片或 PDF，並在加入任何內容前先顯示找到的結果。",
+          "「明天的要事」和「你的一週」是根據家庭行程在裝置上寫成的簡短摘要。",
+          "「家務點子」會依孩子的年齡建議家務。年齡只會保存在那部 iPhone 或 iPad 上。",
+          "匯入的行程會和其他 Kinboard 資料一樣，儲存到家庭 iCloud 中名為「已匯入」的 Kinboard 行事曆。Kinboard 絕不會寫入「行事曆」App。",
+          "如果 Apple Intelligence 已關閉或無法使用，行程匯入會在裝置上用簡單的方法尋找日期，摘要和家務點子則會隱藏。Apple TV 沒有這些功能。"
         ]
       },
       {
@@ -355,6 +371,18 @@
     "title": "找不到網頁",
     "text": "此網頁不存在，可能已經移動。",
     "back": "前往首頁"
+  },
+  "appLink": {
+    "title": "在 Kinboard 中打開",
+    "text": "此連結會在你的 iPhone 或 iPad 上打開 Kinboard。",
+    "install": "如果尚未安裝 Kinboard，請從 App Store 下載，然後在 iPhone 或 iPad 上再次打開此連結。",
+    "joinTitle": "在 Kinboard 中加入你的家庭",
+    "joinHeading": "家庭邀請如何運作",
+    "joinSteps": [
+      "家人會從他們 iPhone 上的 Kinboard 傳送邀請給你（「家人」→「邀請家人」）。邀請是一個 iCloud 連結。",
+      "請在已登入你的 iCloud 帳號並安裝 Kinboard 的 iPhone 或 iPad 上打開它。",
+      "Kinboard 會詢問你是否加入家庭。之後，你就能查看和編輯相同的列表和行事曆。"
+    ]
   },
   "jsonld": {
     "description": "Kinboard 能把你已經有的 Apple TV 或 iPad 變成家庭螢幕：每個人的行事曆、共享列表、可得星星的孩子家務、倒數、天氣和家庭照片，可用任何一支 iPhone 編輯。",

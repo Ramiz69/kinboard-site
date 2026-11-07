@@ -1,0 +1,10 @@
+# App links without the app: every path under /app/ and /join/ (also /<lang>/app/, /<lang>/join/)
+# shows that folder's landing page, with status 200 and the URL unchanged. Written by build.mjs.
+/app/:seg /app/ 200
+/app/:seg/* /app/ 200
+/join/:seg /join/ 200
+/join/:seg/* /join/ 200
+/:lang/app/:seg /:lang/app/ 200
+/:lang/app/:seg/* /:lang/app/ 200
+/:lang/join/:seg /:lang/join/ 200
+/:lang/join/:seg/* /:lang/join/ 200

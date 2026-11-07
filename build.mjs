@@ -6,8 +6,9 @@
 // What it does: copies src/static as is; content-hashes src/assets, the CSS bundles and the JS
 // into public/assets/ (served immutable); renders the home, support and privacy pages per
 // language from src/pages/*.html inside src/layout.html with i18n/<lang>.json; renders 404.html;
-// renders the English press kit at /press/ and zips its files; writes sitemap.xml and robots.txt;
-// prints page weights.
+// renders the app link landing pages (/app/, /join/ per language) and _redirects for their deeper
+// paths; renders the English press kit at /press/ and zips its files; writes sitemap.xml and
+// robots.txt; prints page weights.
 
 import { readFileSync, writeFileSync, mkdirSync, rmSync, readdirSync, statSync, copyFileSync, existsSync } from 'node:fs';
 import { join, dirname, extname, basename, relative } from 'node:path';
@@ -317,6 +318,43 @@ for (const l of BUILT) {
   data.content = render(read(join(SRC, 'pages', '404.html')), data, '404');
   write(join(DIST, '404.html'), render(layout, data, 'layout 404'));
 }
+
+// ---------- app link landing: /app/ and /join/ per language, not indexed ----------
+// Universal Links (src/static/.well-known/apple-app-site-association) open /app/* and /join* in
+// Kinboard. Without the app, or on a computer, the browser gets this page instead of the 404:
+// what the link is, the App Store badge and, on /join/, how a family invitation works. Every
+// deeper path (/app/list/<id>, /ru/join/x) is served the same page by the 200 rules in _redirects.
+// Not in the sitemap, no canonical or hreflang: there is nothing to index.
+const LINK_PAGES = ['app', 'join'];
+for (const l of BUILT) {
+  const t = loadLang(l.code);
+  for (const id of LINK_PAGES) {
+    const path = `${l.path}${id}/`;
+    const steps = t.appLink.joinSteps.map(s => `<li>${s}</li>`).join('');
+    const data = {
+      ...pageData(t, 'home'),
+      title: id === 'join' ? t.appLink.joinTitle : t.appLink.title,
+      linkTitle: id === 'join' ? t.appLink.joinTitle : t.appLink.title,
+      joinNote: id === 'join' ? `<div class="card how"><h2>${t.appLink.joinHeading}</h2><ol>${steps}</ol></div>` : '',
+      path, jsonld: '', bodyClass: `p-${id}`, css: assets.get('css/page.css'),
+      current: { home: '', support: '', privacy: '', press: '' },
+      menus: headerMenus(t.ui, l.code, Object.fromEntries(BUILT.map(x => [x.code, `${x.path}${id}/`]))),
+      head: `<meta name="robots" content="noindex">\n<meta name="description" content="${attr(t.appLink.text)}">`,
+    };
+    data.content = render(read(join(SRC, 'pages', 'applink.html')), data, `${id}/${l.code}`);
+    write(join(DIST, path.slice(1), 'index.html'), render(layout, data, `layout ${id}/${l.code}`));
+  }
+}
+// Workers static assets keep a 404 for any path without a file (not_found_handling "404-page"), so
+// deeper paths are rewritten with status 200 ("proxying": same URL, the landing page's content).
+// The sources never match the landing page itself (":seg" needs at least one character), so no
+// rule points at its own path. ":lang" covers every language folder; an unknown folder still 404s
+// because its target does not exist. 8 dynamic rules, far below the 100 allowed.
+write(join(DIST, '_redirects'), `# App links without the app: every path under /app/ and /join/ (also /<lang>/app/, /<lang>/join/)
+# shows that folder's landing page, with status 200 and the URL unchanged. Written by build.mjs.
+${[...LINK_PAGES.flatMap(id => [`/${id}/:seg /${id}/ 200`, `/${id}/:seg/* /${id}/ 200`]),
+    ...LINK_PAGES.flatMap(id => [`/:lang/${id}/:seg /:lang/${id}/ 200`, `/:lang/${id}/:seg/* /:lang/${id}/ 200`])].join('\n')}
+`);
 
 // ---------- press kit: /press/, English only ----------
 // A ZIP of everything in src/static/press except the page's thumbnails, written at build time.

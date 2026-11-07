@@ -4,6 +4,12 @@ The public site for Kinboard, the family screen for Apple TV and iPad with the i
 remote. `build.mjs` (Node, no dependencies) builds it from `src/` and `i18n/` into `public/`, and
 Cloudflare serves it at **https://kinboard-family.app**. The layout copies the SnowWall site's.
 
+App link deep paths are rewritten by `_redirects` (static, no Worker code), not by a Worker as in
+SnowWall: SnowWall needs one only for video byte ranges. The rules use `:seg` (one or more
+characters), so they never match the landing page's own path; `wrangler dev` serves
+`/app/list/x`, `/ru/join/a/b` with 200 and the landing page, `/app` and `/join` with a 307 to the
+slash form, and unknown paths with the 404.
+
 | Path | What | Used by |
 |---|---|---|
 | `/` | home page, English | Marketing URL in App Store Connect |
@@ -11,6 +17,8 @@ Cloudflare serves it at **https://kinboard-family.app**. The layout copies the S
 | `/privacy/` | privacy policy | Privacy Policy URL in App Store Connect, the app |
 | `/ru/`, `/ru/support/`, `/ru/privacy/`, … | the same three pages in every other built language | hreflang alternates |
 | `/press/` | press kit, English only: facts, descriptions, icon, logo, banner, screenshots, ZIP | press emails |
+| `/app/`, `/join/`, `/ru/app/`, `/ru/join/`, … | app link landing per language (`noindex`, not in the sitemap): "This link opens Kinboard on your iPhone or iPad", the App Store badge, and on `/join/` how a family invitation works | Universal Links opened without the app, or on a computer |
+| `_redirects` | written by the build: every deeper path (`/app/list/<id>`, `/app/import`, `/join/x`, `/ru/join/x`) gets its folder's landing page with status 200, URL unchanged | Cloudflare static assets |
 | `404.html` | anything else (English, `noindex`) | Cloudflare `not_found_handling` |
 | `_headers` | security and cache headers | Cloudflare |
 | `/.well-known/apple-app-site-association` | Universal Links: `/app/*` and `/join*` open the app, everything else stays web (served as `application/json` by `_headers`) | iOS and iPadOS |
@@ -24,13 +32,13 @@ and `/privacy/`. Each page is `name/index.html`, so it answers at `/name` and `/
 build.mjs              the build: templates + i18n -> public/, hashed assets, sitemap, robots, size report
 i18n/<lang>.json       every visible string, per language; en.json is the source, its _notes explain the keys
 src/layout.html        the shared page: <head> with all SEO tags, header with menus, footer
-src/pages/*.html       home, support, privacy, 404 ({{key}}, {{#list}}…{{/list}}, {{@src/path}})
+src/pages/*.html       home, support, privacy, 404, applink ({{key}}, {{#list}}…{{/list}}, {{@src/path}})
 src/css/               tokens.css (themes, header, menus; shared) + home.css / page.css
 src/js/theme-init.js   classic script in <head>: applies the saved theme before first paint
 src/js/menus.js        the language and appearance menus (the only module)
 src/assets/            content-hashed on build: badges/ (Apple's App Store badges), shots/<lang>/ (screenshots)
 src/static/            copied as is: _headers, favicon.png, icon.png, og/ (social images), .well-known/ (AASA)
-tools/serve.mjs        local preview that applies _headers, so the CSP is enforced
+tools/serve.mjs        local preview that applies _headers (so the CSP is enforced) and the 200 rules in _redirects
 tools/check-i18n.mjs   checks every translation against en.json (keys, HTML, placeholders, dashes, RTL marks)
 tools/check-site.mjs   checks the built site in public/ (SEO tags, hreflang, sitemap, links, image sizes)
 tools/images.py        regenerates screenshots, icons and social images from the app repo (Pillow)

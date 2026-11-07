@@ -1,6 +1,8 @@
 {
   "_notes": {
-    "about": "See en.json _notes: they explain every tricky key."
+    "about": "See en.json _notes: they explain every tricky key.",
+    "privacy.sections.appleIntelligence": "The Apple Intelligence section follows Diagnostics. Its first sentence is the app's own wording (Intelligence.xcstrings, key \"Schedule import, summaries and chore ideas use Apple Intelligence...\"); take it as the app has it. Use Apple's name for Apple Intelligence in your language (zh-Hans: Apple 智能), and the app's feature names from Intelligence.xcstrings: Import Schedule, What Matters Tomorrow, Your Week, Chore Ideas, and the calendar name Imported.",
+    "appLink": "The landing page for app links (/app/..., /join/...) when Kinboard is not installed or the link is opened on a computer. join* strings are only on the /join page and explain the family invitation. Not indexed."
   },
   "lang": "ja",
   "path": "/ja/",
@@ -299,7 +301,8 @@
         "paragraphs": [],
         "points": [
           "あなたが追加した家族の写真は、すべての家族の画面に表示できるよう、あなたのiCloudに保存されます。",
-          "「写真」Appのアルバムを選んだ場合、その写真はそのデバイス上でのみ読み込まれ、アップロードされることはありません。"
+          "「写真」Appのアルバムを選んだ場合、その写真はそのデバイス上でのみ読み込まれ、アップロードされることはありません。",
+          "予定の読み込みに選んだ写真やPDFは、そのデバイス上でのみ読み込まれ、アップロードされることはありません。保存されるのはあなたが追加した予定だけで、「読み込み済み」カレンダーに入ります。"
         ]
       },
       {
@@ -319,6 +322,19 @@
           "レポートがデベロッパに届くのは、「メールに診断情報を添付」をオン（初期設定はオフ）にして、「開発者に連絡」からご自身でメールを送信した場合だけです。送信先は<a href=\"mailto:{supportemail}\">{supportemail}</a>です。",
           "このメールには、デバイスのモデル識別子、システムのバージョン、アプリのバージョン、アプリの言語と地域、Kinboard+が有効かどうかも含まれます。デバイス名や家族のデータが含まれることはありません。",
           "デベロッパはレポートを問題の修正にのみ使い、不要になった時点で削除します。"
+        ]
+      },
+      {
+        "title": "Apple Intelligence",
+        "paragraphs": [
+          "予定の読み込み、まとめ、お手伝いのアイデアはiPhoneやiPad上のApple Intelligenceを使います。写真、書類、家族の予定がデバイスの外に出ることはありません。処理はすべてデバイス上のAppleのモデルで行われ、デベロッパやサーバに何かが送信されることはありません。"
+        ],
+        "points": [
+          "「予定を読み込む」は、学校の予定表、チラシ、お便りの写真やPDFを、デバイス上のAppleの文字認識（Vision）とAppleのモデル（Foundation Models）で読み取り、追加する前に見つかった内容を表示します。",
+          "「明日の大事なこと」と「今週の予定」は、家族の予定をもとにデバイス上で作成される短いまとめです。",
+          "「お手伝いのアイデア」は、子どもの年齢に合ったお手伝いを提案します。年齢はそのiPhoneまたはiPadにのみ保存されます。",
+          "読み込んだ予定は、ほかのKinboardのデータと同じく、家族のiCloudにある「読み込み済み」というKinboardのカレンダーに保存されます。Kinboardが「カレンダー」Appに書き込むことはありません。",
+          "Apple Intelligenceがオフまたは利用できない場合、予定の読み込みはデバイス上で簡単な方法で日付を探し、まとめとお手伝いのアイデアは表示されません。Apple TVにはこれらの機能はありません。"
         ]
       },
       {
@@ -355,6 +371,18 @@
     "title": "ページが見つかりません",
     "text": "このページは存在しません。移動した可能性があります。",
     "back": "ホームページへ"
+  },
+  "appLink": {
+    "title": "Kinboardで開く",
+    "text": "このリンクはiPhoneまたはiPadでKinboardを開きます。",
+    "install": "Kinboardがまだインストールされていない場合は、App Storeから入手して、iPhoneまたはiPadでもう一度リンクを開いてください。",
+    "joinTitle": "Kinboardで家族に参加する",
+    "joinHeading": "家族の招待のしくみ",
+    "joinSteps": [
+      "家族のメンバーが、iPhoneのKinboardから招待を送ります（「家族」→「家族を招待」）。招待はiCloudのリンクです。",
+      "あなたのiCloudアカウントでサインインしていて、KinboardがインストールされているiPhoneまたはiPadで開きます。",
+      "Kinboardが家族に参加するかどうかを尋ねます。参加すると、同じリストやカレンダーを見たり編集したりできます。"
+    ]
   },
   "jsonld": {
     "description": "Kinboardは、お持ちのApple TVやiPadを家族の画面に変えます。みんなのカレンダー、共有リスト、星つきの子どものお手伝い、カウントダウン、天気、家族の写真を、どのiPhoneからでも編集できます。",

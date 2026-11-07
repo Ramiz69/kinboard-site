@@ -1,6 +1,8 @@
 {
   "_notes": {
-    "about": "See en.json _notes: they explain every tricky key."
+    "about": "See en.json _notes: they explain every tricky key.",
+    "privacy.sections.appleIntelligence": "The Apple Intelligence section follows Diagnostics. Its first sentence is the app's own wording (Intelligence.xcstrings, key \"Schedule import, summaries and chore ideas use Apple Intelligence...\"); take it as the app has it. Use Apple's name for Apple Intelligence in your language (zh-Hans: Apple 智能), and the app's feature names from Intelligence.xcstrings: Import Schedule, What Matters Tomorrow, Your Week, Chore Ideas, and the calendar name Imported.",
+    "appLink": "The landing page for app links (/app/..., /join/...) when Kinboard is not installed or the link is opened on a computer. join* strings are only on the /join page and explain the family invitation. Not indexed."
   },
   "lang": "ar",
   "path": "/ar/",
@@ -299,7 +301,8 @@
         "paragraphs": [],
         "points": [
           "تُحفظ صور العائلة التي تضيفها في iCloud الخاص بك كي تعرضها كل شاشات العائلة.",
-          "إذا اخترت ألبومًا من تطبيق الصور، فتُقرأ صوره على ذلك الجهاز فقط ولا تُرفع أبدًا."
+          "إذا اخترت ألبومًا من تطبيق الصور، فتُقرأ صوره على ذلك الجهاز فقط ولا تُرفع أبدًا.",
+          "تُقرأ الصور وملفات PDF التي تختارها لاستيراد جدول على ذلك الجهاز فقط ولا تُرفع أبدًا. لا يُحفظ إلا الأحداث التي تضيفها، في تقويم «مستورد»."
         ]
       },
       {
@@ -319,6 +322,19 @@
           "لا تصل إلى المطوّر إلا إذا شغّلت «إرفاق التشخيصات بالبريد» (وهو متوقف افتراضيًا) وأرسلت البريد بنفسك من «راسل المطوّر». يُرسل البريد إلى <a href=\"mailto:{supportemail}\">{supportemail}</a>.",
           "يتضمن هذا البريد أيضًا معرّف طراز الجهاز وإصدار النظام وإصدار التطبيق ولغة التطبيق ومنطقته، وما إذا كان Kinboard+‎ نشطًا. ولا يتضمن أبدًا اسم جهازك أو أي بيانات عائلية.",
           "لا يستخدم المطوّر التقارير إلا لإصلاح المشكلات، ويحذفها عندما لا تعود هناك حاجة إليها."
+        ]
+      },
+      {
+        "title": "Apple Intelligence",
+        "paragraphs": [
+          "يستخدم استيراد الجداول والملخصات وأفكار المهام Apple Intelligence على الـ iPhone أو iPad - لا تغادر الصور والمستندات وخطط عائلتك الجهاز أبدًا. يعمل كل شيء بنموذج Apple على الجهاز نفسه، ولا يُرسَل أي شيء إلى المطوّر أو إلى أي خادم."
+        ],
+        "points": [
+          "تقرأ ميزة «استيراد جدول» صورة أو ملف PDF لجدول مدرسي أو منشور أو رسالة باستخدام ميزة Apple للتعرّف على النص (Vision) ونموذج Apple ‏(Foundation Models) على الجهاز، وتعرض ما وجدته قبل إضافة أي شيء.",
+          "«المهم غدًا» و«أسبوعك» ملخصات قصيرة تُكتب على الجهاز من جدول العائلة.",
+          "تقترح «أفكار للمهام» مهامّ تناسب عمر الطفل. يُحفظ العمر على ذلك الـ iPhone أو iPad فقط.",
+          "تُحفظ الأحداث المستوردة في تقويم Kinboard باسم «مستورد» في iCloud العائلة، مثل بقية بيانات Kinboard. لا يكتب Kinboard أبدًا في تطبيق التقويم.",
+          "إذا كانت Apple Intelligence متوقفة أو غير متاحة، يبحث استيراد الجداول عن التواريخ بطريقة بسيطة على الجهاز، وتُخفى الملخصات وأفكار المهام. لا تتوفر أي من هذه الميزات على Apple TV."
         ]
       },
       {
@@ -355,6 +371,18 @@
     "title": "الصفحة غير موجودة",
     "text": "هذه الصفحة غير موجودة. ربما نُقلت.",
     "back": "الذهاب إلى الصفحة الرئيسية"
+  },
+  "appLink": {
+    "title": "فتح في Kinboard",
+    "text": "يفتح هذا الرابط Kinboard على الـ iPhone أو iPad.",
+    "install": "إذا لم يكن Kinboard مثبّتًا بعد، فنزّله من App Store، ثم افتح الرابط مرة أخرى على الـ iPhone أو iPad.",
+    "joinTitle": "انضم إلى عائلتك في Kinboard",
+    "joinHeading": "كيف تعمل دعوة العائلة",
+    "joinSteps": [
+      "يرسل إليك أحد أفراد العائلة دعوة من Kinboard على iPhone الخاص به (العائلة ← دعوة أفراد العائلة). الدعوة رابط iCloud.",
+      "افتحها على الـ iPhone أو iPad المسجَّل فيه الدخول إلى حساب iCloud الخاص بك والمثبَّت عليه Kinboard.",
+      "يسألك Kinboard إن كنت تريد الانضمام إلى العائلة. بعدها ترى القوائم والتقويمات نفسها وتعدّلها."
+    ]
   },
   "jsonld": {
     "description": "يحوّل Kinboard جهاز Apple TV أو iPad الذي تملكه إلى شاشة للعائلة: تقويمات الجميع، والقوائم المشتركة، ومهام الأطفال مع النجوم، والعدّ التنازلي، والطقس، وصور العائلة، مع التعديل من أي iPhone.",

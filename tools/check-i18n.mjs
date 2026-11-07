@@ -25,6 +25,9 @@ const OWN = new Set(['lang', 'path', 'badgeLang']);
 const SAME = new Set(['home.pricing.plus.title']);
 // May read the same as in English (names, the copyright line); not reported as "still English".
 const MAY_MATCH = new Set(['ui.copyright', 'support.meta.title', 'privacy.meta.title']);
+// Apple's names that most languages keep in English (the privacy heading "Apple Intelligence"),
+// left out before the "still English" test.
+const BRAND = /Apple Intelligence|Apple TV|App Store|Family Sharing|Top Shelf/g;
 
 const tags = s => (s.match(/<\/?[a-z][^>]*>/gi) || []).map(t => t.replace(/\s+(?!href=)[a-z-]+="[^"]*"/gi, '')).sort().join(' ');
 const holes = s => (s.match(/\{[a-z]+\}|\{\{[^}]+\}\}/g) || []).sort().join(' ');
@@ -84,7 +87,7 @@ for (const code of codes) {
     if (t.path !== path) problems.push(`path: should be "${path}"`);
     const untranslated = [];
     (function walk(a, b, p) {
-      if (typeof a === 'string' && a === b && /[a-z]{4,}\s+[a-z]{3,}/i.test(a.replace(/<[^>]+>/g, '')) && !SAME.has(p) && !OWN.has(p) && !MAY_MATCH.has(p)) untranslated.push(p);
+      if (typeof a === 'string' && a === b && /[a-z]{4,}\s+[a-z]{3,}/i.test(a.replace(/<[^>]+>/g, '').replace(BRAND, '')) && !SAME.has(p) && !OWN.has(p) && !MAY_MATCH.has(p)) untranslated.push(p);
       else if (a && typeof a === 'object') for (const k of Object.keys(a)) if (!k.startsWith('_') && b && k in b) walk(a[k], b[k], p ? `${p}.${k}` : k);
     })(en, t, '');
     if (untranslated.length) problems.push(`still English: ${untranslated.slice(0, 8).join(', ')}${untranslated.length > 8 ? ` and ${untranslated.length - 8} more` : ''}`);

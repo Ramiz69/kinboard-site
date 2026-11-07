@@ -1,6 +1,8 @@
 {
   "_notes": {
-    "about": "See en.json _notes: they explain every tricky key."
+    "about": "See en.json _notes: they explain every tricky key.",
+    "privacy.sections.appleIntelligence": "The Apple Intelligence section follows Diagnostics. Its first sentence is the app's own wording (Intelligence.xcstrings, key \"Schedule import, summaries and chore ideas use Apple Intelligence...\"); take it as the app has it. Use Apple's name for Apple Intelligence in your language (zh-Hans: Apple 智能), and the app's feature names from Intelligence.xcstrings: Import Schedule, What Matters Tomorrow, Your Week, Chore Ideas, and the calendar name Imported.",
+    "appLink": "The landing page for app links (/app/..., /join/...) when Kinboard is not installed or the link is opened on a computer. join* strings are only on the /join page and explain the family invitation. Not indexed."
   },
   "lang": "vi",
   "path": "/vi/",
@@ -299,7 +301,8 @@
         "paragraphs": [],
         "points": [
           "Ảnh gia đình bạn thêm được lưu vào iCloud của bạn để mọi màn hình gia đình đều có thể hiển thị.",
-          "Nếu bạn chọn một album từ app Ảnh, hình ảnh trong đó chỉ được đọc trên thiết bị ấy và không bao giờ được tải lên."
+          "Nếu bạn chọn một album từ app Ảnh, hình ảnh trong đó chỉ được đọc trên thiết bị ấy và không bao giờ được tải lên.",
+          "Ảnh và PDF bạn chọn để nhập lịch trình chỉ được đọc trên thiết bị đó và không bao giờ được tải lên. Chỉ những sự kiện bạn thêm mới được lưu, trong lịch “Đã nhập”."
         ]
       },
       {
@@ -319,6 +322,19 @@
           "Báo cáo chỉ đến tay nhà phát triển nếu bạn bật Đính kèm chẩn đoán vào email (mặc định tắt) và tự gửi email từ Viết cho nhà phát triển. Email được gửi tới <a href=\"mailto:{supportemail}\">{supportemail}</a>.",
           "Email đó cũng có mã định danh kiểu máy, phiên bản hệ điều hành, phiên bản ứng dụng, ngôn ngữ và khu vực của ứng dụng, và Kinboard+ có đang hiệu lực hay không. Email không bao giờ có tên thiết bị hay dữ liệu gia đình của bạn.",
           "Nhà phát triển chỉ dùng báo cáo để khắc phục sự cố và xóa chúng khi không còn cần nữa."
+        ]
+      },
+      {
+        "title": "Apple Intelligence",
+        "paragraphs": [
+          "Nhập lịch trình, tóm tắt và gợi ý nhiệm vụ dùng Apple Intelligence trên iPhone hoặc iPad của bạn - ảnh, tài liệu và kế hoạch của gia đình không bao giờ rời khỏi thiết bị. Mọi thứ chạy bằng mô hình của Apple ngay trên thiết bị, và không có gì được gửi cho nhà phát triển hay bất kỳ máy chủ nào."
+        ],
+        "points": [
+          "“Nhập lịch trình” đọc ảnh hoặc PDF của thời khóa biểu, tờ rơi hay thư của trường bằng tính năng nhận dạng văn bản của Apple (Vision) và mô hình của Apple (Foundation Models) trên thiết bị, rồi hiển thị những gì tìm thấy trước khi thêm bất cứ thứ gì.",
+          "“Điều quan trọng ngày mai” và “Tuần của bạn” là các bản tóm tắt ngắn được viết trên thiết bị từ lịch của gia đình.",
+          "“Ý tưởng nhiệm vụ” gợi ý nhiệm vụ theo tuổi của trẻ. Tuổi chỉ được lưu trên iPhone hoặc iPad đó.",
+          "Sự kiện đã nhập được lưu vào lịch Kinboard có tên “Đã nhập” trong iCloud của gia đình, giống như các dữ liệu Kinboard khác. Kinboard không bao giờ ghi vào ứng dụng Lịch.",
+          "Nếu Apple Intelligence tắt hoặc không khả dụng, tính năng nhập lịch trình tìm ngày theo cách đơn giản trên thiết bị, còn tóm tắt và gợi ý nhiệm vụ được ẩn đi. Apple TV không có tính năng nào trong số này."
         ]
       },
       {
@@ -355,6 +371,18 @@
     "title": "Không tìm thấy trang",
     "text": "Trang này không tồn tại. Có thể nó đã được chuyển đi.",
     "back": "Về trang chủ"
+  },
+  "appLink": {
+    "title": "Mở trong Kinboard",
+    "text": "Liên kết này mở Kinboard trên iPhone hoặc iPad của bạn.",
+    "install": "Nếu chưa cài Kinboard, hãy tải ứng dụng từ App Store, rồi mở lại liên kết trên iPhone hoặc iPad của bạn.",
+    "joinTitle": "Tham gia gia đình trong Kinboard",
+    "joinHeading": "Lời mời gia đình hoạt động thế nào",
+    "joinSteps": [
+      "Một thành viên gia đình gửi lời mời cho bạn từ Kinboard trên iPhone của họ (Gia đình → Mời thành viên gia đình). Đó là một liên kết iCloud.",
+      "Mở lời mời trên iPhone hoặc iPad đã đăng nhập tài khoản iCloud của bạn và đã cài Kinboard.",
+      "Kinboard sẽ hỏi bạn có muốn tham gia gia đình không. Sau đó bạn xem và chỉnh sửa cùng các danh sách và lịch."
+    ]
   },
   "jsonld": {
     "description": "Kinboard biến Apple TV hoặc iPad bạn đang có thành màn hình gia đình: lịch của mọi người, danh sách chung, nhiệm vụ của bé kèm sao, đếm ngược, thời tiết và ảnh gia đình, chỉnh sửa từ bất kỳ iPhone nào.",

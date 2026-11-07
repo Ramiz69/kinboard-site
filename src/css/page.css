@@ -12,6 +12,10 @@
 .doc-cta { margin-top: 2.5rem; }
 .notfound { text-align: center; padding: 40px 0; display: grid; justify-items: center; }
 .logo.big { width: 64px; height: 64px; margin-bottom: 20px; }
+/* App link landing (/app/, /join/): the invitation steps read from the line start, not centred. */
+.applink .how { text-align: start; padding: 4px 22px 8px; margin: 0 0 1.75rem; width: 100%; }
+.applink .how h2 { font-size: 1.1rem; margin: 1.1rem 0 .4rem; }
+.applink .cta { margin-bottom: .75rem; }
 .button {
   display: inline-block; padding: 12px 22px; border-radius: 999px; text-decoration: none; font-weight: 600;
   background: var(--accent-fill); color: var(--on-accent);

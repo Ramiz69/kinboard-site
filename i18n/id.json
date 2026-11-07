@@ -1,6 +1,8 @@
 {
   "_notes": {
-    "about": "See en.json _notes: they explain every tricky key."
+    "about": "See en.json _notes: they explain every tricky key.",
+    "privacy.sections.appleIntelligence": "The Apple Intelligence section follows Diagnostics. Its first sentence is the app's own wording (Intelligence.xcstrings, key \"Schedule import, summaries and chore ideas use Apple Intelligence...\"); take it as the app has it. Use Apple's name for Apple Intelligence in your language (zh-Hans: Apple 智能), and the app's feature names from Intelligence.xcstrings: Import Schedule, What Matters Tomorrow, Your Week, Chore Ideas, and the calendar name Imported.",
+    "appLink": "The landing page for app links (/app/..., /join/...) when Kinboard is not installed or the link is opened on a computer. join* strings are only on the /join page and explain the family invitation. Not indexed."
   },
   "lang": "id",
   "path": "/id/",
@@ -299,7 +301,8 @@
         "paragraphs": [],
         "points": [
           "Foto keluarga yang Anda tambahkan disimpan di iCloud Anda agar setiap layar keluarga dapat menampilkannya.",
-          "Jika Anda memilih album dari app Foto, gambarnya hanya dibaca di perangkat itu dan tidak pernah diunggah."
+          "Jika Anda memilih album dari app Foto, gambarnya hanya dibaca di perangkat itu dan tidak pernah diunggah.",
+          "Foto dan PDF yang Anda pilih untuk impor jadwal hanya dibaca di perangkat itu dan tidak pernah diunggah. Hanya acara yang Anda tambahkan yang disimpan, di kalender “Diimpor”."
         ]
       },
       {
@@ -319,6 +322,19 @@
           "Laporan hanya sampai ke pengembang jika Anda menyalakan Lampirkan Diagnostik ke Email (mati secara default) dan mengirim sendiri emailnya dari Tulis ke Pengembang. Email dikirim ke <a href=\"mailto:{supportemail}\">{supportemail}</a>.",
           "Email tersebut juga berisi pengenal model perangkat, versi sistem, versi app, bahasa dan wilayah app, serta apakah Kinboard+ aktif. Email tidak pernah berisi nama perangkat atau data keluarga Anda.",
           "Pengembang menggunakan laporan hanya untuk memperbaiki masalah dan menghapusnya saat tidak diperlukan lagi."
+        ]
+      },
+      {
+        "title": "Apple Intelligence",
+        "paragraphs": [
+          "Impor jadwal, ringkasan, dan ide tugas memakai Apple Intelligence di iPhone atau iPad Anda - foto, dokumen, dan rencana keluarga tidak pernah meninggalkan perangkat. Semuanya berjalan dengan model Apple langsung di perangkat, dan tidak ada yang dikirim ke pengembang atau ke server mana pun."
+        ],
+        "points": [
+          "Impor Jadwal membaca foto atau PDF jadwal sekolah, selebaran, atau surat dengan pengenalan teks Apple (Vision) dan model Apple (Foundation Models) di perangkat, lalu menampilkan hasilnya sebelum menambahkan apa pun.",
+          "Yang Penting Besok dan Minggu Anda adalah ringkasan singkat yang ditulis di perangkat dari jadwal keluarga.",
+          "Ide Tugas menyarankan tugas sesuai usia anak. Usia hanya disimpan di iPhone atau iPad itu.",
+          "Acara yang diimpor disimpan di kalender Kinboard bernama “Diimpor” di iCloud keluarga, seperti data Kinboard lainnya. Kinboard tidak pernah menulis ke app Kalender.",
+          "Jika Apple Intelligence mati atau tidak tersedia, impor jadwal mencari tanggal dengan cara sederhana di perangkat, sedangkan ringkasan dan ide tugas disembunyikan. Apple TV tidak memiliki fitur-fitur ini."
         ]
       },
       {
@@ -355,6 +371,18 @@
     "title": "Halaman tidak ditemukan",
     "text": "Halaman ini tidak ada. Mungkin sudah dipindahkan.",
     "back": "Ke beranda"
+  },
+  "appLink": {
+    "title": "Buka di Kinboard",
+    "text": "Tautan ini membuka Kinboard di iPhone atau iPad Anda.",
+    "install": "Jika Kinboard belum terpasang, unduh dari App Store, lalu buka lagi tautannya di iPhone atau iPad Anda.",
+    "joinTitle": "Bergabung dengan keluarga di Kinboard",
+    "joinHeading": "Cara kerja undangan keluarga",
+    "joinSteps": [
+      "Anggota keluarga mengirimi Anda undangan dari Kinboard di iPhone mereka (Keluarga → Undang Anggota Keluarga). Undangan ini berupa tautan iCloud.",
+      "Buka undangan di iPhone atau iPad yang masuk ke akun iCloud Anda dan sudah terpasang Kinboard.",
+      "Kinboard akan menanyakan apakah Anda ingin bergabung dengan keluarga. Setelah itu Anda melihat dan mengedit daftar dan kalender yang sama."
+    ]
   },
   "jsonld": {
     "description": "Kinboard mengubah Apple TV atau iPad yang sudah Anda punya menjadi layar keluarga: kalender semua orang, daftar bersama, tugas anak dengan bintang, hitung mundur, cuaca, dan foto keluarga, yang bisa diedit dari iPhone mana pun.",

@@ -1,6 +1,8 @@
 {
   "_notes": {
-    "about": "See en.json _notes: they explain every tricky key."
+    "about": "See en.json _notes: they explain every tricky key.",
+    "privacy.sections.appleIntelligence": "The Apple Intelligence section follows Diagnostics. Its first sentence is the app's own wording (Intelligence.xcstrings, key \"Schedule import, summaries and chore ideas use Apple Intelligence...\"); take it as the app has it. Use Apple's name for Apple Intelligence in your language (zh-Hans: Apple 智能), and the app's feature names from Intelligence.xcstrings: Import Schedule, What Matters Tomorrow, Your Week, Chore Ideas, and the calendar name Imported.",
+    "appLink": "The landing page for app links (/app/..., /join/...) when Kinboard is not installed or the link is opened on a computer. join* strings are only on the /join page and explain the family invitation. Not indexed."
   },
   "lang": "ru",
   "path": "/ru/",
@@ -299,7 +301,8 @@
         "paragraphs": [],
         "points": [
           "Фото семьи, которые вы добавляете, сохраняются в вашем iCloud, чтобы их могли показывать все экраны семьи.",
-          "Если вы выбираете альбом из приложения «Фото», его снимки читаются только на этом устройстве и никуда не загружаются."
+          "Если вы выбираете альбом из приложения «Фото», его снимки читаются только на этом устройстве и никуда не загружаются.",
+          "Фото и PDF, выбранные для импорта расписания, читаются только на этом устройстве и никуда не загружаются. Сохраняются лишь добавленные вами события - в календаре «Импорт»."
         ]
       },
       {
@@ -319,6 +322,19 @@
           "Разработчику они уходят, только если вы включите «Приложить диагностику к письму» (по умолчанию выключено) и сами отправите письмо через «Написать разработчику». Письмо уходит на <a href=\"mailto:{supportemail}\">{supportemail}</a>.",
           "В таком письме также есть идентификатор модели устройства, версия системы, версия приложения, язык и регион приложения и то, активен ли Kinboard+. Имени устройства и данных семьи в нём нет.",
           "Разработчик использует отчёты только для исправления ошибок и удаляет их, когда они больше не нужны."
+        ]
+      },
+      {
+        "title": "Apple Intelligence",
+        "paragraphs": [
+          "Импорт расписания, сводки и идеи заданий работают на Apple Intelligence прямо на iPhone или iPad - фото, документы и планы семьи не покидают устройство. Всё выполняет модель Apple на самом устройстве, и ничего не отправляется ни разработчику, ни на какие-либо серверы."
+        ],
+        "points": [
+          "«Импорт расписания» читает фото или PDF школьного расписания, афиши или письма с помощью распознавания текста Apple (Vision) и модели Apple (Foundation Models) на устройстве и показывает найденное, прежде чем что-либо добавить.",
+          "«Что важно завтра» и «Ваша неделя» - короткие сводки, которые составляются на устройстве по расписанию семьи.",
+          "«Идеи заданий» предлагают задания по возрасту ребёнка. Возраст хранится только на этом iPhone или iPad.",
+          "Импортированные события сохраняются в календарь Kinboard «Импорт» в iCloud семьи, как и остальные данные Kinboard. Kinboard никогда ничего не записывает в приложение «Календарь».",
+          "Если Apple Intelligence выключен или недоступен, импорт расписания ищет даты простым способом на устройстве, а сводки и идеи заданий скрыты. На Apple TV этих функций нет."
         ]
       },
       {
@@ -355,6 +371,18 @@
     "title": "Страница не найдена",
     "text": "Такой страницы нет. Возможно, она переехала.",
     "back": "На главную"
+  },
+  "appLink": {
+    "title": "Открыть в Kinboard",
+    "text": "Эта ссылка открывает Kinboard на iPhone или iPad.",
+    "install": "Если Kinboard ещё не установлен, загрузите его из App Store и откройте ссылку ещё раз на iPhone или iPad.",
+    "joinTitle": "Присоединиться к семье в Kinboard",
+    "joinHeading": "Как работает приглашение в семью",
+    "joinSteps": [
+      "Член семьи отправляет вам приглашение из Kinboard на своём iPhone («Семья» → «Пригласить семью»). Это ссылка iCloud.",
+      "Откройте её на iPhone или iPad, где выполнен вход в ваш iCloud и установлен Kinboard.",
+      "Kinboard спросит, присоединиться ли к семье. После этого у вас будут общие списки и календари, и вы сможете их править."
+    ]
   },
   "jsonld": {
     "description": "Kinboard превращает Apple TV или iPad, который у вас уже есть, в экран семьи: календари всех, общие списки, задания детей со звёздами, обратный отсчёт, погода и семейные фото, а править всё можно с любого iPhone.",
