@@ -30,14 +30,14 @@
       "title": "Kinboard - màn hình gia đình cho Apple TV và iPad",
       "description": "Biến Apple TV hoặc iPad bạn đang có thành màn hình gia đình: lịch của mọi người, danh sách chung, nhiệm vụ của bé và thời tiết. Miễn phí 14 ngày.",
       "ogTitle": "Kinboard - màn hình gia đình cho Apple TV và iPad",
-      "ogDescription": "Lịch của mọi người, danh sách chung, nhiệm vụ của bé và thời tiết trên màn hình bạn đang có. Không tài khoản, không đăng ký.",
+      "ogDescription": "Lịch của mọi người, danh sách chung, nhiệm vụ của bé và thời tiết trên màn hình bạn đang có. Không tài khoản, không gói đăng ký.",
       "ogAlt": "Logo Kinboard: màn hình gia đình cho Apple TV và iPad"
     },
     "hero": {
       "eyebrow": "Cho Apple TV, iPad và iPhone",
       "title": "Màn hình gia đình bạn đã có sẵn",
-      "sub": "Một ngày của mọi người, danh sách đi chợ, nhiệm vụ của các bé và thời tiết - trên Apple TV trong phòng khách hoặc iPad trên tường bếp. Đọc được từ phía bên kia phòng, và luôn bật.",
-      "note": "Miễn phí 14 ngày, sau đó mua một lần. Không tài khoản, không đăng ký.",
+      "sub": "Lịch trong ngày của mọi người, danh sách đi chợ, nhiệm vụ của các bé và thời tiết - trên Apple TV trong phòng khách hoặc iPad trên tường bếp. Đọc được từ phía bên kia phòng, và luôn bật.",
+      "note": "Miễn phí 14 ngày, sau đó mua một lần. Không tài khoản, không gói đăng ký.",
       "requires": "Yêu cầu iOS 26, iPadOS 26 hoặc tvOS 26.",
       "shotAlt": "Kinboard trên Apple TV: đồng hồ, sự kiện sắp tới, thời tiết, đếm ngược, sự kiện hôm nay và ngày mai, nhiệm vụ của các bé và danh sách đi chợ"
     },
@@ -47,7 +47,7 @@
       "steps": [
         {
           "title": "Màn hình",
-          "text": "Apple TV trong phòng khách hoặc iPad trên tường bếp. Màn hình hiển thị một ngày của cả nhà, luôn thức và tự làm mới."
+          "text": "Apple TV trong phòng khách hoặc iPad trên tường bếp. Màn hình hiển thị lịch trong ngày của cả nhà, luôn thức và tự làm mới."
         },
         {
           "title": "Điều khiển",
@@ -55,13 +55,13 @@
         },
         {
           "title": "Cùng một iCloud",
-          "text": "Cài Kinboard trên cả hai với cùng tài khoản iCloud, màn hình sẽ tự điền. Mời gia đình bạn, và mỗi người chỉnh sửa từ iPhone của mình."
+          "text": "Cài Kinboard trên cả hai với cùng tài khoản iCloud, mọi thứ sẽ tự hiện lên màn hình. Mời gia đình bạn, và mỗi người chỉnh sửa từ iPhone của mình."
         }
       ],
       "shotAlt": "Kinboard trên iPad treo tường, với các tab Màn hình, Danh sách, Trẻ em, Gia đình và Cài đặt ở trên cùng"
     },
     "features": {
-      "title": "Mọi thứ gia đình cần, chỉ một cái nhìn",
+      "title": "Mọi thứ cả nhà cần, chỉ cần nhìn qua",
       "lede": "Thiết lập một lần trên iPhone. Thay đổi hiện trên mọi màn hình chỉ sau vài giây.",
       "items": [
         {
@@ -151,7 +151,7 @@
       "lede": "Hãy thử mọi thứ trên màn hình của bạn trước. Nếu Kinboard xứng đáng có chỗ trên tường, hãy giữ nó chỉ với một lần mua.",
       "trial": {
         "title": "Miễn phí 14 ngày",
-        "text": "Mọi thứ đều mở ngay từ lần đầu mở app. Không cần đăng ký tài khoản, không có gì phải hủy."
+        "text": "Mọi thứ đều mở ngay từ lần đầu mở ứng dụng. Không cần đăng ký tài khoản, không có gì phải hủy."
       },
       "free": {
         "title": "Miễn phí sau thời gian dùng thử",
@@ -165,7 +165,7 @@
       },
       "plus": {
         "title": "Kinboard+",
-        "text": "Mua một lần, không đăng ký.",
+        "text": "Mua một lần, không phải gói đăng ký.",
         "items": [
           "Mọi lịch",
           "Danh sách chung",
@@ -301,7 +301,7 @@
         "paragraphs": [],
         "points": [
           "Ảnh gia đình bạn thêm được lưu vào iCloud của bạn để mọi màn hình gia đình đều có thể hiển thị.",
-          "Nếu bạn chọn một album từ app Ảnh, hình ảnh trong đó chỉ được đọc trên thiết bị ấy và không bao giờ được tải lên.",
+          "Nếu bạn chọn một album từ ứng dụng Ảnh, hình ảnh trong đó chỉ được đọc trên thiết bị ấy và không bao giờ được tải lên.",
           "Ảnh và PDF bạn chọn để nhập lịch trình chỉ được đọc trên thiết bị đó và không bao giờ được tải lên. Chỉ những sự kiện bạn thêm mới được lưu, trong lịch “Đã nhập”."
         ]
       },

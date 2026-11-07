@@ -47,7 +47,7 @@
       "steps": [
         {
           "title": "La pantalla",
-          "text": "Un Apple TV en el salón o un iPad en la pared de la cocina. Muestra el día de la familia, se mantiene encendida y se actualiza sola."
+          "text": "Un Apple TV en el salón o un iPad en la pared de la cocina. Muestra el día de la familia, se mantiene encendido y se actualiza solo."
         },
         {
           "title": "El mando",
@@ -72,7 +72,7 @@
             "Calendarios de tu iPhone y iPad, incluidas las cuentas de Google y Outlook añadidas allí",
             "Cualquier calendario al que te puedas suscribir con un enlace - cole, club deportivo, festivos"
           ],
-          "shotAlt": "La pestaña Familia en el iPhone: mamá, papá, Mia y Leo, cada uno con su color y sus calendarios"
+          "shotAlt": "La pestaña Familia en el iPhone: mamá, papá, Mía y Leo, cada uno con su color y sus calendarios"
         },
         {
           "title": "Listas compartidas",
@@ -151,7 +151,7 @@
       "lede": "Pruébalo todo primero en tu propia pantalla. Si Kinboard se gana su sitio en la pared, quédatelo con una única compra.",
       "trial": {
         "title": "14 días gratis",
-        "text": "Todo está abierto desde el primer momento. Sin registro y sin nada que cancelar."
+        "text": "Todo está desbloqueado desde el primer momento. Sin registro y sin nada que cancelar."
       },
       "free": {
         "title": "Gratis tras la prueba",
@@ -251,7 +251,7 @@
         },
         {
           "q": "¿Qué es gratis y qué incluye Kinboard+?",
-          "a": "Todo está abierto durante 14 días. Después, el reloj, el tiempo, las cuentas atrás, el modo noche y un calendario siguen siendo gratis. Kinboard+ es una compra única que desbloquea todos los calendarios, las listas compartidas, las tareas y estrellas, el fondo de fotos, las invitaciones a la familia y el Top Shelf del Apple TV. Cuando termina la prueba no se borra nada de lo que añadiste."
+          "a": "Todo está desbloqueado durante 14 días. Después, el reloj, el tiempo, las cuentas atrás, el modo noche y un calendario siguen siendo gratis. Kinboard+ es una compra única que desbloquea todos los calendarios, las listas compartidas, las tareas y estrellas, el fondo de fotos, las invitaciones a la familia y el Top Shelf del Apple TV. Cuando termina la prueba no se borra nada de lo que añadiste."
         },
         {
           "q": "Compré Kinboard+ en otro dispositivo.",

@@ -151,7 +151,7 @@
       "lede": "Prova tutto prima sul tuo schermo. Se Kinboard si guadagna il suo posto sulla parete, tienilo con un unico acquisto.",
       "trial": {
         "title": "14 giorni gratis",
-        "text": "Tutto è aperto fin dal primo avvio. Nessuna registrazione, niente da disdire."
+        "text": "Tutto è sbloccato fin dal primo avvio. Nessuna registrazione, niente da disdire."
       },
       "free": {
         "title": "Gratis dopo la prova",
@@ -171,7 +171,7 @@
           "Le liste condivise",
           "Incarichi e stelle",
           "La foto di sfondo",
-          "Gli inviti in famiglia",
+          "Gli inviti per la famiglia",
           "La Top Shelf di Apple TV"
         ],
         "price": "{price} sull’App Store statunitense. Negli altri paesi l’App Store mostra il prezzo nella tua valuta.",
@@ -213,7 +213,7 @@
       ]
     },
     "cta": {
-      "title": "Regala alla tua famiglia un solo schermo",
+      "title": "Un solo schermo per tutta la famiglia",
       "text": "Prova tutto gratis per 14 giorni sulla Apple TV o sull’iPad che hai già."
     }
   },
@@ -251,7 +251,7 @@
         },
         {
           "q": "Cosa è gratis e cosa include Kinboard+?",
-          "a": "Tutto è aperto per 14 giorni. Dopo, orologio, meteo, countdown, modalità notte e un calendario restano gratis. Kinboard+ è un acquisto singolo che sblocca tutti i calendari, le liste condivise, incarichi e stelle, la foto di sfondo, gli inviti in famiglia e la Top Shelf di Apple TV. Quando la prova finisce, nulla di ciò che hai aggiunto viene eliminato."
+          "a": "Tutto è sbloccato per 14 giorni. Dopo, orologio, meteo, countdown, modalità notte e un calendario restano gratis. Kinboard+ è un acquisto singolo che sblocca tutti i calendari, le liste condivise, incarichi e stelle, la foto di sfondo, gli inviti in famiglia e la Top Shelf di Apple TV. Quando la prova finisce, nulla di ciò che hai aggiunto viene eliminato."
         },
         {
           "q": "Ho acquistato Kinboard+ su un altro dispositivo.",

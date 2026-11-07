@@ -36,7 +36,7 @@
     "hero": {
       "eyebrow": "Für Apple TV, iPad und iPhone",
       "title": "Der Familienbildschirm, den du schon hast",
-      "sub": "Der Tag aller, die Einkaufsliste, die Aufgaben der Kinder und das Wetter - auf dem Apple TV im Wohnzimmer oder dem iPad an der Küchenwand. Quer durch den Raum lesbar und immer an.",
+      "sub": "Die Termine aller, die Einkaufsliste, die Aufgaben der Kinder und das Wetter - auf dem Apple TV im Wohnzimmer oder dem iPad an der Küchenwand. Auch vom anderen Ende des Raums lesbar und immer an.",
       "note": "14 Tage kostenlos, dann ein einziger Kauf. Kein Konto, kein Abo.",
       "requires": "Erfordert iOS 26, iPadOS 26 oder tvOS 26.",
       "shotAlt": "Kinboard auf einem Apple TV: die Uhr, der nächste Termin, das Wetter, Countdowns, die Termine von heute und morgen, die Aufgaben der Kinder und die Einkaufsliste"
@@ -47,14 +47,14 @@
       "steps": [
         {
           "title": "Der Bildschirm",
-          "text": "Ein Apple TV im Wohnzimmer oder ein iPad an der Küchenwand. Es zeigt den Tag der Familie, bleibt von selbst wach und aktualisiert sich selbst."
+          "text": "Ein Apple TV im Wohnzimmer oder ein iPad an der Küchenwand. Es zeigt, was in der Familie ansteht, bleibt wach und aktualisiert sich von selbst."
         },
         {
           "title": "Die Fernbedienung",
           "text": "Dein iPhone. In seinen vier Tabs - Listen, Kinder, Familie und Einstellungen - fügst du Personen hinzu, wählst Kalender aus und hakst Dinge ab."
         },
         {
-          "title": "Dasselbe iCloud",
+          "title": "Derselbe iCloud-Account",
           "text": "Installiere Kinboard auf beiden Geräten mit demselben iCloud-Account, und der Bildschirm füllt sich von selbst. Lade deine Familie ein, dann bearbeiten alle vom eigenen iPhone aus."
         }
       ],
@@ -87,7 +87,7 @@
           "title": "Aufgaben und Sterne für die Kinder",
           "text": "Tägliche Aufgaben für jedes Kind, an den Tagen, die du wählst.",
           "points": [
-            "Ein bis drei Sterne pro Aufgabe und ein Wochenstand, den die Kinder sehen",
+            "Ein bis drei Sterne pro Aufgabe und eine Wochenzählung, die die Kinder sehen",
             "Kinder haken erledigte Aufgaben selbst auf dem iPad ab"
           ],
           "shotAlt": "Der Tab „Kinder“ auf dem iPhone: Katze füttern, Bett machen, Spülmaschine ausräumen und Pflanzen gießen, mit Sternen"
@@ -106,7 +106,7 @@
       ]
     },
     "alwaysOn": {
-      "title": "Gemacht für einen Bildschirm, der immer an ist",
+      "title": "Für einen Bildschirm, der immer an ist",
       "lede": "Kinboard soll den ganzen Tag laufen, deshalb kümmert es sich selbst um den Bildschirm.",
       "facts": [
         {
@@ -225,7 +225,7 @@
     "title": "Support",
     "lede": "Kinboard wird von einem einzelnen unabhängigen Entwickler gemacht. Schreib jederzeit - jede Nachricht wird gelesen und beantwortet, meist innerhalb von zwei Tagen.",
     "emailLabel": "E-Mail:",
-    "emailHint": "Bitte nenne deine Geräte (Apple TV, iPad, iPhone) und was du erwartet hast zu sehen.",
+    "emailHint": "Bitte nenne deine Geräte (Apple TV, iPad, iPhone) und was du eigentlich erwartet hast.",
     "start": {
       "title": "Erste Schritte",
       "steps": [
@@ -247,7 +247,7 @@
         },
         {
           "q": "Das Wetter wird nicht angezeigt.",
-          "a": "Erlaube Kinboard, deinen Standort zu verwenden: auf iPhone und iPad unter Einstellungen → Apps → Kinboard → Standort (bei manchen Versionen unter Einstellungen → Datenschutz &amp; Sicherheit → Ortungsdienste). Drücke auf dem Apple TV die Auswahltaste der Fernbedienung und wähle dann „Lokales Wetter zeigen“."
+          "a": "Erlaube Kinboard, deinen Standort zu verwenden: auf iPhone und iPad unter Einstellungen → Apps → Kinboard → Standort (bei manchen Versionen unter Einstellungen → Datenschutz &amp; Sicherheit → Ortungsdienste). Drücke auf dem Apple TV die Auswahltaste der Fernbedienung und wähle dann „Lokales Wetter anzeigen“."
         },
         {
           "q": "Was ist kostenlos und was gehört zu Kinboard+?",
@@ -266,7 +266,7 @@
   },
   "privacy": {
     "meta": {
-      "title": "Kinboard Datenschutzerklärung",
+      "title": "Kinboard-Datenschutzerklärung",
       "description": "Wie Kinboard mit deinen Daten umgeht: keine Konten, keine Analyse, alles bleibt im iCloud deiner Familie."
     },
     "title": "Datenschutzerklärung",

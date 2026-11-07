@@ -36,7 +36,7 @@
     "hero": {
       "eyebrow": "Apple TV, iPad ve iPhone için",
       "title": "Aile ekranınız zaten evinizde",
-      "sub": "Herkesin günü, market listesi, çocukların görevleri ve hava durumu - oturma odasındaki Apple TV’de ya da mutfak duvarındaki iPad’de. Odanın öbür ucundan okunur ve hep açık kalır.",
+      "sub": "Herkesin programı, market listesi, çocukların görevleri ve hava durumu - oturma odasındaki Apple TV’de ya da mutfak duvarındaki iPad’de. Odanın öbür ucundan okunur ve hep açık kalır.",
       "note": "14 gün ücretsiz, sonra tek seferlik satın alma. Hesap yok, abonelik yok.",
       "requires": "iOS 26, iPadOS 26 veya tvOS 26 gerektirir.",
       "shotAlt": "Apple TV’de Kinboard: saat, sıradaki etkinlik, hava durumu, geri sayımlar, bugünün ve yarının etkinlikleri, çocukların görevleri ve market listesi"
@@ -47,7 +47,7 @@
       "steps": [
         {
           "title": "Ekran",
-          "text": "Oturma odasında bir Apple TV ya da mutfak duvarında bir iPad. Ailenin gününü gösterir, uyanık kalır ve kendiliğinden yenilenir."
+          "text": "Oturma odasında bir Apple TV ya da mutfak duvarında bir iPad. Ailenin gündemini gösterir, uyanık kalır ve kendiliğinden yenilenir."
         },
         {
           "title": "Kumanda",
@@ -70,9 +70,9 @@
           "points": [
             "Bugün ve yarın yan yana, şu an olan en üstte",
             "iPhone ve iPad’deki takvimler, oraya eklenmiş Google ve Outlook hesapları dahil",
-            "Bağlantıyla abone olabileceğiniz her takvim - okul, spor kulübü, tatil günleri"
+            "Bağlantıyla abone olabileceğiniz her takvim - okul, spor kulübü, resmî tatiller"
           ],
-          "shotAlt": "iPhone’da Aile sekmesi: Anne, Baba, Mia ve Leo, her biri kendi renginde ve kendi takvimleriyle"
+          "shotAlt": "iPhone’da Aile sekmesi: Anne, Baba, Elif ve Can, her biri kendi renginde ve kendi takvimleriyle"
         },
         {
           "title": "Ortak listeler",
