@@ -1,0 +1,25 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "8AD8N54BY6.com.ramiz-kichibekov.kinboard"
+        ],
+        "components": [
+          {
+            "/": "/app/*",
+            "comment": "Lists, countdowns and schedule import open in Kinboard"
+          },
+          {
+            "/": "/join",
+            "comment": "Family setup and invitation landing opens the Family tab"
+          },
+          {
+            "/": "/join/*",
+            "comment": "Same landing with a trailing slash or a language"
+          }
+        ]
+      }
+    ]
+  }
+}

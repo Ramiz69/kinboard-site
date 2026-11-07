@@ -13,6 +13,7 @@ Cloudflare serves it at **https://kinboard-family.app**. The layout copies the S
 | `/press/` | press kit, English only: facts, descriptions, icon, logo, banner, screenshots, ZIP | press emails |
 | `404.html` | anything else (English, `noindex`) | Cloudflare `not_found_handling` |
 | `_headers` | security and cache headers | Cloudflare |
+| `/.well-known/apple-app-site-association` | Universal Links: `/app/*` and `/join*` open the app, everything else stays web (served as `application/json` by `_headers`) | iOS and iPadOS |
 
 **Keep the URLs.** App Store Connect and every installed copy of the app link to `/support/`
 and `/privacy/`. Each page is `name/index.html`, so it answers at `/name` and `/name/`.
@@ -28,7 +29,7 @@ src/css/               tokens.css (themes, header, menus; shared) + home.css / p
 src/js/theme-init.js   classic script in <head>: applies the saved theme before first paint
 src/js/menus.js        the language and appearance menus (the only module)
 src/assets/            content-hashed on build: badges/ (Apple's App Store badges), shots/<lang>/ (screenshots)
-src/static/            copied as is: _headers, favicon.png, icon.png, og/ (social images)
+src/static/            copied as is: _headers, favicon.png, icon.png, og/ (social images), .well-known/ (AASA)
 tools/serve.mjs        local preview that applies _headers, so the CSP is enforced
 tools/check-i18n.mjs   checks every translation against en.json (keys, HTML, placeholders, dashes, RTL marks)
 tools/check-site.mjs   checks the built site in public/ (SEO tags, hreflang, sitemap, links, image sizes)

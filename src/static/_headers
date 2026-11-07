@@ -23,3 +23,9 @@
 
 /icon.png
   Cache-Control: public, max-age=86400
+
+# Universal Links: Apple's CDN fetches this file and needs it served as JSON. It has no extension,
+# so the type is set here. A short cache lets a changed path list reach devices within a day.
+/.well-known/apple-app-site-association
+  Content-Type: application/json
+  Cache-Control: public, max-age=3600
